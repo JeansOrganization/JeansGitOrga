@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绑定样式</title>
+    <style>
+        .basic{
+            width: 200px;
+            height: 200px;
+            border: 1px solid #000;
+        }
+
+        .happy{
+            background:linear-gradient(45deg,red,pink)
+        }
+        .sad{
+            background:linear-gradient(45deg,#000,#333)
+        }
+        .normal{
+            background:linear-gradient(45deg,blue,skyblue)
+        }
+
+        .atguigu1{
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .atguigu2{
+            background:linear-gradient(45deg,red,pink)
+        }
+        .atguigu3{
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <!-- 绑定class样式--字符串写法，适用于：样式的类名不确定，需要动态指定 -->
+        <div class="basic" :class="mood" @click="changeMood">{{name}}</div><br/>
+
+        <!-- 绑定class样式--数组写法，适用于：要绑定的样式个数不确定、名字也不确定 -->
+        <div class="basic" :class="classArr">{{name}}</div> <br/>
+
+        <!-- 绑定class样式--对象写法，适用于：要绑定的样式个数确定、名字也确定，但要动态决定用不用 -->
+        <div class="basic" :class="classObj">{{name}}</div> 
+    </div>
+
+</body>
+<script>
+    const moodArr = ['happy','sad','normal']
+    new Vue({
+        el:'#root',
+        data:{
+            name:'Jean',
+            mood:'normal',
+            classArr:['atguigu1','atguigu2','atguigu3'],
+            classObj:{
+                atguigu1:false,
+                atguigu2:false,
+                atguigu3:false,
+            }
+        },
+        methods: {
+            changeMood(){
+                const num = Math.floor(Math.random() * 3);
+                if(num >= 0 && num <= 2){
+                    this.mood = moodArr[num]
+                }
+            }
+        },
+    })
+
+</script>
+</html>

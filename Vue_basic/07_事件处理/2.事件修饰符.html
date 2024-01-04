@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件修饰符</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+        .demo1{
+            width: 150px;
+            height: 100px;
+            background-color: orangered;
+        }
+        .box1{
+            padding: 5px;
+            width: 150px;
+            background-color: skyblue;
+        }
+        .box2{
+            padding: 5px;
+            width: 100px;
+            background-color: orange;
+        }
+        .list{
+            width: 150px;
+            height: 200px;
+            background-color: skyblue;
+            list-style: none;
+            overflow: auto;
+        }
+        .list li{
+            width: 60%;
+            height: 100px;
+            margin: 10px;
+            background-color: green;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        Vue中的事件修饰符：
+        1.prevent：阻止默认事件（常用）
+        2.stop：阻止事件冒泡（常用）
+        3.once：事件只触发一次（常用）
+        4.capture：使用事件的捕获模式
+        5.self：只有event.target是当前操作的元素时才触发事件
+        6.passive：事件的默认行为立即执行，无需等待事件回调执行完毕
+     -->
+    <div id="root">
+        <h2>欢迎来到{{name}}学习</h2>
+        
+        <!-- 阻止默认事件（常用） -->
+        <a href="http://www.atguigu.com" @click.prevent="showInfo">点我提示信息prevent</a>
+
+        <br><br><br>
+
+        <!-- 阻止事件冒泡（常用） -->
+        <div class="demo1" @click="showInfo">
+            <!-- 修饰符可以连续写 -->
+            <!-- <a href="http://www.atguigu.com" @click.stop.prevent="showInfo">点我提示信息stop</a> -->
+            <button @click.stop="showInfo">点我提示信息stop</button>
+        </div>
+
+        <br><br><br>
+
+        <!-- 事件只触发一次（常用） -->
+        <button @click.once="showInfo">点我提示信息once</button>
+
+        <br><br><br>
+
+        <!-- 使用事件的捕获模式 -->
+        <div class="box1" @click.capture="showMsg(1)">
+            div1-capture
+            <div class="box2" @click="showMsg(2)">
+                div2-capture
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <!-- 只有event.target是当前操作的元素时才触发事件 -->
+        <div class="demo1" @click.self="showInfoSelf">
+            <button @click="showInfoSelf">点我提示信息self</button>
+        </div>
+
+        <br><br><br>
+
+        <!-- <ul @scroll="demo" class="list"> -->
+        <ul @wheel.passive="demo" class="list">
+            <li>1passive</li>
+            <li>2passive</li>
+            <li>3passive</li>
+            <li>4passive</li>
+        </ul>
+
+    </div>
+</body>
+<script>
+
+    const vm = new Vue({
+        el:'#root',
+        data:{
+            name:'尚硅谷'
+        },
+        methods:{
+            showInfo(e){
+                alert('同学你好1')
+            },
+            showMsg(msg){
+                
+                alert(msg)
+            },
+            showInfoSelf(e){
+                console.log(e.target);
+            },
+            demo(e){
+                // console.log('@');
+                
+                for(let i = 0;i<100000;i++){
+                    console.log('@');
+                }
+            }
+        }
+    })
+
+</script>
+</html>
