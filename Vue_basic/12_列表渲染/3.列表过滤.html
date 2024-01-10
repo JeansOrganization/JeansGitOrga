@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表过滤</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+
+        <!-- 遍历数组 -->
+        <h2>人员列表（遍历数组）</h2>
+        <input type="text" v-model="keyWord" placeholder="请输入文本">
+        <ul>
+            <li v-for="p,index in filCPersons" :key="p.id">
+                ID:{{p.id}}  姓名:{{p.name}}  年龄(岁):{{p.age}}   索引:{{index}}
+            </li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    const moodArr = ['happy','sad','normal']
+    new Vue({
+        el:'#root',
+        data:{
+            keyWord:'',
+            persons:[
+                {id:101,name:'周杰伦',age:13},
+                {id:102,name:'周润发',age:14},
+                {id:103,name:'林俊杰',age:13},
+                {id:104,name:'林润梅',age:20},
+                {id:105,name:'林大发',age:20},
+            ],
+            filWPersons:[]
+        },
+        watch:{
+            keyWord:{
+                immediate:true,
+                handler(val){
+                    // this.filWPersons = this.persons.filter((p) => {
+                    //     return p.name.indexOf(val) !== -1
+                    // })
+                    this.filWPersons = this.persons.filter(p => p.name.indexOf(val) !== -1)
+                }
+            }
+        },
+        computed:{
+            filCPersons(){
+                return this.persons.filter(p => p.name.indexOf(this.keyWord) !== -1)
+            }
+        }
+    })
+
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基本列表</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <!-- 
+        v-for指令
+        1.用于展示列表数据
+        2.语法：v-for="(item,index) in xxx" :key="yyy"
+        3.可遍历：数组、对象、字符串（用得很少）、指定次数（用得很少）
+     -->
+    <div id="root">
+
+        <!-- 遍历数组 -->
+        <h2>人员列表（遍历数组）</h2>
+        <ul>
+            <li v-for="p,index in persons" :key="p.id">
+                ID:{{p.id}}  姓名:{{p.name}}  年龄(岁):{{p.age}}   索引:{{index}}
+            </li>
+        </ul>
+
+        <!-- 遍历对象 -->
+        <h2>人员信息（遍历对象）</h2>
+        <ul>
+            <li v-for="value,key in person" :key="key">
+                值:{{value}} 键:{{key}}
+            </li>
+        </ul>
+
+        <!-- 遍历字符串 -->
+        <h2>测试遍历字符串</h2>
+        <ul>
+            <li v-for="s,index in str" :key="index">
+                值:{{s}} 索引:{{index}}
+            </li>
+        </ul>
+
+        <!-- 遍历指定次数 -->
+        <h2>遍历指定次数</h2>
+        <ul>
+            <li v-for="num,index in 5" :key="index">
+                值:{{num}} 索引:{{index}}
+            </li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    const moodArr = ['happy','sad','normal']
+    new Vue({
+        el:'#root',
+        data:{
+            persons:[
+                {id:101,name:'Jean',age:13},
+                {id:102,name:'Ting',age:14},
+                {id:103,name:'Qina',age:13},
+            ],
+            person:{
+                id:104,name:'LiQing',age:15
+            },
+            str:'Jean'
+        },
+    })
+
+</script>
+</html>

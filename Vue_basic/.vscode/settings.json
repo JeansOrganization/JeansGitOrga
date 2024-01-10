@@ -1,0 +1,78 @@
+{
+    "editor.renderWhitespace": "all",
+    "editor.mouseWheelZoom": true,          //鼠标缩放代码
+    "editor.renderControlCharacters": false,//是否显示控制字符
+    "editor.fontFamily": "JetBrains Mono",  //字体
+    "editor.fontWeight": "normal",          //字体粗细
+    "editor.bracketPairColorization.enabled": true, //启用彩虹括号
+
+
+    "editor.tokenColorCustomizations":{
+        // "variables": "#81C1E1", //传参
+        "comments": "#70716F", //注释
+        // "numbers": "#CED8DA", //数字
+        // "keywords": "#FF0000", //关键字
+        "functions": "#D2691E", //函数名
+        "strings": "#90AA90", //字符串
+        // "types": "#FF0000", //
+    },
+    // "editor.tokenColorCustomizations": {
+    //        "keywords": "#9c1ba3",   // 关键字
+    //        "variables": "#7db7e3",  // 传参
+    //     //  "functions": "#fa0303",  // 函数名
+    //        "strings": "#b2c508",    // 字符串
+    //        "numbers": "#a62449",    // 数字
+    //     //  "comments": "#03f951fa",   // 注释
+    // },
+
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true, // enable for all themes
+        "rules": {
+            "*.static": {
+                "foreground": "#ba0c0cd8",
+                "fontStyle": "bold"
+            },
+            "property": {   //属性,成员变量
+                "foreground": "#7db7e3",
+                "fontStyle": "bold"
+            },
+            "macro": {      //宏
+                "foreground": "#9c042f",
+                "fontStyle": "bold"
+            },
+            "function": {   //函数
+                "foreground": "#c0e385",
+                "fontStyle": "bold"
+            },
+            "variable.global": { //全局变量
+                "foreground": "#8f397b",
+                "fontStyle": "bold"
+            },
+            "variable.local": { //局部变量
+                "foreground": "#7db7e3",
+                "fontStyle": "bold"
+            },
+        }
+    },
+
+    "security.workspace.trust.untrustedFiles": "open",
+    "files.encoding": "gb2312",             //默认使用的字符编码
+    // "files.trimTrailingWhitespace": true,   //按保存删除行尾空格
+    "workbench.editor.enablePreview": false,
+    "C_Cpp.errorSquiggles": "disabled",     //关闭头文件下划线报警
+    "extensions.autoCheckUpdates": false,   //自动检查插件更新
+    "extensions.autoUpdate": false,         //主侧栏放右边
+    "git.ignoreWindowsGit27Warning": true,
+
+    //source insight风格的高亮效果
+    "highlightwords.box": {
+        "light": false,
+        "dark": false
+    },
+    "highlightwords.colors": [
+        {
+            "light": "#b3d9ff",
+            "dark": "yellow"
+        },
+    ],
+}

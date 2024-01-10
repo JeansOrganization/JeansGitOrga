@@ -36,6 +36,17 @@
     <script type="text/javascript" src="../js/vue.js"></script>
 </head>
 <body>
+    <!-- 
+        绑定样式：
+            1.class样式
+                写法：class="xxx" xxx可以是字符串、对象、数组
+                    字符串写法适用于：类名不确定，要动态获取
+                    对象写法适用于：要绑定多个样式，个数不确定，名字也不确定
+                    数组写法适用于：要绑定多个样式，个数确定，名字也确定，但不确定用不用
+            2.style样式
+                :style="{fontSize:xxx}"其中xxx是动态值
+                :style="[a,b]"其中a、b是样式对象
+     -->
     <div id="root">
         <!-- 绑定class样式--字符串写法，适用于：样式的类名不确定，需要动态指定 -->
         <div class="basic" :class="mood" @click="changeMood">{{name}}</div><br/>
@@ -44,7 +55,13 @@
         <div class="basic" :class="classArr">{{name}}</div> <br/>
 
         <!-- 绑定class样式--对象写法，适用于：要绑定的样式个数确定、名字也确定，但要动态决定用不用 -->
-        <div class="basic" :class="classObj">{{name}}</div> 
+        <div class="basic" :class="classObj">{{name}}</div> <br/>
+
+        <!-- 绑定style样式--对象写法 -->
+        <div class="basic" :style="styleObj1">{{name}}</div>  <br/>
+
+        <!-- 绑定style样式--数组写法 -->
+        <div class="basic" :style="styleArr">{{name}}</div> 
     </div>
 
 </body>
@@ -60,7 +77,24 @@
                 atguigu1:false,
                 atguigu2:false,
                 atguigu3:false,
-            }
+            },
+
+            styleObj1:{
+                color:'red',
+                fontSize:'50px'
+            },
+            styleObj2:{
+                background:'linear-gradient(45deg,blue,skyblue)'
+            },
+            styleArr:[
+                {
+                    color:'red',
+                    fontSize:'50px'
+                },
+                {
+                    background:'linear-gradient(45deg,blue,skyblue)'
+                }
+            ]
         },
         methods: {
             changeMood(){

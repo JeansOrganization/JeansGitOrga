@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列表排序</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+
+        <!-- 遍历数组 -->
+        <h2>人员列表（遍历数组）</h2>
+        <input type="text" v-model="keyWord" placeholder="请输入文本">
+        <button @click="sortType=2">列表升序</button>
+        <button @click="sortType=1">列表降序</button>
+        <button @click="sortType=0">原顺序</button>
+        <ul>
+            <li v-for="p,index in filCPersons" :key="p.id">
+                ID:{{p.id}}  姓名:{{p.name}}  年龄(岁):{{p.age}}   索引:{{index}}
+            </li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    const moodArr = ['happy','sad','normal']
+    new Vue({
+        el:'#root',
+        data:{
+            sortType:0,//0原顺序、1降序、2升序
+            keyWord:'',
+            persons:[
+                {id:101,name:'周杰伦',age:20},
+                {id:102,name:'周润发',age:16},
+                {id:103,name:'林俊杰',age:23},
+                {id:104,name:'林润梅',age:18},
+                {id:105,name:'林大发',age:17},
+            ],
+            filWPersons:[]
+        },
+        watch:{
+            keyWord:{
+                immediate:true,
+                handler(val){
+                    // this.filWPersons = this.persons.filter((p) => {
+                    //     return p.name.indexOf(val) !== -1
+                    // })
+                    this.filWPersons = this.persons.filter(p => p.name.indexOf(val) !== -1)
+                }
+            }
+        },
+        computed:{
+            filCPersons(){
+                const arr = this.persons.filter(p => p.name.indexOf(this.keyWord) !== -1)
+                if(this.sortType){
+                    arr.sort((p1,p2) => {
+                        return (this.sortType === 1 ? p2.age - p1.age : p1.age - p2.age)
+                    })
+                }
+                return arr
+            }
+        }
+    })
+
+</script>
+</html>

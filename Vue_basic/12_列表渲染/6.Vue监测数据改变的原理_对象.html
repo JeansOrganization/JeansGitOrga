@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue监测数据改变的原理_对象</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+    <div id="root">
+        <h2>学校名称：{{name}}</h2>
+        <h2>学校地址：{{address}}</h2>
+    </div>
+
+</body>
+<script>
+    let dataA = {
+            name:'尚硅谷',
+            address:'北京',
+            //不管层级有多少，Vue都会使用递归查找到无对象为止
+            student:{
+                name:'11',
+                age:15,
+                student:[
+                    {name:'22',age:40}
+                ]
+            }
+        }
+    const vm = new Vue({
+        el:'#root',
+        data:dataA
+        
+    })
+
+</script>
+</html>
