@@ -26,36 +26,25 @@ export default {
         }
     },
     computed:{
-        //借助mapState生成计算属性，从state中读取数据。(对象写法)
-        // ...mapState({sum:'sum',school:'school',subject:'subject'})
         //借助mapState生成计算属性，从state中读取数据。(数组写法)
-        ...mapState(['sum','school','subject','personList']),
+        ...mapState('countAbout',['sum','school','subject']),
+        ...mapState('personAbout',['personList']),
 
-        /* ******************************************************************** */
-
-        //借助mapGetters生成计算属性，从getters中读取数据。(对象写法)
-        // ...mapGetters({bigSum:'bigSum'})
         //借助mapGetters生成计算属性，从getters中读取数据。(数组写法)
-        ...mapGetters(['bigSum']),
+        ...mapGetters('countAbout',['bigSum']),
 
     },
     methods:{
-        //借助mapMutations生成对应的方法，方法中会调用commit去联系mutations(对象写法)
-        // ...mapMutations({Increment:'Increment',Decrement:'Decrement'}),
         //借助mapMutations生成对应的方法，方法中会调用commit去联系mutations(数组写法)
-        ...mapMutations(['Increment','Decrement']),
+        ...mapMutations('countAbout',['Increment','Decrement']),
 
-        /* ************************************************* */
-        
-        //借助mapActions生成对应的方法，方法中会调用dispatch去联系actions(对象写法)
-        // ...mapActions({incrementOdd:'incrementOdd',incrementWait:'incrementWait'})
         //借助mapActions生成对应的方法，方法中会调用dispatch去联系actions(数组写法)
-        ...mapActions(['incrementOdd','incrementWait'])
+        ...mapActions('countAbout',['incrementOdd','incrementWait'])
 
     },
     mounted(){
         const x = mapState({sum:'sum',school:'school',subject:'subject'})
-        console.log(x)
+        console.log(this.$store)
     }
 };
 </script>
