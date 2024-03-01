@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\bin\Debug\net6.0\CSharp语言的新特性.exe
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\bin\Debug\net6.0\CSharp语言的新特性.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\bin\Debug\net6.0\CSharp语言的新特性.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\bin\Debug\net6.0\CSharp语言的新特性.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\bin\Debug\net6.0\CSharp语言的新特性.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\refint\CSharp语言的新特性.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\CSharp语言的新特性.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\CSharp语言的新特性\obj\Debug\net6.0\ref\CSharp语言的新特性.dll

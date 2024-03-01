@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "using的陷阱", "CSharp语言的新特性\using的陷阱.csproj", "{7C8529E7-136B-49C9-970D-C341CA560B68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSharp语言的新特性", "CSharp语言的新特性", "{10F4AA62-AA66-420D-A001-5912F121EA79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "using的声明新语法", "using的声明新语法\using的声明新语法.csproj", "{951547A8-1687-4867-84B6-E3C4A28DCC43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C8529E7-136B-49C9-970D-C341CA560B68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8529E7-136B-49C9-970D-C341CA560B68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8529E7-136B-49C9-970D-C341CA560B68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8529E7-136B-49C9-970D-C341CA560B68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{951547A8-1687-4867-84B6-E3C4A28DCC43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{951547A8-1687-4867-84B6-E3C4A28DCC43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{951547A8-1687-4867-84B6-E3C4A28DCC43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{951547A8-1687-4867-84B6-E3C4A28DCC43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7C8529E7-136B-49C9-970D-C341CA560B68} = {10F4AA62-AA66-420D-A001-5912F121EA79}
+		{951547A8-1687-4867-84B6-E3C4A28DCC43} = {10F4AA62-AA66-420D-A001-5912F121EA79}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52065DC5-FE6A-40C5-A5CE-03074A6B6776}
+	EndGlobalSection
+EndGlobal

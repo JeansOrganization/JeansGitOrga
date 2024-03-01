@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E8C\u7AE0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{951547A8-1687-4867-84B6-E3C4A28DCC43}|using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E8C\u7AE0\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{951547A8-1687-4867-84B6-E3C4A28DCC43}|using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj|solutionrelative:using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{951547A8-1687-4867-84B6-E3C4A28DCC43}|using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E8C\u7AE0\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{951547A8-1687-4867-84B6-E3C4A28DCC43}|using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj|solutionrelative:using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E8C\u7AE0\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj",
+              "RelativeDocumentMoniker": "using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E8C\u7AE0\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj",
+              "RelativeToolTip": "using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-01T08:45:57.058Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E8C\u7AE0\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\Program.cs",
+              "RelativeDocumentMoniker": "using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E8C\u7AE0\\using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\Program.cs",
+              "RelativeToolTip": "using\u7684\u58F0\u660E\u65B0\u8BED\u6CD5\\Program.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABwAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-01T07:21:38.111Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
