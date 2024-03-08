@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\bin\Debug\net6.0\async背后的线程切换.exe
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\bin\Debug\net6.0\async背后的线程切换.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\bin\Debug\net6.0\async背后的线程切换.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\bin\Debug\net6.0\async背后的线程切换.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\bin\Debug\net6.0\async背后的线程切换.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\refint\async背后的线程切换.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\async背后的线程切换.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\async背后的线程切换\obj\Debug\net6.0\ref\async背后的线程切换.dll

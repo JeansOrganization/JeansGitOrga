@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\bin\Debug\net6.0\异步的暂停.exe
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\bin\Debug\net6.0\异步的暂停.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\bin\Debug\net6.0\异步的暂停.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\bin\Debug\net6.0\异步的暂停.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\bin\Debug\net6.0\异步的暂停.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\refint\异步的暂停.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\异步的暂停.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步的暂停\obj\Debug\net6.0\ref\异步的暂停.dll

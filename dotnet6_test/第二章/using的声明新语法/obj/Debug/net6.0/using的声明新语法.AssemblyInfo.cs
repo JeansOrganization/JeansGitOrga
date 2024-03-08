@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("using的声明新语法")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8aa043ba50f8c4c1ce08d785818d39fc291c1a4e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17af8813b28b84d1c5176cf92322912bad5cded6")]
 [assembly: System.Reflection.AssemblyProductAttribute("using的声明新语法")]
 [assembly: System.Reflection.AssemblyTitleAttribute("using的声明新语法")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

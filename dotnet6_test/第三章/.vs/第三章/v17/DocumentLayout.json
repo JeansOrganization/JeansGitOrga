@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|solutionrelative:di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|solutionrelative:di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\userdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\iuserdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|solutionrelative:di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\iuserdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A6575083-710D-4A35-8188-1225568E17AD}|DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165.csproj|solutionrelative:di\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\sqlhelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserDao.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\UserDao.cs",
+              "RelativeDocumentMoniker": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\UserDao.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\UserDao.cs",
+              "RelativeToolTip": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\UserDao.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T07:42:53.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IUserDao.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\IUserDao.cs",
+              "RelativeDocumentMoniker": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\IUserDao.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\IUserDao.cs",
+              "RelativeToolTip": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\IUserDao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T07:13:55.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SqlHelper.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\SqlHelper.cs",
+              "RelativeDocumentMoniker": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\SqlHelper.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\SqlHelper.cs",
+              "RelativeToolTip": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\SqlHelper.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAmwAcAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T06:31:39.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\program.cs",
+              "RelativeDocumentMoniker": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E09\u7AE0\\DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\program.cs",
+              "RelativeToolTip": "DI\u9B45\u529B\u6E10\u663E_\u4F9D\u8D56\u6CE8\u5165\\program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAA0AAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-08T03:05:28.022Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

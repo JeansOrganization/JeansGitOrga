@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\bin\Debug\net6.0\异步编程原理.exe
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\bin\Debug\net6.0\异步编程原理.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\bin\Debug\net6.0\异步编程原理.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\bin\Debug\net6.0\异步编程原理.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\bin\Debug\net6.0\异步编程原理.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\refint\异步编程原理.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\异步编程原理.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\异步编程原理\obj\Debug\net6.0\ref\异步编程原理.dll

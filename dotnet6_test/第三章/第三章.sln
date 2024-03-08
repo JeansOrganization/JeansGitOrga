@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DI魅力渐显_依赖注入", "DI魅力渐显_依赖注入\DI魅力渐显_依赖注入.csproj", "{A6575083-710D-4A35-8188-1225568E17AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "依赖注入的基本使用", "依赖注入的基本使用\依赖注入的基本使用.csproj", "{94B1C9E0-7222-4624-810A-84DB882FAD88}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "依赖注入", "依赖注入", "{BC3B42B8-8A82-4AC3-B48A-3C61C555E1EA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "日志", "日志", "{D84DB9D9-992D-47E8-9053-8038C1C8C376}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "配置系统", "配置系统", "{2F07F37B-1144-4A5E-ACA4-F627FFD58D47}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6575083-710D-4A35-8188-1225568E17AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6575083-710D-4A35-8188-1225568E17AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6575083-710D-4A35-8188-1225568E17AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6575083-710D-4A35-8188-1225568E17AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94B1C9E0-7222-4624-810A-84DB882FAD88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B1C9E0-7222-4624-810A-84DB882FAD88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B1C9E0-7222-4624-810A-84DB882FAD88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B1C9E0-7222-4624-810A-84DB882FAD88}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A6575083-710D-4A35-8188-1225568E17AD} = {BC3B42B8-8A82-4AC3-B48A-3C61C555E1EA}
+		{94B1C9E0-7222-4624-810A-84DB882FAD88} = {BC3B42B8-8A82-4AC3-B48A-3C61C555E1EA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1AA8B480-1E30-4EE0-AF79-25ABCF0B2B04}
+	EndGlobalSection
+EndGlobal

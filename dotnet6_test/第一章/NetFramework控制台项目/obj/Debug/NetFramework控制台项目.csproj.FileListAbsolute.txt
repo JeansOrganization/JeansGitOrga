@@ -1,0 +1,10 @@
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\bin\Debug\NetFramework控制台项目.exe.config
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\bin\Debug\NetFramework控制台项目.exe
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\bin\Debug\NetFramework控制台项目.pdb
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\bin\Debug\NetStandard类库.dll
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\bin\Debug\NetStandard类库.pdb
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\obj\Debug\NetFramework控制台项目.csproj.AssemblyReference.cache
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\obj\Debug\NetFramework控制台项目.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\obj\Debug\NetFrame.AE8A35D6.Up2Date
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\obj\Debug\NetFramework控制台项目.exe
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetFramework控制台项目\obj\Debug\NetFramework控制台项目.pdb

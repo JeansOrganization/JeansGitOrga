@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\bin\Debug\net6.0\简化的命名空间声明.exe
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\bin\Debug\net6.0\简化的命名空间声明.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\bin\Debug\net6.0\简化的命名空间声明.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\bin\Debug\net6.0\简化的命名空间声明.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\bin\Debug\net6.0\简化的命名空间声明.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\refint\简化的命名空间声明.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\简化的命名空间声明.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\简化的命名空间声明\obj\Debug\net6.0\ref\简化的命名空间声明.dll

@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "NetCore控制台项目/1.0.0": {
+        "dependencies": {
+          "NetStandard类库": "1.0.0"
+        },
+        "runtime": {
+          "NetCore控制台项目.dll": {}
+        }
+      },
+      "NetStandard类库/1.0.0": {
+        "runtime": {
+          "NetStandard类库.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "NetCore控制台项目/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NetStandard类库/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

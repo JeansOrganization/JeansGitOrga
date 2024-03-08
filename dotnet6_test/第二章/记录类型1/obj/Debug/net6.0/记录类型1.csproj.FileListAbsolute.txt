@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\bin\Debug\net6.0\记录类型1.exe
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\bin\Debug\net6.0\记录类型1.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\bin\Debug\net6.0\记录类型1.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\bin\Debug\net6.0\记录类型1.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\bin\Debug\net6.0\记录类型1.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\refint\记录类型1.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\记录类型1.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\记录类型1\obj\Debug\net6.0\ref\记录类型1.dll

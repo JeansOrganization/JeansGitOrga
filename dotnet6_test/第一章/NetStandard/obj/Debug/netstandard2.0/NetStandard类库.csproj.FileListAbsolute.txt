@@ -1,0 +1,11 @@
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\bin\Debug\netstandard2.0\NetStandard类库.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\bin\Debug\netstandard2.0\NetStandard类库.dll
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\bin\Debug\netstandard2.0\NetStandard类库.pdb
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.csproj.AssemblyReference.cache
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.dll
+D:\File\JeansGitOrga\dotnet6_test\第一章\NetStandard\obj\Debug\netstandard2.0\NetStandard类库.pdb

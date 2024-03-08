@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZghE+zffxRGa/VFBtsYeF8clVKPAbqSFjbSEePQmX+TQ7TedJxt/hVR27MCAesubq5iEktAsPC6vVHex60gIkQ==",
+  "success": true,
+  "projectFilePath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第一章\\NetStandard\\NetStandard类库.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

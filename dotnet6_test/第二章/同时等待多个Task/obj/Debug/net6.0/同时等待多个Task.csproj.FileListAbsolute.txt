@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\bin\Debug\net6.0\同时等待多个Task.exe
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\bin\Debug\net6.0\同时等待多个Task.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\bin\Debug\net6.0\同时等待多个Task.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\bin\Debug\net6.0\同时等待多个Task.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\bin\Debug\net6.0\同时等待多个Task.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\refint\同时等待多个Task.dll
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.pdb
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\同时等待多个Task.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第二章\同时等待多个Task\obj\Debug\net6.0\ref\同时等待多个Task.dll
