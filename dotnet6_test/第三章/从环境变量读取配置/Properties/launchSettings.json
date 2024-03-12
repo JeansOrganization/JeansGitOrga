@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "从环境变量读取配置": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "jean_name": "jean1111",
+        "jean_proxy:address": "127.0.0.1",
+        "jean_proxy:ids:0": "2",
+        "jean_proxy:ids:1": "5",
+        "jean_proxy:ids:2": "7"
+      }
+    }
+  }
+}

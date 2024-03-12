@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DI魅力渐显_依赖注入")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17af8813b28b84d1c5176cf92322912bad5cded6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+64b871ddbd56d65a7516ac819bc2b772a25919b2")]
 [assembly: System.Reflection.AssemblyProductAttribute("DI魅力渐显_依赖注入")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DI魅力渐显_依赖注入")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

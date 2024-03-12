@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "JrJq45X9DbAEKWzqmRyPb7aG2mjviIMK/qTlP3OKJERzB+W/xR9+rsFkraV2BRm62q8koGGmLbwnmXP6CRXoOA==",
+  "success": true,
+  "projectFilePath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第三章\\从命令行读取配置\\从命令行读取配置.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.configuration.commandline\\8.0.0\\microsoft.extensions.configuration.commandline.8.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

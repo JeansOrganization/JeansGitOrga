@@ -1,0 +1,14 @@
+{
+  "profiles": {
+    "多配置源": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "jean_name": "jean",
+        "jean_address": "127.0.0.1",
+        "jean_proxy:ids:0": "3",
+        "jean_proxy:ids:1": "5",
+        "jean_proxy:ids:2": "7"
+      }
+    }
+  }
+}

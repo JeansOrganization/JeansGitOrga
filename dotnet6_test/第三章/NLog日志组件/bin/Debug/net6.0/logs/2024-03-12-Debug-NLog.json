@@ -1,0 +1,10 @@
+{ "time": "2024-03-12T17:00:45.8382403+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Test.Test", "level": "Debug" }
+{ "time": "2024-03-12T17:00:45.9301708+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Demo.Demo", "level": "Debug" }
+{ "time": "2024-03-12T17:00:45.9421059+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Test.Test", "level": "Debug" }
+{ "time": "2024-03-12T17:00:45.9571154+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Demo.Demo", "level": "Debug" }
+{ "time": "2024-03-12T17:00:45.9740038+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Test.Test", "level": "Debug" }
+{ "time": "2024-03-12T17:00:46.0190198+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Demo.Demo", "level": "Debug" }
+{ "time": "2024-03-12T17:00:46.0470976+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Test.Test", "level": "Debug" }
+{ "time": "2024-03-12T17:00:46.0762159+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Demo.Demo", "level": "Debug" }
+{ "time": "2024-03-12T17:00:46.0932729+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Test.Test", "level": "Debug" }
+{ "time": "2024-03-12T17:00:46.1084890+08:00", "message": "这是一条Debug消息", "logger": "SY.Windows.Demo.Demo", "level": "Debug" }

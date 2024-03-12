@@ -1,0 +1,50 @@
+【Trace】2024-03-12 17:00:45.9301 SY.Windows.Demo.Demo 这是一条Trace消息
+【Debug】2024-03-12 17:00:45.9301 SY.Windows.Demo.Demo 这是一条Debug消息
+【Info】2024-03-12 17:00:45.9301 SY.Windows.Demo.Demo 用户输入的年龄：abc
+【Warn】2024-03-12 17:00:45.9301 SY.Windows.Demo.Demo 这是一条Warning消息
+【Error】2024-03-12 17:00:45.9301 SY.Windows.Demo.Demo 这是一条Error消息
+【Error】2024-03-12 17:00:45.9421 SY.Windows.Demo.Demo 解析字符串为int失败System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at SY.Windows.Demo.Demo.demo() in D:\File\JeansGitOrga\dotnet6_test\第三章\NLog日志组件\Demo.cs:line 24
+【Fatal】2024-03-12 17:00:45.9421 SY.Windows.Demo.Demo 这是一条Critical消息
+【Trace】2024-03-12 17:00:45.9571 SY.Windows.Demo.Demo 这是一条Trace消息
+【Debug】2024-03-12 17:00:45.9571 SY.Windows.Demo.Demo 这是一条Debug消息
+【Info】2024-03-12 17:00:45.9571 SY.Windows.Demo.Demo 用户输入的年龄：abc
+【Warn】2024-03-12 17:00:45.9571 SY.Windows.Demo.Demo 这是一条Warning消息
+【Error】2024-03-12 17:00:45.9571 SY.Windows.Demo.Demo 这是一条Error消息
+【Error】2024-03-12 17:00:45.9740 SY.Windows.Demo.Demo 解析字符串为int失败System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at SY.Windows.Demo.Demo.demo() in D:\File\JeansGitOrga\dotnet6_test\第三章\NLog日志组件\Demo.cs:line 24
+【Fatal】2024-03-12 17:00:45.9740 SY.Windows.Demo.Demo 这是一条Critical消息
+【Trace】2024-03-12 17:00:46.0190 SY.Windows.Demo.Demo 这是一条Trace消息
+【Debug】2024-03-12 17:00:46.0190 SY.Windows.Demo.Demo 这是一条Debug消息
+【Info】2024-03-12 17:00:46.0190 SY.Windows.Demo.Demo 用户输入的年龄：abc
+【Warn】2024-03-12 17:00:46.0190 SY.Windows.Demo.Demo 这是一条Warning消息
+【Error】2024-03-12 17:00:46.0190 SY.Windows.Demo.Demo 这是一条Error消息
+【Error】2024-03-12 17:00:46.0470 SY.Windows.Demo.Demo 解析字符串为int失败System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at SY.Windows.Demo.Demo.demo() in D:\File\JeansGitOrga\dotnet6_test\第三章\NLog日志组件\Demo.cs:line 24
+【Fatal】2024-03-12 17:00:46.0470 SY.Windows.Demo.Demo 这是一条Critical消息
+【Trace】2024-03-12 17:00:46.0762 SY.Windows.Demo.Demo 这是一条Trace消息
+【Debug】2024-03-12 17:00:46.0762 SY.Windows.Demo.Demo 这是一条Debug消息
+【Info】2024-03-12 17:00:46.0762 SY.Windows.Demo.Demo 用户输入的年龄：abc
+【Warn】2024-03-12 17:00:46.0762 SY.Windows.Demo.Demo 这是一条Warning消息
+【Error】2024-03-12 17:00:46.0762 SY.Windows.Demo.Demo 这是一条Error消息
+【Error】2024-03-12 17:00:46.0932 SY.Windows.Demo.Demo 解析字符串为int失败System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at SY.Windows.Demo.Demo.demo() in D:\File\JeansGitOrga\dotnet6_test\第三章\NLog日志组件\Demo.cs:line 24
+【Fatal】2024-03-12 17:00:46.0932 SY.Windows.Demo.Demo 这是一条Critical消息
+【Trace】2024-03-12 17:00:46.1084 SY.Windows.Demo.Demo 这是一条Trace消息
+【Debug】2024-03-12 17:00:46.1084 SY.Windows.Demo.Demo 这是一条Debug消息
+【Info】2024-03-12 17:00:46.1084 SY.Windows.Demo.Demo 用户输入的年龄：abc
+【Warn】2024-03-12 17:00:46.1084 SY.Windows.Demo.Demo 这是一条Warning消息
+【Error】2024-03-12 17:00:46.1084 SY.Windows.Demo.Demo 这是一条Error消息
+【Error】2024-03-12 17:00:46.1084 SY.Windows.Demo.Demo 解析字符串为int失败System.FormatException: Input string was not in a correct format.
+   at System.Number.ThrowOverflowOrFormatException(ParsingStatus status, TypeCode type)
+   at System.Int32.Parse(String s)
+   at SY.Windows.Demo.Demo.demo() in D:\File\JeansGitOrga\dotnet6_test\第三章\NLog日志组件\Demo.cs:line 24
+【Fatal】2024-03-12 17:00:46.1084 SY.Windows.Demo.Demo 这是一条Critical消息

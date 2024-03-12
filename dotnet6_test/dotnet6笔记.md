@@ -200,9 +200,203 @@
   由于AddScoped对象是在请求的时候创建的，所以不能在AddSingleton对象中使用，甚至也不能在AddTransient对象中使用
   ```
 
+## 配置系统
+
+### 从json文件中读取配置
+- 需引用包:Microsoft.Extensions.Configuration、Microsoft.Extensions.Configuration.Json
+- 通过ConfigurationBuilder引入json配置文件创建配置根节点configRoot(json文件需设置成较新时复制)
+- 获取数据方式
+  1. configRoot["name"]
+  2. configRoot.GetSection("proxy:address").Value
+- 将根节点获取到的某个对象节点绑定成对象 (需要引入Microsoft.Extensions.Configuration.Binder包)
+  ```C#
+  /* 通过ConfigurationBuilder引入json配置文件创建配置根节点configRoot (需要引入Microsoft.Extensions.Configuration.Json包) */
+  /* AddJsonFile() 中optional:false表示文件不可选，如果找寻不到文件会报错，reloadOnChange表示更改后是否实时更新 */
+  ConfigurationBuilder configBuilder = new ConfigurationBuilder();
+  configBuilder.AddJsonFile("config.json",optional:false,reloadOnChange:false);
+  IConfigurationRoot configRoot = configBuilder.Build();
+
+  /* 通过根节点获取某个子节点的数据 第一层configRoot["name"]  多层configRoot.GetSection("proxy:address") */
+  Console.WriteLine("\n------①------");
+  string name = configRoot["name"];
+  var address0 = configRoot["proxy:address"];
+  var address = configRoot.GetSection("proxy:address").Value; //多层规范写法
+  var port = configRoot.GetSection("proxy:port").Value;
+  Console.WriteLine(name + " " + address0 + " " + address + " " + port);
+
+  /* 将根节点获取到的某个对象节点绑定成对象 (需要引入Microsoft.Extensions.Configuration.Binder包) */
+  Console.WriteLine("\n------②------");
+  Config config = configRoot.GetSection("proxy").Get<Config>();
+  Console.WriteLine("config.address:" + config.address + "," +
+      "config.port:" + config.port + "," +
+      "config.username:" + config.username + "," +
+      "config.password:" + config.password);
+  ```
+
+### 从命令行引入配置
+- 需引用包:Microsoft.Extensions.Configuration.CommandLine
+- 在项目根目录启动命令行,输入***.exe key=value key1:key2=value2
+```C#
+/* 在项目根目录启动命令行,输入***.exe key=value key1:key2=value2 */
+/* 从命令行读取配置.exe server=127.0.0.1 proxy:username=jean
+    输出:server:127.0.0.1,username:jean */
+ConfigurationBuilder configBuilder = new ConfigurationBuilder();
+var config = configBuilder.AddCommandLine(args).Build();
+var server = config["server"];
+var username = config.GetSection("proxy:username").Value;
+Console.WriteLine($"server:{server},username:{username}");
+```
+
+### 从环境变量引入配置
+- 需引用包:Microsoft.Extensions.Configuration.Environmentvariables
+- AddEnvironmentVariables(可选填前缀prefix,用于区分自己设置的环境变量与其他环境变量)
+```C#
+ConfigurationBuilder configBuilder = new ConfigurationBuilder();
+var config = configBuilder.AddEnvironmentVariables(prefix: "jean_").Build();
+string name = config["name"];
+string address = config.GetSection("proxy:address").Value;
+int[] ids = config.GetSection("proxy:ids").Get<int[]>();
+Console.WriteLine($"name:{name},address:{address}");
+foreach(int id in ids)
+{
+    Console.Write(id+",");
+}
+```
 
 
+### 配置结合依赖注入
+- 需引用包:Microsoft.Extensions.Configuration.Binder、Microsoft.Extensions.Options
+- services.AddOptions() 注册服务IOptions<T>,IOptionsSnapshot<T>,IOptionsMonitor<T>,IOptionsFactory<T>,IOptionsMonitorCache<T>
+  1. IOptions<T>:在配置改变后，我们不能读取新的值，必须重启程序。
+  2. IOptionsMonitor<T>:配置改变后，可以读到新的值。
+  3. IOptionsSnapshot<T>:配置改变后，可以读到新的值，与上者不同的是，上者在同一范围内会保持一致性。(常用)
+- services.Configure<T> 通过lambda表达式绑定配置对象
+```C#
+/* AddOptions() 注册服务IOptions<T>,IOptionsSnapshot<T>,IOptionsMonitor<T>,IOptionsFactory<T>,IOptionsMonitorCache<T> 
+ (需引入Microsoft.Extensions.Options包)*/
+/* Configure<T> 通过lambda表达式绑定配置对象(需引入Microsoft.Extensions.Configuration.Binder) */
+ServiceCollection services = new ServiceCollection();
+services.AddOptions()
+    .Configure<DbSetting>(e => configRoot.GetSection("DB").Bind(e))
+    .Configure<SmtpSetting>(e => configRoot.GetSection("Smtp").Bind(e));
 
+namespace 选项方式读取配置
+{
+    public class Demo
+    {
+        public readonly IOptionsSnapshot<DbSetting> DbSetting;
+        public readonly IOptionsSnapshot<SmtpSetting> SmtpSetting;
+        public Demo(IOptionsSnapshot<DbSetting> DbSetting, IOptionsSnapshot<SmtpSetting> SmtpSetting)
+        {
+            this.DbSetting = DbSetting;
+            this.SmtpSetting = SmtpSetting;
+        }
+    }
+}
+```
+
+## 日志系统
+
+### 基本使用
+- 需引用包:Microsoft.Extensions.Logging、Microsoft.Extensions.Logging.*(提供者)
+- 日志级别(LogLevel):Trace< Debug< Information< Warning< Error< Critical
+- 日志提供者(LoggingProvider):把日志输出到哪里。控制台、文件、数据库等
+- 第三方日志组件(如：NLog、Serialog、Log4net)
+```C#
+/* 日志注入 */
+public readonly ILogger<Test> logger;
+public Test(ILogger<Test> logger)
+{
+    this.logger = logger;
+}
+
+/* 获取sppsettings.json配置 */
+ConfigurationBuilder configBuilder = new ConfigurationBuilder();
+var config = configBuilder.AddJsonFile("appsettings.json", false, true).Build();
+
+ServiceCollection services = new ServiceCollection();
+services.AddLogging(logBuilder =>
+{
+    /* 添加日志提供者 */
+    logBuilder.AddConsole();
+    /* 将Logging配置绑定到Logger中，就可以通过配置操作过滤器、日志等级 */
+    logBuilder.AddConfiguration(config.GetSection("Logging"));
+    /* 设置允许展示的最小的日志等级 */
+    logBuilder.SetMinimumLevel(LogLevel.Trace);
+    /* provider校验日志提供者的名称，category校验日志发起方的命名空间，logLevel校验日志等级 */
+    logBuilder.AddFilter((provider,category,logLevel) => {
+        if(provider.Contains("Console") &&
+            category.Contains("Test") &&
+            logLevel >= LogLevel.Information)
+        {
+            return true;
+        }
+        return false;
+    });
+});
+```
+```JSON
+/* appsettings.json */
+{
+  "Logging": {
+    "Console": {
+      "LogLevel": {
+        "Default": "Trace",
+        "SY.Windows.xxx.Test": "Debug",
+        "SN.Windows.xxx.Demo": "Error"
+      }
+    },
+    "LogLevel": {
+      "Default": "Information",
+    }
+  }
+}
+```
+
+### Nlog(第三方日志组件)
+- 需引用包:NLog.Extensions.Logging
+- 配置nlog.config 再调用AddNLog()
+```C#
+ServiceCollection services = new ServiceCollection();
+services.AddLogging(logBuilder =>
+{
+    //logBuilder.AddConsole();
+    logBuilder.AddNLog();
+});
+
+/* nlog.config */
+<?xml version="1.0" ?>
+<nlog xmlns="http://www.nlog-project.org/schemas/NLog.xsd"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<!-- logger:发起方fullName message:日志消息 basedir:项目根路径 shortdate:年月日时分秒 -->
+	<targets>
+		<target name="file" xsi:type="File"
+            layout="【${level}】${longdate} ${logger} ${message}${exception:format=ToString}"
+            fileName="${basedir}/logs/${shortdate}-NLog.txt"
+            keepFileOpen="true"
+            encoding="utf-8" />
+		<target name="jsonfile" xsi:type="File" fileName="${basedir}/logs/${shortdate}-${level}-NLog.json">
+			<layout xsi:type="JsonLayout">
+				<attribute name="time" layout="${date:format=O}" />
+				<attribute name="message" layout="${message}" />
+				<attribute name="logger" layout="${logger}"/>
+				<attribute name="level" layout="${level}"/>
+			</layout>
+		</target>
+		<target name="console" xsi:type="Console"
+            layout="【${level}】${longdate} ${logger} ${message}${exception:format=ToString}"/>
+	</targets>
+
+	<!-- level:Trace、Debug、Info、Warn、Error、Fatal -->
+	<!-- name为fullName的筛选 final="true"表示如果符合这条规则，则不需要再往后匹配规则 writeTo对应target的name -->
+	<rules>
+		<logger name="SY.Windows.*" minlevel="Debug" writeTo="jsonfile" />
+		<logger name="SY.Windows.Demo.*" minlevel="Debug" maxlevel="Fatal" writeTo="file" final="true"/>
+		<logger name="SY.Windows.Test.*" minlevel="Debug" writeTo="console"/>
+	</rules>
+</nlog>
+```
 
 
 # 额外记录

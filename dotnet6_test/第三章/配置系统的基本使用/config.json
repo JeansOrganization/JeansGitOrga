@@ -1,0 +1,10 @@
+{
+  "name": "jean",
+  "age" : 18,
+  "proxy": {
+    "address": "123456.1.1",
+    "port": "3305",
+    "username": "Jean",
+    "password": "123456"
+  }
+}
