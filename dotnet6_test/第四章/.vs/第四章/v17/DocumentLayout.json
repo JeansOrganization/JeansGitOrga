@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8EE0078F-7DEE-41D2-BBFB-8E9B163A7049}|\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE\\\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u7B2C\u4E00\u4E2Aefcore\u9879\u76EE\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8EE0078F-7DEE-41D2-BBFB-8E9B163A7049}|\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE\\\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE.csproj|solutionrelative:\u7B2C\u4E00\u4E2Aefcore\u9879\u76EE\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|solutionrelative:\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\userconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|solutionrelative:\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|solutionrelative:\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|solutionrelative:\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\mysqlcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1B2AE9DE-2405-4D59-A0F7-4D0B55A4AD35}|\u5355\u5411\u5BFC\u822A\u673A\u5236\\\u5355\u5411\u5BFC\u822A\u673A\u5236.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u5355\u5411\u5BFC\u822A\u673A\u5236\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1B2AE9DE-2405-4D59-A0F7-4D0B55A4AD35}|\u5355\u5411\u5BFC\u822A\u673A\u5236\\\u5355\u5411\u5BFC\u822A\u673A\u5236.csproj|solutionrelative:\u5355\u5411\u5BFC\u822A\u673A\u5236\\testdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092138_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092138_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\migrations\\20240314092253_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F66AE67C-3AD3-4D02-9BC1-1EDB6972C4D5}|\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811.csproj|solutionrelative:\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\migrations\\20240314092253_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,20 +38,95 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\User.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\User.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\User.cs",
+              "RelativeToolTip": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\User.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-15T03:25:29.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserConfig.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\UserConfig.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\UserConfig.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\UserConfig.cs",
+              "RelativeToolTip": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\UserConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T09:59:01.596Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240314092253_init.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092253_init.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092253_init.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092253_init.cs",
+              "RelativeToolTip": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092253_init.cs",
+              "ViewState": "AQIAAAoAAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T09:22:53.451Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MySqlContext.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\MySqlContext.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\MySqlContext.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\MySqlContext.cs",
+              "RelativeToolTip": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\MySqlContext.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T09:22:18.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE\\Program.cs",
-              "RelativeDocumentMoniker": "\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE\\Program.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE\\Program.cs",
-              "RelativeToolTip": "\u7B2C\u4E00\u4E2AEFCore\u9879\u76EE\\Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Program.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Program.cs",
+              "RelativeToolTip": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T09:22:15.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20240314092138_init.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092138_init.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092138_init.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092138_init.cs",
+              "RelativeToolTip": "\u81EA\u5F15\u7528\u7684\u7EC4\u7EC7\u7ED3\u6784\u6811\\Migrations\\20240314092138_init.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-12T09:17:25.909Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-14T09:21:38.398Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TestDbContext.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u5355\u5411\u5BFC\u822A\u673A\u5236\\TestDbContext.cs",
+              "RelativeDocumentMoniker": "\u5355\u5411\u5BFC\u822A\u673A\u5236\\TestDbContext.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u56DB\u7AE0\\\u5355\u5411\u5BFC\u822A\u673A\u5236\\TestDbContext.cs",
+              "RelativeToolTip": "\u5355\u5411\u5BFC\u822A\u673A\u5236\\TestDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T09:18:54.781Z"
             }
           ]
         }

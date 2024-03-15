@@ -5,36 +5,30 @@
 ## 新旧using
 
 ### using新用法
-  ```C#
-
-  var connStr = "server=127.0.0.1;Port=3306;user id=Jean;password=123456;database=jeandb";
-  using var conn = new MySqlConnection(connStr);
-
-  conn.Open();
-  using var command = conn.CreateCommand();
-  command.CommandText = "select * from fa_bazi_order";
-
-  ```
+```C#
+var connStr = "server=127.0.0.1;Port=3306;user id=Jean;password=123456;database=jeandb";
+using var conn = new MySqlConnection(connStr);
+conn.Open();
+using var command = conn.CreateCommand();
+command.CommandText = "select * from fa_bazi_order";
+```
 
 ### using旧用法
-  ```C#
-
-  var connStr = "server=127.0.0.1;Port=3306;user id=Jean;password=123456;database=jeandb";
-  using (var conn = new MySqlConnection(connStr))
-  {
-      conn.Open();
-      using (command = conn.CreateCommand()){
-          command.CommandText = "select * from fa_bazi_order";
-          DataTable dt = new DataTable();
-          using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
-          {
-              adapter.Fill(dt);
-          }
-      }
-  }
-
-  ```
-
+```C#
+var connStr = "server=127.0.0.1;Port=3306;user id=Jean;password=123456;database=jeandb";
+using (var conn = new MySqlConnection(connStr))
+{
+    conn.Open();
+    using (command = conn.CreateCommand()){
+        command.CommandText = "select * from fa_bazi_order";
+        DataTable dt = new DataTable();
+        using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
+        {
+            adapter.Fill(dt);
+        }
+    }
+}
+```
 
 ## 记录类型
 
@@ -46,48 +40,43 @@
 - records具有值语义。当比较两个records的实例时，比较的是这些实例的属性而非引用。(两个创建的实例只要属性相等实例就相等)
 - 更适合用来声明一些简单的数据对象，如值对象和DTO
 
-  ```C# 
+```C# 
+## 对象相等性(值语义)
+public record struct Person(string firstName, string lastName, int age); ==>指定声明struct
+public record Person(string firstName, string lastName); ==>默认声明class
+Person p1 =new("Jean","Lee");
+Person p2 =new("Jean","Lee");
+Console.WriteLine(p1 == p2); ==> true
 
-  ## 对象相等性(值语义)
-  public record struct Person(string firstName, string lastName, int age); ==>指定声明struct
-  public record Person(string firstName, string lastName); ==>默认声明class
-  Person p1 =new("Jean","Lee");
-  Person p2 =new("Jean","Lee");
-  Console.WriteLine(p1 == p2); ==> true
-  
-  ## record构造括号内的属性初始化后不可修改(init)
-  p1.firstName = "DEQIANG"; ==>会报错，
+## record构造括号内的属性初始化后不可修改(init)
+p1.firstName = "DEQIANG"; ==>会报错，
 
-  ## record可以像普通类一样扩展可变更的属性和自定义的方法
-  public record Person(string firstName, string lastName, int age)
-  {
-      public required string PhoneNumber {get;set;}
-      public static IEnumerable GetAll()
-      {
-          yield return newPerson("Jean","Lee",18) { PhoneNumber ="123456789"};
-          yield return newPerson("Lucy","Fei",20) { PhoneNumber ="123456789" };
-          yield return newPerson("Luffi","Monkey",20) { PhoneNumber ="123456789" }; ;
-      }
-      public string GetDisplayName() => $"{firstName} ({lastName})";
-  };
+## record可以像普通类一样扩展可变更的属性和自定义的方法
+public record Person(string firstName, string lastName, int age)
+{
+    public required string PhoneNumber {get;set;}
+    public static IEnumerable GetAll()
+    {
+        yield return newPerson("Jean","Lee",18) { PhoneNumber ="123456789"};
+        yield return newPerson("Lucy","Fei",20) { PhoneNumber ="123456789" };
+        yield return newPerson("Luffi","Monkey",20) { PhoneNumber ="123456789" }; ;
+    }
+    public string GetDisplayName() => $"{firstName} ({lastName})";
+};
 
-  ## record可以通过解构，将对象解构为元组，方便一次性获取record中的初始构造属性值
-  Person p1 =new("Jean","Lee");
-  var (firstName,lastName) = p1;
-
-  ```
+## record可以通过解构，将对象解构为元组，方便一次性获取record中的初始构造属性值
+Person p1 =new("Jean","Lee");
+var (firstName,lastName) = p1;
+```
   
 ### with
 - 当使用不可变的数据时，with可以从现存的值创建新值来呈现一个新状态(避免重新进行赋值，只修改需要修改的属性)
 - 如果只是进行拷贝，不需要修改属性，那么无须指定任何属性修改
-
-  ```C#
-  
-  var person = new Person { FirstName = "Mads", LastName = "Nielsen" };
-  var otherPerson = person with { LastName = "Torgersen" };
-  var clonePerson = person with {}
-
-  ```
+```C#
+var person = new Person { FirstName = "Mads", LastName = "Nielsen" };
+var otherPerson = person with { LastName = "Torgersen" };
+var clonePerson = person with {}
+```
 
 ## 异步编程
 
@@ -95,18 +84,18 @@
 - await与wait()区别: await是异步等待，wait()是同步等待  await执行时线程返回线程池，执行完成后再重新获取新的线程，wait()始终在同一线程上会阻塞进程
 - await需要与async配套使用
 - 异步方法不添加await将不等待异步方法的执行，直接继续执行代码，容易出现进程冲突
-  ```C#
-  string fileName = "d:/test/1.txt";
-  File.Delete(fileName);
-  string text = new string('a', 100000000);
-  File.WriteAllTextAsync(fileName, text);
-  string s = await File.ReadAllTextAsync(fileName);
-  Console.WriteLine(s);
-  /* 
-  * 调用await 或者.wait()会等待任务Task执行结束才往下执行其他内容
-  * 不加await 或者.wait()容易会出现线程冲突
-  */
-  ```
+```C#
+string fileName = "d:/test/1.txt";
+File.Delete(fileName);
+string text = new string('a', 100000000);
+File.WriteAllTextAsync(fileName, text);
+string s = await File.ReadAllTextAsync(fileName);
+Console.WriteLine(s);
+/* 
+* 调用await 或者.wait()会等待任务Task执行结束才往下执行其他内容
+* 不加await 或者.wait()容易会出现线程冲突
+*/
+```
 
 ### Task.Delay() 和 Thread.Sleep()
 - Thread.Sleep 是同步延迟，Task.Delay异步延迟。
@@ -115,71 +104,70 @@
 - Task.Delay() 比 Thread.Sleep() 消耗更多的资源，但是Task.Delay()可用于为方法返回Task类型；或者根据CancellationToken取消标记动态取消等待
 - Task.Delay() 实质创建一个运行给定时间的任务， Thread.Sleep() 使当前线程休眠给定时间。
 
-  ```C#
-  using HttpClient httpClient = new HttpClient();
-  string h1 = await httpClient.GetStringAsync("http://www.baidu.com");
-  Console.WriteLine(h1);
-  Thread.Sleep(3000); //同步延迟:会阻塞进程
-  string h2 = await httpClient.GetStringAsync("https://www.ptpress.com.cn");
-  Console.WriteLine(h2);
-  await Task.Delay(3000); //异步延迟:不会阻塞进程
-  string h3 = await httpClient.GetStringAsync("https://www.rymooc.com");
-  Console.WriteLine(h3);
-  ```
+```C#
+using HttpClient httpClient = new HttpClient();
+string h1 = await httpClient.GetStringAsync("http://www.baidu.com");
+Console.WriteLine(h1);
+Thread.Sleep(3000); //同步延迟:会阻塞进程
+string h2 = await httpClient.GetStringAsync("https://www.ptpress.com.cn");
+Console.WriteLine(h2);
+await Task.Delay(3000); //异步延迟:不会阻塞进程
+string h3 = await httpClient.GetStringAsync("https://www.rymooc.com");
+Console.WriteLine(h3);
+```
 
 ### async背后的线程切换
 使用await+async异步方法时，当前线程会放置回线程池，等到异步方法执行完成，要继续往下执行时再从线程池里获取新的线程，大概率与之前线程不是同一线程，可用Thread.CurrentThread.ManagedThreadId去判断
 
 ### 不用async的异步方法
-  ```C#
-  string content = await ReadFileAsync(num);
-  async Task<string> ReadFileAsync(int num)
-  {
-      switch (num)
-      {
-          case 0:
-              return await File.ReadAllTextAsync("d:/test/a.txt");
-          case 1:
-              return await File.ReadAllTextAsync("d:/test/b.txt");
-          default:
-              return "没有此选项";
-      }
-  }
-  Task<string> ReadFileAsync(int num)
-  {
-      switch (num)
-      {
-          /* 避免了拆箱之后再装箱，直接将Task<string>return出去，由调用方进行await获取数据 */
-          case 0:
-              return File.ReadAllTextAsync("d:/test/a.txt");
-          case 1:
-              return File.ReadAllTextAsync("d:/test/b.txt");
-          default:
-              /* 手动创建的Task对象，Task.FromResult(content) 和 Task.CompletedTask */
-              return Task.FromResult("没有此选项");
-              // return Task.CompletedTask;
-      }
-  }
-  ```
+```C#
+string content = await ReadFileAsync(num);
+async Task<string> ReadFileAsync(int num)
+{
+    switch (num)
+    {
+        case 0:
+            return await File.ReadAllTextAsync("d:/test/a.txt");
+        case 1:
+            return await File.ReadAllTextAsync("d:/test/b.txt");
+        default:
+            return "没有此选项";
+    }
+}
+Task<string> ReadFileAsync(int num)
+{
+    switch (num)
+    {
+        /* 避免了拆箱之后再装箱，直接将Task<string>return出去，由调用方进行await获取数据 */
+        case 0:
+            return File.ReadAllTextAsync("d:/test/a.txt");
+        case 1:
+            return File.ReadAllTextAsync("d:/test/b.txt");
+        default:
+            /* 手动创建的Task对象，Task.FromResult(content) 和 Task.CompletedTask */
+            return Task.FromResult("没有此选项");
+            // return Task.CompletedTask;
+    }
+}
+```
 
 ### Task.WhenAll 和 Task.WhenAny
 - Task.WhenAll方法接受一个Task数组作为参数，返回一个新的Task，该Task会在所有传入的Task都完成后完成。
 - Task.WhenAny方法也接受一个Task数组作为参数，返回一个新的Task，该Task会在任意一个传入的Task完成后完成。
-  ```C#
-  /* Task.WhenAll()会等待task全部完成后再完成返回Task<result[]> */
-  string[] strArr = await Task.WhenAll(task1, task2, task3);
-  Console.WriteLine("5-thread" + Thread.CurrentThread.ManagedThreadId);
-  foreach (string str in strArr)
-  {
-      Console.WriteLine(str);
-      Console.WriteLine();
-  }
+```C#
+/* Task.WhenAll()会等待task全部完成后再完成返回Task<result[]> */
+string[] strArr = await Task.WhenAll(task1, task2, task3);
+Console.WriteLine("5-thread" + Thread.CurrentThread.ManagedThreadId);
+foreach (string str in strArr)
+{
+    Console.WriteLine(str);
+    Console.WriteLine();
+}
 
-  /* Task.WhenAny()只要任意一个Task执行成功就完成返回Task<Task<result>> */
-  string result = await await Task.WhenAny(task1, task2, task3);
-  Console.WriteLine(result);
-
-  ```
+/* Task.WhenAny()只要任意一个Task执行成功就完成返回Task<Task<result>> */
+string result = await await Task.WhenAny(task1, task2, task3);
+Console.WriteLine(result);
+```
 
 # 第三章
 
@@ -190,15 +178,15 @@
 - AddTransient: 每次service请求都是获得不同的实例，暂时性模式：暂时性对象始终不同，无论是不是同一个请求（同一个请求里的不同服务）同一个客户端，每次都是创建新的实例
 - AddScoped: 对于同一个请求返回同一个实例，不同的请求返回不同的实例，作用域模式：作用域对象在一个客户端请求中是相同的，但在多个客户端请求中是不同的
 - AddSingleton: 每次都是获得同一个实例， 单一实例模式：单一实例对象对每个对象和每个请求都是相同的，可以说是不同客户端不同请求都是相同的
-  ```
-  AddSingleton的生命周期：项目启动-项目关闭 相当于静态类 只会有一个
+```
+AddSingleton的生命周期：项目启动-项目关闭 相当于静态类 只会有一个
 
-  AddScoped的生命周期：请求开始-请求结束 在这次请求中获取的对象都是同一个
+AddScoped的生命周期：请求开始-请求结束 在这次请求中获取的对象都是同一个
 
-  AddTransient的生命周期：请求获取-（GC回收-主动释放） 每一次获取的对象都不是同一个
+AddTransient的生命周期：请求获取-（GC回收-主动释放） 每一次获取的对象都不是同一个
 
-  由于AddScoped对象是在请求的时候创建的，所以不能在AddSingleton对象中使用，甚至也不能在AddTransient对象中使用
-  ```
+由于AddScoped对象是在请求的时候创建的，所以不能在AddSingleton对象中使用，甚至也不能在AddTransient对象中使用
+```
 
 ## 配置系统
 
@@ -209,29 +197,29 @@
   1. configRoot["name"]
   2. configRoot.GetSection("proxy:address").Value
 - 将根节点获取到的某个对象节点绑定成对象 (需要引入Microsoft.Extensions.Configuration.Binder包)
-  ```C#
-  /* 通过ConfigurationBuilder引入json配置文件创建配置根节点configRoot (需要引入Microsoft.Extensions.Configuration.Json包) */
-  /* AddJsonFile() 中optional:false表示文件不可选，如果找寻不到文件会报错，reloadOnChange表示更改后是否实时更新 */
-  ConfigurationBuilder configBuilder = new ConfigurationBuilder();
-  configBuilder.AddJsonFile("config.json",optional:false,reloadOnChange:false);
-  IConfigurationRoot configRoot = configBuilder.Build();
+```C#
+/* 通过ConfigurationBuilder引入json配置文件创建配置根节点configRoot (需要引入Microsoft.Extensions.Configuration.Json包) */
+/* AddJsonFile() 中optional:false表示文件不可选，如果找寻不到文件会报错，reloadOnChange表示更改后是否实时更新 */
+ConfigurationBuilder configBuilder = new ConfigurationBuilder();
+configBuilder.AddJsonFile("config.json",optional:false,reloadOnChange:false);
+IConfigurationRoot configRoot = configBuilder.Build();
 
-  /* 通过根节点获取某个子节点的数据 第一层configRoot["name"]  多层configRoot.GetSection("proxy:address") */
-  Console.WriteLine("\n------①------");
-  string name = configRoot["name"];
-  var address0 = configRoot["proxy:address"];
-  var address = configRoot.GetSection("proxy:address").Value; //多层规范写法
-  var port = configRoot.GetSection("proxy:port").Value;
-  Console.WriteLine(name + " " + address0 + " " + address + " " + port);
+/* 通过根节点获取某个子节点的数据 第一层configRoot["name"]  多层configRoot.GetSection("proxy:address") */
+Console.WriteLine("\n------①------");
+string name = configRoot["name"];
+var address0 = configRoot["proxy:address"];
+var address = configRoot.GetSection("proxy:address").Value; //多层规范写法
+var port = configRoot.GetSection("proxy:port").Value;
+Console.WriteLine(name + " " + address0 + " " + address + " " + port);
 
-  /* 将根节点获取到的某个对象节点绑定成对象 (需要引入Microsoft.Extensions.Configuration.Binder包) */
-  Console.WriteLine("\n------②------");
-  Config config = configRoot.GetSection("proxy").Get<Config>();
-  Console.WriteLine("config.address:" + config.address + "," +
-      "config.port:" + config.port + "," +
-      "config.username:" + config.username + "," +
-      "config.password:" + config.password);
-  ```
+/* 将根节点获取到的某个对象节点绑定成对象 (需要引入Microsoft.Extensions.Configuration.Binder包) */
+Console.WriteLine("\n------②------");
+Config config = configRoot.GetSection("proxy").Get<Config>();
+Console.WriteLine("config.address:" + config.address + "," +
+    "config.port:" + config.port + "," +
+    "config.username:" + config.username + "," +
+    "config.password:" + config.password);
+```
 
 ### 从命令行引入配置
 - 需引用包:Microsoft.Extensions.Configuration.CommandLine
@@ -398,6 +386,312 @@ services.AddLogging(logBuilder =>
 </nlog>
 ```
 
+# 第四章
+
+## EFcore
+Entity Framework Core(简称EF Core) 是.NET Core中的ORM (object relational mapping,对象关系映射) 框架。它可以让开发者面向对象的方式进行数据库操作。
+ORM和ADO.NET是不一样的，ORM只是对ADO.NET的封装
+
+### 数据迁移准备
+- 需引用包Microsoft.EntityFrameworkCore.SqlServer(不同数据库需要安装不同的包)、Microsoft.EntityFrameworkCore.Tools
+- 创建实体类<T>以及创建<T>EntityConfig(实现IEntityTypeConfiguration<T>)，用于配置实体类与数据库的对应关系，如不存在配置类则按默认处理
+```C#
+public class BookEntityConfig : IEntityTypeConfiguration<Book>
+{
+    public void Configure(EntityTypeBuilder<Book> builder)
+    {
+        builder.ToTable("T_Book");
+        builder.Property(r => r.id).HasComment("主键").IsRequired();
+        builder.Property(r => r.name).HasMaxLength(50).HasComment("书名").IsRequired();
+        builder.Property(r => r.price).HasComment("价格").HasDefaultValue(0);
+    }
+}
+public class Book
+{
+    public int id { get; set; }
+    public string name { get; set; }
+    public double price { get; set; }
+}
+```
+- 创建一个继承DbContext的*DbContext类
+```C#
+public class MyDbContext : DbContext
+{
+    public DbSet<Book> Books { get; set; }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        /* 配置所关联的数据库信息，如不存在则新建 */
+        string connStr = "server=127.0.0.1;port=3306;user=Jean;password=123456;database=jeandb2";
+        optionsBuilder.UseMySql(connStr, ServerVersion.Parse("8.2.0"));//new MySqlServerVersion(new Version(8.2.0)));
+
+    }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
+    }
+}
+```
+
+### 日志记录
+- 简单的日志记录 LogTo
+```C#
+protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+{
+    string connStr = "server=127.0.0.1;port=3306;user=Jean;password=123456;database=jeandb2";
+    optionsBuilder.UseMySql(connStr, ServerVersion.Parse("8.2.0"));
+    //optionsBuilder.LogTo(Console.WriteLine);
+    /* Console.WriteLine、Debug.WriteLine */
+    optionsBuilder.LogTo(msg => _logStream.WriteLine(msg.Replace("`","")) , 
+        new[] { DbLoggerCategory.Database.Command.Name },
+        LogLevel.Information);
+}
+```
+
+### EF Core两种配置方式
+- Data Annotation(数据注解):通过.NET提供的Attribute对实体类，属性等进行标注的方式来实现实体类配置
+- Fluent API:通过实现IEntityTypeConfiguration<T>来创建表配置文件<T>Config,实现接口方法Configure在里面配置表的各种配置
+- 看起来很容易发现使用Data Annotation方法更简单，只需要在实体上加入Attribute即可，不用像Fluent API一样写单独的配置类，但是Fluent API是官方推荐的用法，原因如下:
+1. Fluent API能够更好的进行职责划分，所有和数据库相关的内容都放在配置类中。
+2. Fluent API和Data Annotation可以同时使用，但是Fluent API优先级高于Data Annotation
+```C#
+/* Data Annotation */
+[Table("T_Teacher")]//配置表名
+public class Teacher
+{
+    public Guid id { get; set; } //id默认Guid类型
+    [MaxLength(40)]
+    public string name { get; set; }
+    [DataType("int")] 
+    public double salary { get; set; }
+    [Column("inputDate")] //配置列名
+    public DateTime indate { get; set; }
+}
+/* Fluent API */
+public class TeacherConfig : IEntityTypeConfiguration<Teacher>
+{
+    public void Configure(EntityTypeBuilder<Teacher> builder)
+    {
+        builder.ToTable("T_Teacher");
+        builder.Property(r=>r.Name).HasMaxLength(256).IsRequired();
+        //builder.Property("Name").HasMaxLength(256).IsRequired();
+    }
+}
+```
+
+### long自增与Guid的区别
+```
+long自增:
+优点：自增long类型的使用非常简单，所有主流数据库都内置了对自增列的支持。新插入的数据都会由数据库自动赋值一个新增的、不重复的主键。而且占用磁盘空间小，可读性强。
+缺点：自增long类型的主键在数据库迁移以及分布式系统（如分库分表，数据库集群）中使用非常麻烦，而且在高并发插入的时候性能比较差。
+注:由于自增列的值一般是由数据库自动生成的，因此无法提前获得新增数据行的主键值，我们需要把数据保存到数据库后才能获得主键值
+
+Guid:
+优点：简单，高并发，全局唯一
+缺点：磁盘占用空间大
+注:由于Guid算法生成的值是不连续的，因此不能把Guid类型的主键设置为聚集索引，因为聚集索引是按顺序保存主键的，在插入Guid类型主键的时候，它将导致新插入的每天数据都要经历查找合适位置的过程，当数据量特别大的时候性能就很特别糟糕。Guid id的值在加入context时就已经生成，不需要保存数据库之后
+```
+
+### 关系配置
+```C#
+public void Configure(EntityTypeBuilder<Comment> builder)
+{
+    /* 一对多 */
+    builder.HasOne<Article>(r => r.article).WithMany(t => t.comments).IsRequired()
+        .HasForeignKey(r=>r.articleid);
+    /* 一对一 */
+    builder.HasOne(r => r.Delivery).WithOne(t => t.Order).HasForeignKey<Delivery>(r=>r.OrderId).IsRequired();
+    /* 多对多 需要使用.UsingEntity()配置中间表，无需创建中间表实体类 */
+    builder.HasMany(r => r.Teachers).WithMany(r => r.Students).UsingEntity("T_TeacherToStudent");
+    /* 单向导航 */
+		builder.HasOne<User>(l => l.Requester).WithMany();
+		builder.HasOne<User>(l => l.Approver).WithMany();
+    /* 自引用组织结构树 */
+    builder.HasOne<User>(r => r.Patent).WithMany(r=>r.Childrens).HasForeignKey(r=>r.ParentId);
+}
+
+/* 关联查询时，需要用.Include()将需要关联的数据包含进来 */
+var Articles = ct.Articles.Include(r=>r.comments).Where(r => r.comments.Any(t => t.message.Contains("棒")));
+foreach (var a in Articles)
+{
+    Console.WriteLine(a.title + ":" + a.content);
+    foreach (var c in a.comments)
+    {
+        Console.WriteLine(c.message);
+    }
+}
+
+/* 需注意 */
+void ConsoleUserAll(User user, MySqlContext context, int level = 1)
+{
+    Console.WriteLine($"LEVEL{level}:{user.Name}");
+    /* 由于IQueryable在遍历时是以IReader一条一条读取的，数据库链接占用较长，此时再递归调用再进行遍历会报错[This MySqlConnection is already in use] */
+    //var childrens = context.Users.Where(r => r.ParentId == user.Id);
+    var childrens = context.Users.Where(r => r.ParentId == user.Id).ToList();
+    foreach (var child in childrens)
+    {
+        ConsoleUserAll(child, context, level + 1);
+    }
+}
+
+```
+
+# 第五章
+
+## EFCore
+
+### IQueryable底层读取数据
+- IQueryable遍历时，是调用DataReader获取数据,使用ToArray()、ToArrayAsync()、ToList()、ToListAsync()等方法时调用DataTable
+- 使用DataReader优点与缺点
+1. 优点:节省客户端内存
+2. 缺点:处理慢的话会长时间占用数据库链接
+
+### 自定义sql语句执行方法
+- 非查询语句:context.Database.ExecuteSqlInterpolated(),入参传入formatString对象
+- 查询语句:context.Books.FromSqlInterpolated(),入参传入formatString对象
+- 任意语句:context.Database.GetDbConnection(),获取数据库连接，采用传统方式获取数据或者更新数据
+```C#
+#region ExecuteSqlInterpolatedAsync(控制台插入程序)
+while (true)
+{
+	string name="";
+   while (name.Equals(""))
+	{
+       Console.WriteLine("请输入您的姓名(按Enter确认):");
+       name = Console.ReadLine()?.Trim();
+		if(name.Equals("")) Console.WriteLine("姓名不能为空！！");
+   }
+
+   string bookName = "";
+   while (bookName.Equals(""))
+   {
+       Console.WriteLine("请输入您要售卖的书(按Enter确认):");
+       bookName = Console.ReadLine()?.Trim();
+       if (bookName.Equals("")) Console.WriteLine("书名不能为空！！");
+   }
+
+   string priceStr = "";
+   double price = 0;
+   while (!double.TryParse(priceStr, out price))
+   {
+       Console.WriteLine("请输入您要售卖的价格(按Enter确认):");
+       priceStr = Console.ReadLine()?.Trim(); 
+       if (!double.TryParse(priceStr, out price))
+       {
+           Console.WriteLine("价格输入不规范，请重新输入!!!");
+       }
+   }
+
+	ConsoleKeyInfo? keyInfo = null;
+	while(keyInfo?.Key != ConsoleKey.F && keyInfo?.Key != ConsoleKey.Enter)
+   {
+       Console.WriteLine($"请确认您的售卖信息是否无误:[书名:{bookName},作者名:{name},售卖价格:{price}],无误请按Enter确认,否则按F重新输入");
+       keyInfo = Console.ReadKey();
+		if(keyInfo?.Key != ConsoleKey.F && keyInfo?.Key != ConsoleKey.Enter)
+		{
+           Console.WriteLine("请输入正确的按键进行选择！！");
+       }
+   }
+
+	if(keyInfo?.Key == ConsoleKey.F)
+	{
+       Console.WriteLine();
+       continue;
+	}
+	if(keyInfo?.Key == ConsoleKey.Enter)
+	{
+		int times = await context.Database.ExecuteSqlInterpolatedAsync
+			($"INSERT INTO t_book (ID, Title, PubTime, Price, AuthorName) VALUES ({Guid.NewGuid()},{bookName}, SYSDATE(), {price}, {name})");
+       if(times == 1) Console.WriteLine("插入成功！！"); else { Console.WriteLine("插入失败！！"); }
+		break;
+   }
+}
+#endregion
+
+#region FromSqlInterpolated(控制台查询程序)
+
+Console.WriteLine("请输入作者姓名搜索书籍(支持模糊搜索):");
+string name = Console.ReadLine();
+name = $"%{name}%";
+IQueryable<Book> books = context.Books.FromSqlInterpolated($"select* from t_book a where a.AuthorName like {name}");
+foreach (var book in books)
+/* FromSqlInterpolated数据再加工 */
+//foreach (var book in books.Take(2))
+{
+   Console.WriteLine($"ID:{book},书名:{book.Title},作者:{book.AuthorName},价格:{book.Price}元");
+}
+
+#endregion
+
+#region 获取connect连接(执行任意语句)
+using MySqlConnection conn = (MySqlConnection)context.Database.GetDbConnection();
+if(conn.State != System.Data.ConnectionState.Open) conn.Open();
+using var command = conn.CreateCommand();
+command.CommandText = "select * from t_book";
+#region DataTable
+DataTable dt = new DataTable();
+MySqlDataAdapter dataAdapter = new MySqlDataAdapter(command);
+dataAdapter.Fill(dt);
+foreach(DataRow dr in dt.Rows)
+{
+   foreach (DataColumn dc in dt.Columns)
+   {
+       Console.Write(dc.ColumnName + ":" + dr[dc.ColumnName] + ",");
+   }
+   Console.WriteLine();
+}
+#endregion
+
+#region DataReader
+//using var reader = command.ExecuteReader();
+//while (reader.Read())
+//{
+//    Console.WriteLine($"{reader.GetValue(0)}:{reader.GetValue(1)}");
+//}
+#endregion
+
+#endregion
+```
+
+### AsNoTracking 与 EntityState
+- .AsNoTracking()会将查询的数据状态设置为EntityState.Detached,可用于查询不需要更新或者删除的数据
+- EntityState: EntityState.Added、EntityState.Deleted、EntityState.Detached、EntityState.Unchanged、EntityState.Modified
+```C#
+/*AsNoTracking*/
+Book[] books = context.Books.AsNoTracking().Take(3).ToArray();
+Book b1 = books[0];
+b1.Title = "abc";
+EntityEntry entry1 = context.Entry(b1);
+Console.WriteLine(entry1.State);
+
+/* EntityState */
+Book b1 = context.Books.First(b => b.AuthorName=="Jean");
+b1.Title = "Jean2333";
+EntityEntry entry1 = context.Entry(b1);
+Console.WriteLine(entry1.State);
+context.SaveChanges();
+Console.WriteLine(entry1.State);
+
+/* 通过改变EntityState.Detached数据的state值,实现不查询就能操作数据(不推荐) */
+Book b1 = new Book { Id = Guid.Parse("08dc44b6-cea9-4f9f-8c47-ce4bcde76dc7") };
+b1.Title = "新书名";
+var entry1 = context.Entry(b1);
+entry1.Property("Title").IsModified = true;
+Console.WriteLine(entry1.DebugView.LongView);
+context.SaveChanges();
+/*Book b1 = new Book { Id = Guid.Parse("08dc44b6-cea9-4f9f-8c47-ce4bcde76dc7") };
+context.Entry(b1).State = EntityState.Deleted;
+context.SaveChanges();*/
+
+```
+
+
+
+
+
+
+
 
 # 额外记录
 
@@ -474,711 +768,5 @@ static async Task<int> ProduceNumberAsync(int seed)
 ```
 
 
-
-# 分隔处
-
-
-
-
-
-
-
-<img src="https://user-images.githubusercontent.com/499550/93624428-53932780-f9ae-11ea-8d16-af949e16a09f.png" style="width:200px" />
-
-
-
-## 1.Vue3简介
-
-- 2020年9月18日，Vue.js发布3.0版本，代号：One Piece（海贼王）
-- 耗时2年多、[2600+次提交](https://github.com/vuejs/vue-next/graphs/commit-activity)、[30+个RFC](https://github.com/vuejs/rfcs/tree/master/active-rfcs)、[600+次PR](https://github.com/vuejs/vue-next/pulls?q=is%3Apr+is%3Amerged+-author%3Aapp%2Fdependabot-preview+)、[99位贡献者](https://github.com/vuejs/vue-next/graphs/contributors) 
-- github上的tags地址：https://github.com/vuejs/vue-next/releases/tag/v3.0.0
-
-## 2.Vue3带来了什么
-
-### 1.性能的提升
-
-- 打包大小减少41%
-
-- 初次渲染快55%, 更新渲染快133%
-
-- 内存减少54%
-
-  ......
-
-### 2.源码的升级
-
-- 使用Proxy代替defineProperty实现响应式
-
-- 重写虚拟DOM的实现和Tree-Shaking
-
-  ......
-
-### 3.拥抱TypeScript
-
-- Vue3可以更好的支持TypeScript
-
-### 4.新的特性
-
-1. Composition API（组合API）
-
-   - setup配置
-   - ref与reactive
-   - watch与watchEffect
-   - provide与inject
-   - ......
-2. 新的内置组件
-   - Fragment 
-   - Teleport
-   - Suspense
-3. 其他改变
-
-   - 新的生命周期钩子
-   - data 选项应始终被声明为一个函数
-   - 移除keyCode支持作为 v-on 的修饰符
-   - ......
-
-# 一、创建Vue3.0工程
-
-## 1.使用 vue-cli 创建
-
-官方文档：https://cli.vuejs.org/zh/guide/creating-a-project.html#vue-create
-
-```bash
-## 查看@vue/cli版本，确保@vue/cli版本在4.5.0以上
-vue --version
-## 安装或者升级你的@vue/cli
-npm install -g @vue/cli
-## 创建
-vue create vue_test
-## 启动
-cd vue_test
-npm run serve
-```
-
-## 2.使用 vite 创建
-
-官方文档：https://v3.cn.vuejs.org/guide/installation.html#vite
-
-vite官网：https://vitejs.cn
-
-- 什么是vite？—— 新一代前端构建工具。
-- 优势如下：
-  - 开发环境中，无需打包操作，可快速的冷启动。
-  - 轻量快速的热重载（HMR）。
-  - 真正的按需编译，不再等待整个应用编译完成。
-- 传统构建 与 vite构建对比图
-
-<img src="https://cn.vitejs.dev/assets/bundler.37740380.png" style="width:500px;height:280px;float:left" /><img src="https://cn.vitejs.dev/assets/esm.3070012d.png" style="width:480px;height:280px" />
-
-```bash
-## 创建工程
-npm init vite-app <project-name>
-## 进入工程目录
-cd <project-name>
-## 安装依赖
-npm install
-## 运行
-npm run dev
-```
-
-# 二、常用 Composition API
-
-官方文档: https://v3.cn.vuejs.org/guide/composition-api-introduction.html
-
-## 1.拉开序幕的setup
-
-1. 理解：Vue3.0中一个新的配置项，值为一个函数。
-2. setup是所有<strong style="color:#DD5145">Composition API（组合API）</strong><i style="color:gray;font-weight:bold">“ 表演的舞台 ”</i>。
-4. 组件中所用到的：数据、方法等等，均要配置在setup中。
-5. setup函数的两种返回值：
-   1. 若返回一个对象，则对象中的属性、方法, 在模板中均可以直接使用。（重点关注！）
-   2. <span style="color:#aad">若返回一个渲染函数：则可以自定义渲染内容。（了解）</span>
-6. 注意点：
-   1. 尽量不要与Vue2.x配置混用
-      - Vue2.x配置（data、methos、computed...）中<strong style="color:#DD5145">可以访问到</strong>setup中的属性、方法。
-      - 但在setup中<strong style="color:#DD5145">不能访问到</strong>Vue2.x配置（data、methos、computed...）。
-      - 如果有重名, setup优先。
-   2. setup不能是一个async函数，因为返回值不再是return的对象, 而是promise, 模板看不到return对象中的属性。（后期也可以返回一个Promise实例，但需要Suspense和异步组件的配合）
-
-##  2.ref函数
-
-- 作用: 定义一个响应式的数据
-- 语法: ```const xxx = ref(initValue)``` 
-  - 创建一个包含响应式数据的<strong style="color:#DD5145">引用对象（reference对象，简称ref对象）</strong>。
-  - JS中操作数据： ```xxx.value```
-  - 模板中读取数据: 不需要.value，直接：```<div>{{xxx}}</div>```
-- 备注：
-  - 接收的数据可以是：基本类型、也可以是对象类型。
-  - 基本类型的数据：响应式依然是靠``Object.defineProperty()``的```get```与```set```完成的。
-  - 对象类型的数据：内部 <i style="color:gray;font-weight:bold">“ 求助 ”</i> 了Vue3.0中的一个新函数—— ```reactive```函数。
-
-## 3.reactive函数
-
-- 作用: 定义一个<strong style="color:#DD5145">对象类型</strong>的响应式数据（基本类型不要用它，要用```ref```函数）
-- 语法：```const 代理对象= reactive(源对象)```接收一个对象（或数组），返回一个<strong style="color:#DD5145">代理对象（Proxy的实例对象，简称proxy对象）</strong>
-- reactive定义的响应式数据是“深层次的”。
-- 内部基于 ES6 的 Proxy 实现，通过代理对象操作源对象内部数据进行操作。
-
-## 4.Vue3.0中的响应式原理
-
-### vue2.x的响应式
-
-- 实现原理：
-  - 对象类型：通过```Object.defineProperty()```对属性的读取、修改进行拦截（数据劫持）。
-  
-  - 数组类型：通过重写更新数组的一系列方法来实现拦截。（对数组的变更方法进行了包裹）。
-  
-    ```js
-    Object.defineProperty(data, 'count', {
-        get () {}, 
-        set () {}
-    })
-    ```
-
-- 存在问题：
-  - 新增属性、删除属性, 界面不会更新。
-  - 直接通过下标修改数组, 界面不会自动更新。
-
-### Vue3.0的响应式
-
-- 实现原理: 
-  - 通过Proxy（代理）:  拦截对象中任意属性的变化, 包括：属性值的读写、属性的添加、属性的删除等。
-  - 通过Reflect（反射）:  对源对象的属性进行操作。
-  - MDN文档中描述的Proxy与Reflect：
-    - Proxy：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Proxy
-    
-    - Reflect：https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Reflect
-    
-      ```js
-      new Proxy(data, {
-      	// 拦截读取属性值
-          get (target, prop) {
-          	return Reflect.get(target, prop)
-          },
-          // 拦截设置属性值或添加新属性
-          set (target, prop, value) {
-          	return Reflect.set(target, prop, value)
-          },
-          // 拦截删除属性
-          deleteProperty (target, prop) {
-          	return Reflect.deleteProperty(target, prop)
-          }
-      })
-      
-      proxy.name = 'tom'   
-      ```
-
-## 5.reactive对比ref
-
--  从定义数据角度对比：
-   -  ref用来定义：<strong style="color:#DD5145">基本类型数据</strong>。
-   -  reactive用来定义：<strong style="color:#DD5145">对象（或数组）类型数据</strong>。
-   -  备注：ref也可以用来定义<strong style="color:#DD5145">对象（或数组）类型数据</strong>, 它内部会自动通过```reactive```转为<strong style="color:#DD5145">代理对象</strong>。
--  从原理角度对比：
-   -  ref通过``Object.defineProperty()``的```get```与```set```来实现响应式（数据劫持）。
-   -  reactive通过使用<strong style="color:#DD5145">Proxy</strong>来实现响应式（数据劫持）, 并通过<strong style="color:#DD5145">Reflect</strong>操作<strong style="color:orange">源对象</strong>内部的数据。
--  从使用角度对比：
-   -  ref定义的数据：操作数据<strong style="color:#DD5145">需要</strong>```.value```，读取数据时模板中直接读取<strong style="color:#DD5145">不需要</strong>```.value```。
-   -  reactive定义的数据：操作数据与读取数据：<strong style="color:#DD5145">均不需要</strong>```.value```。
-
-## 6.setup的两个注意点
-
-- setup执行的时机
-  - 在beforeCreate之前执行一次，this是undefined。
-  
-- setup的参数
-  - props：值为对象，包含：组件外部传递过来，且组件内部声明接收了的属性。
-  - context：上下文对象
-    - attrs: 值为对象，包含：组件外部传递过来，但没有在props配置中声明的属性, 相当于 ```this.$attrs```。
-    - slots: 收到的插槽内容, 相当于 ```this.$slots```。
-    - emit: 分发自定义事件的函数, 相当于 ```this.$emit```。
-
-
-## 7.计算属性与监视
-
-### 1.computed函数
-
-- 与Vue2.x中computed配置功能一致
-
-- 写法
-
-  ```js
-  import {computed} from 'vue'
-  
-  setup(){
-      ...
-  	//计算属性——简写
-      let fullName = computed(()=>{
-          return person.firstName + '-' + person.lastName
-      })
-      //计算属性——完整
-      let fullName = computed({
-          get(){
-              return person.firstName + '-' + person.lastName
-          },
-          set(value){
-              const nameArr = value.split('-')
-              person.firstName = nameArr[0]
-              person.lastName = nameArr[1]
-          }
-      })
-  }
-  ```
-
-### 2.watch函数
-
-- 与Vue2.x中watch配置功能一致
-
-- 两个小“坑”：
-
-  - 监视reactive定义的响应式数据时：oldValue无法正确获取、强制开启了深度监视（deep配置失效）。
-  - 监视reactive定义的响应式数据中某个属性时：deep配置有效。
-  
-  ```js
-  //情况一：监视ref定义的响应式数据
-  watch(sum,(newValue,oldValue)=>{
-  	console.log('sum变化了',newValue,oldValue)
-  },{immediate:true})
-  
-  //情况二：监视多个ref定义的响应式数据
-  watch([sum,msg],(newValue,oldValue)=>{
-  	console.log('sum或msg变化了',newValue,oldValue)
-  }) 
-  
-  /* 情况三：监视reactive定义的响应式数据
-  			若watch监视的是reactive定义的响应式数据，则无法正确获得oldValue！！
-  			若watch监视的是reactive定义的响应式数据，则强制开启了深度监视 
-  */
-  watch(person,(newValue,oldValue)=>{
-  	console.log('person变化了',newValue,oldValue)
-  },{immediate:true,deep:false}) //此处的deep配置不再奏效
-  
-  //情况四：监视reactive定义的响应式数据中的某个属性
-  watch(()=>person.job,(newValue,oldValue)=>{
-  	console.log('person的job变化了',newValue,oldValue)
-  },{immediate:true,deep:true}) 
-  
-  //情况五：监视reactive定义的响应式数据中的某些属性
-  watch([()=>person.job,()=>person.name],(newValue,oldValue)=>{
-  	console.log('person的job变化了',newValue,oldValue)
-  },{immediate:true,deep:true})
-  
-  //特殊情况
-  watch(()=>person.job,(newValue,oldValue)=>{
-      console.log('person的job变化了',newValue,oldValue)
-  },{deep:true}) //此处由于监视的是reactive素定义的对象中的某个属性，所以deep配置有效
-  ```
-
-### 3.watchEffect函数
-
-- watch的套路是：既要指明监视的属性，也要指明监视的回调。
-
-- watchEffect的套路是：不用指明监视哪个属性，监视的回调中用到哪个属性，那就监视哪个属性。
-
-- watchEffect有点像computed：
-
-  - 但computed注重的计算出来的值（回调函数的返回值），所以必须要写返回值。
-  - 而watchEffect更注重的是过程（回调函数的函数体），所以不用写返回值。
-
-  ```js
-  //watchEffect所指定的回调中用到的数据只要发生变化，则直接重新执行回调。
-  watchEffect(()=>{
-      const x1 = sum.value
-      const x2 = person.age
-      console.log('watchEffect配置的回调执行了')
-  })
-  ```
-
-## 8.生命周期
-
-<div style="border:1px solid black;width:380px;float:left;margin-right:20px;"><strong>vue2.x的生命周期</strong><img src="https://cn.vuejs.org/images/lifecycle.png" alt="lifecycle_2" style="zoom:33%;width:1200px" /></div><div style="border:1px solid black;width:510px;height:985px;float:left"><strong>vue3.0的生命周期</strong><img src="https://v3.cn.vuejs.org/images/lifecycle.svg" alt="lifecycle_2" style="zoom:33%;width:2500px" /></div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-1
-
-- Vue3.0中可以继续使用Vue2.x中的生命周期钩子，但有有两个被更名：
-  - ```beforeDestroy```改名为 ```beforeUnmount```
-  - ```destroyed```改名为 ```unmounted```
-- Vue3.0也提供了 Composition API 形式的生命周期钩子，与Vue2.x中钩子对应关系如下：
-  - `beforeCreate`===>`setup()`
-  - `created`=======>`setup()`
-  - `beforeMount` ===>`onBeforeMount`
-  - `mounted`=======>`onMounted`
-  - `beforeUpdate`===>`onBeforeUpdate`
-  - `updated` =======>`onUpdated`
-  - `beforeUnmount` ==>`onBeforeUnmount`
-  - `unmounted` =====>`onUnmounted`
-
-## 9.自定义hook函数
-
-- 什么是hook？—— 本质是一个函数，把setup函数中使用的Composition API进行了封装。
-
-- 类似于vue2.x中的mixin。
-
-- 自定义hook的优势: 复用代码, 让setup中的逻辑更清楚易懂。
-
-
-
-## 10.toRef
-
-- 作用：创建一个 ref 对象，其value值指向另一个对象中的某个属性。
-- 语法：```const name = toRef(person,'name')```
-- 应用:   要将响应式对象中的某个属性单独提供给外部使用时。
-
-
-- 扩展：```toRefs``` 与```toRef```功能一致，但可以批量创建多个 ref 对象，语法：```toRefs(person)```
-
-
-# 三、其它 Composition API
-
-## 1.shallowReactive 与 shallowRef
-
-- shallowReactive：只处理对象最外层属性的响应式（浅响应式）。
-- shallowRef：只处理基本数据类型的响应式, 不进行对象的响应式处理。
-
-- 什么时候使用?
-  -  如果有一个对象数据，结构比较深, 但变化时只是外层属性变化 ===> shallowReactive。
-  -  如果有一个对象数据，后续功能不会修改该对象中的属性，而是生新的对象来替换 ===> shallowRef。
-
-## 2.readonly 与 shallowReadonly
-
-- readonly: 让一个响应式数据变为只读的（深只读）。
-- shallowReadonly：让一个响应式数据变为只读的（浅只读）。
-- 应用场景: 不希望数据被修改时。
-
-## 3.toRaw 与 markRaw
-
-- toRaw：
-  - 作用：将一个由```reactive```生成的<strong style="color:orange">响应式对象</strong>转为<strong style="color:orange">普通对象</strong>。
-  - 使用场景：用于读取响应式对象对应的普通对象，对这个普通对象的所有操作，不会引起页面更新。
-- markRaw：
-  - 作用：标记一个对象，使其永远不会再成为响应式对象。
-  - 应用场景:
-    1. 有些值不应被设置为响应式的，例如复杂的第三方类库等。
-    2. 当渲染具有不可变数据源的大列表时，跳过响应式转换可以提高性能。
-
-## 4.customRef
-
-- 作用：创建一个自定义的 ref，并对其依赖项跟踪和更新触发进行显式控制。
-
-- 实现防抖效果：
-
-  ```vue
-  <template>
-  	<input type="text" v-model="keyword">
-  	<h3>{{keyword}}</h3>
-  </template>
-  
-  <script>
-  	import {ref,customRef} from 'vue'
-  	export default {
-  		name:'Demo',
-  		setup(){
-  			// let keyword = ref('hello') //使用Vue准备好的内置ref
-  			//自定义一个myRef
-  			function myRef(value,delay){
-  				let timer
-  				//通过customRef去实现自定义
-  				return customRef((track,trigger)=>{
-  					return{
-  						get(){
-  							track() //告诉Vue这个value值是需要被“追踪”的
-  							return value
-  						},
-  						set(newValue){
-  							clearTimeout(timer)
-  							timer = setTimeout(()=>{
-  								value = newValue
-  								trigger() //告诉Vue去更新界面
-  							},delay)
-  						}
-  					}
-  				})
-  			}
-  			let keyword = myRef('hello',500) //使用程序员自定义的ref
-  			return {
-  				keyword
-  			}
-  		}
-  	}
-  </script>
-  ```
-
-  
-
-## 5.provide 与 inject
-
-<img src="https://v3.cn.vuejs.org/images/components_provide.png" style="width:300px" />
-
-- 作用：实现<strong style="color:#DD5145">祖与后代组件间</strong>通信
-
-- 套路：父组件有一个 `provide` 选项来提供数据，后代组件有一个 `inject` 选项来开始使用这些数据
-
-- 具体写法：
-
-  1. 祖组件中：
-
-     ```js
-     setup(){
-     	......
-         let car = reactive({name:'奔驰',price:'40万'})
-         provide('car',car)
-         ......
-     }
-     ```
-
-  2. 后代组件中：
-
-     ```js
-     setup(props,context){
-     	......
-         const car = inject('car')
-         return {car}
-     	......
-     }
-     ```
-
-## 6.响应式数据的判断
-
-- isRef: 检查一个值是否为一个 ref 对象
-- isReactive: 检查一个对象是否是由 `reactive` 创建的响应式代理
-- isReadonly: 检查一个对象是否是由 `readonly` 创建的只读代理
-- isProxy: 检查一个对象是否是由 `reactive` 或者 `readonly` 方法创建的代理
-
-# 四、Composition API 的优势
-
-## 1.Options API 存在的问题
-
-使用传统OptionsAPI中，新增或者修改一个需求，就需要分别在data，methods，computed里修改 。
-
-<div style="width:600px;height:370px;overflow:hidden;float:left">
-    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/f84e4e2c02424d9a99862ade0a2e4114~tplv-k3u1fbpfcp-watermark.image" style="width:600px;float:left" />
-</div>
-<div style="width:300px;height:370px;overflow:hidden;float:left">
-    <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/e5ac7e20d1784887a826f6360768a368~tplv-k3u1fbpfcp-watermark.image" style="zoom:50%;width:560px;left" /> 
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## 2.Composition API 的优势
-
-我们可以更加优雅的组织我们的代码，函数。让相关功能的代码更加有序的组织在一起。
-
-<div style="width:500px;height:340px;overflow:hidden;float:left">
-    <img src="https://p3-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/bc0be8211fc54b6c941c036791ba4efe~tplv-k3u1fbpfcp-watermark.image"style="height:360px"/>
-</div>
-<div style="width:430px;height:340px;overflow:hidden;float:left">
-    <img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/6cc55165c0e34069a75fe36f8712eb80~tplv-k3u1fbpfcp-watermark.image"style="height:360px"/>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 五、新的组件
-
-## 1.Fragment
-
-- 在Vue2中: 组件必须有一个根标签
-- 在Vue3中: 组件可以没有根标签, 内部会将多个标签包含在一个Fragment虚拟元素中
-- 好处: 减少标签层级, 减小内存占用
-
-## 2.Teleport
-
-- 什么是Teleport？—— `Teleport` 是一种能够将我们的<strong style="color:#DD5145">组件html结构</strong>移动到指定位置的技术。
-
-  ```vue
-  <teleport to="移动位置">
-  	<div v-if="isShow" class="mask">
-  		<div class="dialog">
-  			<h3>我是一个弹窗</h3>
-  			<button @click="isShow = false">关闭弹窗</button>
-  		</div>
-  	</div>
-  </teleport>
-  ```
-
-## 3.Suspense
-
-- 等待异步组件时渲染一些额外内容，让应用有更好的用户体验
-
-- 使用步骤：
-
-  - 异步引入组件
-
-    ```js
-    import {defineAsyncComponent} from 'vue'
-    const Child = defineAsyncComponent(()=>import('./components/Child.vue'))
-    ```
-
-  - 使用```Suspense```包裹组件，并配置好```default``` 与 ```fallback```
-
-    ```vue
-    <template>
-    	<div class="app">
-    		<h3>我是App组件</h3>
-    		<Suspense>
-    			<template v-slot:default>
-    				<Child/>
-    			</template>
-    			<template v-slot:fallback>
-    				<h3>加载中.....</h3>
-    			</template>
-    		</Suspense>
-    	</div>
-    </template>
-    ```
-
-# 六、其他
-
-## 1.全局API的转移
-
-- Vue 2.x 有许多全局 API 和配置。
-  - 例如：注册全局组件、注册全局指令等。
-
-    ```js
-    //注册全局组件
-    Vue.component('MyButton', {
-      data: () => ({
-        count: 0
-      }),
-      template: '<button @click="count++">Clicked {{ count }} times.</button>'
-    })
-    
-    //注册全局指令
-    Vue.directive('focus', {
-      inserted: el => el.focus()
-    }
-    ```
-
-- Vue3.0中对这些API做出了调整：
-
-  - 将全局的API，即：```Vue.xxx```调整到应用实例（```app```）上
-
-    | 2.x 全局 API (```Vue```)  | 3.x 实例 API (`app`)                        |
-    | ------------------------- | ------------------------------------------- |
-    | Vue.config.xxxx           | app.config.xxxx                             |
-    | Vue.config.productionTip  | <strong style="color:#DD5145">移除</strong> |
-    | Vue.component             | app.component                               |
-    | Vue.directive             | app.directive                               |
-    | Vue.mixin                 | app.mixin                                   |
-    | Vue.use                   | app.use                                     |
-    | Vue.prototype             | app.config.globalProperties                 |
-  
-
-## 2.其他改变
-
-- data选项应始终被声明为一个函数。
-
-- 过度类名的更改：
-
-  - Vue2.x写法
-
-    ```css
-    .v-enter,
-    .v-leave-to {
-      opacity: 0;
-    }
-    .v-leave,
-    .v-enter-to {
-      opacity: 1;
-    }
-    ```
-
-  - Vue3.x写法
-
-    ```css
-    .v-enter-from,
-    .v-leave-to {
-      opacity: 0;
-    }
-    
-    .v-leave-from,
-    .v-enter-to {
-      opacity: 1;
-    }
-    ```
-
-- <strong style="color:#DD5145">移除</strong>keyCode作为 v-on 的修饰符，同时也不再支持```config.keyCodes```
-
-- <strong style="color:#DD5145">移除</strong>```v-on.native```修饰符
-
-  - 父组件中绑定事件
-
-    ```vue
-    <my-component
-      v-on:close="handleComponentEvent"
-      v-on:click="handleNativeClickEvent"
-    />
-    ```
-
-  - 子组件中声明自定义事件
-
-    ```vue
-    <script>
-      export default {
-        emits: ['close']
-      }
-    </script>
-    ```
-
-- <strong style="color:#DD5145">移除</strong>过滤器（filter）
-
-  > 过滤器虽然这看起来很方便，但它需要一个自定义语法，打破大括号内表达式是 “只是 JavaScript” 的假设，这不仅有学习成本，而且有实现成本！建议用方法调用或计算属性去替换过滤器。
 
 - ......

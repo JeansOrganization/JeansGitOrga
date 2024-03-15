@@ -1,0 +1,9 @@
+﻿START TRANSACTION;
+
+ALTER TABLE `T_Book` MODIFY COLUMN `name` varchar(20) CHARACTER SET utf8mb4 NOT NULL COMMENT '姓名';
+
+DELETE FROM `__EFMigrationsHistory`
+WHERE `MigrationId` = '20240313035401_up1';
+
+COMMIT;
+
