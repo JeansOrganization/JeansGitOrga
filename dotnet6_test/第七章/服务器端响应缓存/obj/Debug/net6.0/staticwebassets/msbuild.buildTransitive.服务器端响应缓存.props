@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\服务器端响应缓存.props" />
+</Project>

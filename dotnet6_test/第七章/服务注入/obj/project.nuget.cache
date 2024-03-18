@@ -1,0 +1,27 @@
+{
+  "version": 2,
+  "dgSpecHash": "H69azzSr5n8R+WpUh69eXdU/h1P3CYOl5y+KLGk9nlmPxR6ZvuSvK8K9UwH+zz3Zj9CvYaVWZjoeq4qbFWcvuw==",
+  "success": true,
+  "projectFilePath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JeanG\\.nuget\\packages\\asmresolver\\4.11.2\\asmresolver.4.11.2.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\asmresolver.dotnet\\4.11.2\\asmresolver.dotnet.4.11.2.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\asmresolver.pe\\4.11.2\\asmresolver.pe.4.11.2.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\asmresolver.pe.file\\4.11.2\\asmresolver.pe.file.4.11.2.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.text.encodings.web\\6.0.0\\system.text.encodings.web.6.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.text.json\\6.0.4\\system.text.json.6.0.4.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\zack.commons\\1.1.11\\zack.commons.1.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}

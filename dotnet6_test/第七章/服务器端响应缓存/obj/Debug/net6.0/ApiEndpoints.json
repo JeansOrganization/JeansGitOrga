@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "\u670D\u52A1\u5668\u7AEF\u54CD\u5E94\u7F13\u5B58.Controllers.DemoController",
+    "Method": "GetDateNow",
+    "RelativePath": "Demo/GetDateNow",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.DateTime",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]
