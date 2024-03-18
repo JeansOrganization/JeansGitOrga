@@ -686,8 +686,237 @@ context.SaveChanges();*/
 
 ```
 
+### 并发控制
+- 并发控制概念:避免多个用户同时操作资源造成的并发冲突。
+- 最好的解决方案：非数据库解决方案。
+- 数据库层面的两种策略：悲观锁、乐观锁，更推荐乐观并发控制。
+  
+### 悲观并发控制
+- 悲观并发控制一般采用行锁、表锁等排他锁对资源进行锁定，确保同时只有一个使用者操作被锁定的资源。
+- EF Core没有封锁悲观并发控制的使用，需要开发人员编写原生SQL语句来使用悲观并发控制，不用数据库语法不同。
+- MySQL方案:select * from T_Houses where Id=1 for update
+```C#
+Console.WriteLine("请输入您的姓名");
+string name = Console.ReadLine();
+using MySqlContext ctx = new MySqlContext();
+/* 开启事务获取tx事务对象 */
+using var tx = await ctx.Database.BeginTransactionAsync();
+Console.WriteLine("准备Select " + DateTime.Now.TimeOfDay);
+var h1 = await ctx.Houses.FromSqlInterpolated($"select * from T_Houses where Id=1 for update")
+    .SingleAsync();
+Console.WriteLine("完成Select " + DateTime.Now.TimeOfDay);
+if (string.IsNullOrEmpty(h1.Owner))
+{
+    await Task.Delay(5000);
+    h1.Owner = name;
+    await ctx.SaveChangesAsync();
+    Console.WriteLine("抢到手了");
+}
+else
+{
+    if (h1.Owner == name)
+    {
+        Console.WriteLine("这个房子已经是你的了，不用抢");
+    }
+    else
+    {
+        Console.WriteLine($"这个房子已经被{h1.Owner}抢走了");
+    }
+}
+/* 提交事务解开行锁 */
+await tx.CommitAsync();
+Console.ReadKey();
+```
+
+### 乐观并发控制(并发令牌 & 并发令牌+RowVersion)
+- 不涉及上锁解锁，性能上相较于悲观并发控制更好。
+- 并发令牌只适用单个字段，并发令牌+RowVersion适用多个字段
+1. 属性配置时调用并发令牌:```builder.Property(r=>r.Owner).IsConcurrencyToken();``` 
+2. 在更新Owner字段时默认会带上旧字段的判断and Owner = oldvalue,故而后续的用户执行更新语句时返回0条被更新，会报DbUpdateConcurrencyException异常
+3. 并发令牌+RowVersion:```builder.Property(r=>r.Rowver).IsRowVersion();``` 
+4. Sql Server数据库支持每次更新插入都自动更新Rowver列值,在更新其他字段时默认会带上旧字段的判断and Rowver = OldRowverValue
+5. 除Sql Server之外的数据库没法自动更新Rowver值，可以使用Guid值手动给RowVer赋值实现
+```C#
+Console.WriteLine("请输入您的姓名");
+string name = Console.ReadLine();
+using MyDbContext ctx = new MyDbContext();
+var h1 = await ctx.Houses.SingleAsync(h => h.Id == 1);
+if (string.IsNullOrEmpty(h1.Owner))
+{
+    await Task.Delay(5000);
+    h1.Owner = name;
+    try
+    {
+        await ctx.SaveChangesAsync();
+        Console.WriteLine("抢到手了");
+    }
+    catch (DbUpdateConcurrencyException ex)
+    {
+        var entry = ex.Entries.First();
+        var dbValues = await entry.GetDatabaseValuesAsync();
+        string newOwner = dbValues.GetValue<string>(nameof(House.Owner));
+        Console.WriteLine($"并发冲突，被{newOwner}提前抢走了");
+    }
+}
+else
+{
+    if (h1.Owner == name)
+    {
+        Console.WriteLine("这个房子已经是你的了，不用抢");
+    }
+    else
+    {
+        Console.WriteLine($"这个房子已经被{h1.Owner}抢走了");
+    }
+}
+Console.ReadLine();
+```
+
+# 第六章
+## WebAPI
+### WebAPI简介
+- WebAPI(Web Application Programming Interface 网络应用程序接口):是一个可以对接各种客户端（浏览器、移动设备），构建 http 服务的框架。是 .net 技术体系下分布式开发的首选技术。与 WebService 和 WCF 相比较，更加的轻量级，传输效率更高。
+
+### WebAPI风格
+- 面向过程(RPC): 形如"URL/api/Controller/Action"，不关心请求方式
+- Rest风格(RestFul)：根据http的语义来决定请求哪个接口，比如Get获取、Post新增、Put整体更新、delete删除、patch局部更新等
+1. 优点：(1).见名知义，不同的http谓词表示不同的操作 (2). 通过状态码反应服务器处理结果
+2. 缺点：(1).需要思考不同的操作到底用哪个谓词，不适合业务复杂的系统 (2).http状态码有限，无法应对所有情况 (3).有些客户端不支持put和delete请求
+  
+### Controller编写注意事项
+- 请求特性:当Controller中存在public修饰的没有相应的[http*]的方法时,Swagger会报错，可以将public改成private,或者加上注解:[ApiExplorerSettings(IgnoreApi = true)]
+- 方法的返回值:
+1. Web API中Action方法的返回值如果是普通数据类型，那么返回值就会默认被序列化为Json格式。
+2. Web API中的Action方法的返回值同样支持IActionResult类型，不包含类型信息，因此Swagger等无法推断出类型，所以推荐用ActionResult<T>，它支持类型转换，从而用起来更简单。
+- 方法参数接收:
+1. [FromRoute(Name="名字")],捕捉的值会被自动赋值给Action中同名的参数；如果名字不一致，可以用[FromRoute(Name="名字")]
+2. [FromQuery]来获取QueryString中的值。如果名字一致，只要为参数添加[FromQuery]即可；而如果名字不一致，[FromQuery(Name = 名字)]
+3. [FromForm] 从Content-Type为multipart/form-data的请求中获取数据的[FromForm]
+4. [FromHeader]从请求报文头中获取值的[FromHeader]
+
+# 第七章
+## 服务注入
+### 服务注入实现
+- 在program类服务池里注册服务:builder.Services.AddScoped<MyService>();
+- 构造函数引入与Action方法引入[FromServices] MyService myService
+```C#
+/* 构造函数引入 */
+public readonly MyService myService;
+public TestController(MyService myService)
+{
+    this.myService = myService;
+}
+
+/* Action方法引入 */
+[HttpGet]
+public ActionResult<int> GetFilesCount([FromServices]MyService myService, int x)
+{
+    int result = myService.GetFilesCount();
+    return result;
+}
+```
+
+### 第三方nuget包:Zack.Commons
+- 适合跨项目依赖注入的情况
+- 在需要依赖注入的类库里，新建类(命名随意，可以*Initializer命名),继承包内接口IModuleInitializer
+- 在待实现接口方法Initialize里利用传入的参数 ```IServiceCollection services```,对当前项目里的服务类进行注册(其他类库同理)
+- 之后在WebAPI项目里program.cs里通过 ```ReflectionHelper.GetAllReferencedAssemblies()``` 获取所有引用实例
+- 使用获取的所有引用实例初始化DI容器 ```builder.Services.RunModuleInitializers(assemblies)``` ;
+
+```C#
+public class ServiceInitialize : IModuleInitializer
+{
+    public void Initialize(IServiceCollection services)
+    {
+        services.AddScoped<SchoolService>();
+    }
+}
+
+/* 获取所有引用实例，通过services运行这些实例的ModuleInitializers (program.cs) */
+var assemblies = ReflectionHelper.GetAllReferencedAssemblies();
+builder.Services.RunModuleInitializers(assemblies);
+```
+
+## 缓存
+
+### 缓存简介
+- 缓存是一种性价比极高的程序性能优化方式，像数据库索引或者其他一些简单有效的优化功能本质上也是属于缓存
+- 缓存顾名思义就是把一些数据按照某种缓存机制存储在内存或者硬盘中进行临时存放
+- 缓存效率极高，访问速度极快，大部分请求都是获取缓存中的数据直接访问，在缓存获取不到数据时才去数据库进行获取，大大降低数据库的访问压力
+- 缓存中的数据在更新到释放的这段时间如果数据库发生更新却没有对缓存做特殊处理，则两者之间容易出现数据差
+- 多级缓存:在整个数据流转的链路中，每个结点可能都会有属于自己的缓存 比如:浏览器-网关服务器-web服务器-数据库服务器，在网关服务器存在缓存的情况下，有可能请求会在网关服务器就直接带着数据返回
+
+### 客户端缓存
+- 客户端缓存可以通过ResponseCache来实现，ResponseCache是一个特性，可以应用于控制器的动作方法或整个控制器(ResponseCache 属性仅在 HTTPGET 请求中生效)
+- ResponseCache的属性:
+1. Duration:指定缓存的过期时间(以秒为单位)
+2. Location:通过设置 Location 属性，指定缓存的位置，可用的选项包括 Any、Client、和 None (Location = ResponseCacheLocation.Client)
+3. NoStore:可以使用 NoStore = true 将缓存禁用，有时需要显式地禁用缓存，以确保每次请求都会从服务器获取最新的数据或内容
+4. VaryByHeader:通过设置 VaryByHeader 属性，指定响应缓存应根据哪些请求标头进行变化
+
+```C#
+/* ResponseCache的属性 */
+[ApiController]
+[Route("[controller]/[Action]")]
+// [ResponseCache(Duration = 15, NoStore = true, Location = ResponseCacheLocation.Client)]
+public class TestController : ControllerBase
+{
+    //设置客户端缓存，间隔15秒释放并重新设置缓存
+    [ResponseCache(Duration = 15)]
+    [HttpGet]
+    public ActionResult<DateTime> GetDateNow()
+    {
+        return DateTime.Now;
+    }
+    
+    //ResponseCache设置缓存仅对HttpGet行为有效，所以调用GetDateNowPost并不会触发缓存机制
+    [ResponseCache(Duration = 15)]
+    [HttpPost]
+    public ActionResult<DateTime> GetDateNowPost()
+    {
+        return DateTime.Now;
+    }
+}
+
+```
+
+### 服务器端缓存
+- 通过缓存中间件配置实现
+1. 在服务池里添加ResponseCaching:builder.Services.AddResponseCaching();
+2. 在builder.Services.AddControllers方法内往options.CacheProfiles添加keyvalue对，value是CacheProfile对象，用于配置各种属性
+3. 在builder建立获得app后调用app.UseResponseCaching()，就可以在Controller或者Action使用key值获取配置属性了:[ResponseCache(CacheProfileName = "")]
+- 如果涉及到跨域的配置，设置服务器缓存的代码一定要放在配置跨域的代码后面(UseResponseCaching放在MapControllers前面，必须放在UseCors后面)
+- 服务器缓存和客户端缓存区别:不同客户端的客户端缓存内容不同，但服务端缓存内容相同
+1. 在未开启服务端缓存且开启客户端缓存的情况下,每个客户端的限制时间内的首次调用都是直接调用的服务器Action,后续则是直接调用的客户端缓存
+2. 在同时开启了服务端缓存和客户端缓存的情况下,在限制时间内第一个调用Action的客户端是直接调用服务器Action,后续则是直接调用的服务端缓存
+```C#
+/* 缓存中间件配置 */
+//program.cs
+builder.Services.AddResponseCaching();
+builder.Services.AddControllers(options =>
+{
+    options.CacheProfiles.Add("jeanCache", new CacheProfile()
+    {
+        Duration = 60
+    });
+});
+app.UseCors();
+app.UseResponseCaching(); //UseResponseCaching放在MapControllers前面，必须放在UseCors后面
+app.MapControllers();
+//Controller
+[ResponseCache(CacheProfileName = "jeanCache",Duration = 60)]
+public class DemoController : ControllerBase
+{
+    [HttpGet]
+    public ActionResult<DateTime> GetDateNow()
+    {
+        return DateTime.Now;
+    }
+}
+```
 
 
+# 简书地址:https://www.jianshu.com/p/9f09fe043564
 
 
 

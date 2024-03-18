@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore原理", "EFCore原理\EFCore原理.csproj", "{4EBBB566-A554-44D2-BEFE-E7AF3C183D36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore原理", "EFCore原理\EFCore原理.csproj", "{4EBBB566-A554-44D2-BEFE-E7AF3C183D36}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "悲观并发控制", "悲观并发控制\悲观并发控制.csproj", "{B9B90CE8-CA95-4E3C-A2DD-D99E8C3C4F82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "乐观并发控制", "乐观并发控制\乐观并发控制.csproj", "{44340715-0B48-413B-9301-C0D62C9AF445}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{4EBBB566-A554-44D2-BEFE-E7AF3C183D36}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EBBB566-A554-44D2-BEFE-E7AF3C183D36}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EBBB566-A554-44D2-BEFE-E7AF3C183D36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9B90CE8-CA95-4E3C-A2DD-D99E8C3C4F82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9B90CE8-CA95-4E3C-A2DD-D99E8C3C4F82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9B90CE8-CA95-4E3C-A2DD-D99E8C3C4F82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9B90CE8-CA95-4E3C-A2DD-D99E8C3C4F82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44340715-0B48-413B-9301-C0D62C9AF445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44340715-0B48-413B-9301-C0D62C9AF445}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44340715-0B48-413B-9301-C0D62C9AF445}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44340715-0B48-413B-9301-C0D62C9AF445}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

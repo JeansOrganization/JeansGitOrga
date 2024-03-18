@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9.Controllers.TestController",
+    "Method": "GetPerson",
+    "RelativePath": "Test/GetPerson/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9.Person",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

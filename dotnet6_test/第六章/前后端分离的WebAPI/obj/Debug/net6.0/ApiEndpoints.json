@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "\u524D\u540E\u7AEF\u5206\u79BB\u7684WebAPI.Controllers.LoginController",
+    "Method": "Login",
+    "RelativePath": "Login/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "\u524D\u540E\u7AEF\u5206\u79BB\u7684WebAPI.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "\u524D\u540E\u7AEF\u5206\u79BB\u7684WebAPI.LoginResult",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

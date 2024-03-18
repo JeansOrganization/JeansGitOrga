@@ -1,0 +1,64 @@
+[
+  {
+    "ContainingType": "WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9.WeatherForecast, WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9.Controllers.WeatherForecastController",
+    "Method": "GetCountryCore",
+    "RelativePath": "WeatherForecast/GetCountryCore",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "countryName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Int32",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9.Controllers.WeatherForecastController",
+    "Method": "SaveNote",
+    "RelativePath": "WeatherForecast/SaveNote",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "snq",
+        "Type": "WebAPI\u7684\u6280\u672F\u53CA\u9009\u62E9.Controllers.SaveNoteRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

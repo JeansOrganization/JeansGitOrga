@@ -1,0 +1,6 @@
+﻿@model MVC项目.Models.Person
+<div>
+    <h1>姓名:@Model.Name</h1>
+    <h1>是否会员:@(Model.IsVIP?"是":"否")</h1>
+    <h1>创建时间:@(Model.CreatedTime.ToString("yyyy年MM月dd日"))</h1>
+</div>
