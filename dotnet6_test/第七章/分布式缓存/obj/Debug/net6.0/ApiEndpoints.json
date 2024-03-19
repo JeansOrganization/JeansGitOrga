@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "\u5206\u5E03\u5F0F\u7F13\u5B58.Controllers.TestController",
+    "Method": "GetBookById",
+    "RelativePath": "Test/GetBookById",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "\u5206\u5E03\u5F0F\u7F13\u5B58.Book",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

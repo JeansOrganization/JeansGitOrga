@@ -915,6 +915,106 @@ public class DemoController : ControllerBase
 }
 ```
 
+### 内存缓存
+- 启用内存缓存: ```builder.Services.AddMemoryCache();``` ，启用方法里注册了IMemoryCache服务，在需要使用的类里可以通过构造引入
+- IMemoryCache里有GetOrCreateAsync、TryGetValue、Get、Set等方法，可以通过存储获取键值对实现内存缓存
+- 优势:解决了服务器缓存和客户端缓存能够被用户屏蔽的弊端，与内存交互效率极高
+```C#
+/* program.cs */
+builder.Services.AddMemoryCache();//相当于注入了IMemoryCache服务
+
+/* 依赖注入 */
+public class TestController : ControllerBase
+{
+    private readonly IMemoryCache memoryCache;
+    public TestController(IMemoryCache memoryCache)
+    {
+        this.memoryCache = memoryCache;
+    }
+}
+```
+#### 解决缓存与数据库数据不一致问题
+- 说明:可能会出现缓存中数据与数据库数据不一致问题
+- 解决:
+1. 在数据更新时及时修改缓存内容，优点是很及时，但是写代码很麻烦
+2. 设置过期时间，假设设置过期时间5秒，那么5秒后就更新缓存内存。设置很简单，但是依然会偶然存在缓存不一致问题。默认过期时间是永远，除非服务器重启
+- 过期时间策略:
+1. 绝对过期时间:AbsoluteExpirationRelativeToNow，可以设置一个有效期，有效期一过则清除缓存
+2. 滑动过期时间:SlidingExpiration，可以设置一个有效期，如果在有效期内有人获取了该缓存，则有效期重置
+3. 绝对过期时间与滑动过期时间混用:同时满足了绝对过期时间与滑动过期时间的规则
+- 总结:大多数情况下用绝对过期时间策略，设置一个相对较短的过期时间,小部分情况使用混合策略，单独滑动过期时间策略几乎没有
+```C#
+/* memoryCache.GetOrCreateAsync */
+var book = await memoryCache.GetOrCreateAsync(key, async e =>
+{
+    logger.LogInformation($"XXXXXXXXXX缓存中不存在，开始查找数据库中id为{id}的书");
+    //绝对过期时间
+    e.AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(60);
+    //滑动过期时间
+    e.SlidingExpiration = TimeSpan.FromSeconds(10);
+    return await bookService.GetBookByIdAsync(id);
+});
+
+/* memoryCache.Set */
+memoryCache.Set(key,book, new MemoryCacheEntryOptions()
+{
+    AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(20),
+    SlidingExpiration = TimeSpan.FromSeconds(10)
+});
+```
+
+#### 缓存穿透
+- 问题:如果缓存中没有书籍缓存结果，将会调用数据库进行查询。如果在数据库中也没有该书籍信息，则将会得到一个空结果并将其写入缓存，在下一次查询该书籍时依然不会从缓存中获取数据而是继续进入数据库。这种情况被称为“缓存穿透”。
+- 解决:可以将数据库找不到值这个结果存储到缓存，可以判断从缓存取出的值从而得知数据库没有值，也可以使用TryGetValue()直接返回布尔值判断是否获取到数据，或者GetOrCreateAsync()获取不到数据直接调用函数存入缓存
+
+#### 缓存雪崩
+- 问题:当有大量缓存同时过期时，容易造成数据库访问量剧增，导致数据库过载、应用服务器响应时间延迟等一系列问题。
+- 可能存在原因:大量缓存设置了一样的有效期，除此之外还有硬件故障或宕机、热点数据、缓存服务端内存泄漏、分布式锁失效等等
+- 解决:让数据库的访问量尽量保持平缓的趋势，如给缓存设置一定范围内随机的有效期 (Random.Shared)
+```C#
+//绝对过期时间
+e.AbsoluteExpirationRelativeToNow = TimeSpan.FromSeconds(Random.Shared.Next(30, 40));
+//滑动过期时间
+e.SlidingExpiration = TimeSpan.FromSeconds(Random.Shared.Next(5,10));
+```
+
+#### 封装MemoryCache帮助类
+- 需求:限制不允许传入IEnumerable、IQueryable延迟加载的数据，容易报错;实现随机缓存时间功能
+```C#
+public TResult? GetOrCreate<TResult>(string cacheKey, Func<ICacheEntry, TResult?> valueFactory, int expireSeconds = 60) where TResult : ICollection
+{
+    //ValidateValueType<TResult>(); //采用泛型约束
+    if(!memoryCache.TryGetValue(cacheKey,out TResult? result))
+    {
+        using var entry = memoryCache.CreateEntry(cacheKey);
+        result = valueFactory(entry);
+        InitCacheEntry(entry, expireSeconds);
+        entry.Value = result;
+    }
+    return result;
+}
+
+private void InitCacheEntry(ICacheEntry entry, int expireSeconds)
+{
+    TimeSpan timespan = TimeSpan.FromSeconds(Random.Shared.Next(expireSeconds, expireSeconds * 2));
+    entry.AbsoluteExpirationRelativeToNow = timespan;
+}
+```
+
+### 分布式缓存
+- 缓存不再放置于web服务器中，而是存放在公共的缓存服务器中，所有服务器都可以共用缓存服务器中的缓存，此时缓存服务器被称为:[集中分布式缓存服务器]
+- 分布式缓存与内存缓存优缺点:
+1. 内存缓存:简单高效，但是不适用于多集群的项目，每个集群的内存缓存都存放在各自的集群上，没法共用，在访问量大的时候容易导致数据库超载
+2. 分布式缓存:在集群节点数量非常多，访问量非常大时，适合使用分布式缓存，在其他情况下还是内存缓存占优
+- 目前主流缓存服务器有:
+1. Redis(推荐):缓存性能比起Memcached稍差，但是高可用、多集群等方面非常强大，且不局限于缓存，Redis还有其他好用功能
+2. Memcached:缓存专用，性能极高，但是多集群、高可用等方面比较弱，而且有“缓存键的最大长度为250字节”等限制  nuget包:EnyimMemcachedCore
+3. 数据库分布式缓存服务器:性能弱，几乎不使用
+
+#### 分布式缓存-Redis
+
+
+
 
 # 简书地址:https://www.jianshu.com/p/9f09fe043564
 
