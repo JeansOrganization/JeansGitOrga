@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.Controllers.HomeController",
+    "Method": "GetString",
+    "RelativePath": "Home/GetString",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

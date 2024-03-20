@@ -1012,6 +1012,51 @@ private void InitCacheEntry(ICacheEntry entry, int expireSeconds)
 3. 数据库分布式缓存服务器:性能弱，几乎不使用
 
 #### 分布式缓存-Redis
+- nuget包:Microsoft.Extensions.Caching.StackExchangeRedis
+- 使用 ```Services.AddStackExchangeRedisCache``` 注册redis,在参数options里配置连接属性Configuration及键值前缀InstanceName
+- 在需要使用redis缓存的类里使用构造注入IDistributedCache
+```C#
+/* program.cs */
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "127.0.0.1:6379,password=123456,defaultDatabase=0,connectTimeout=5000,syncTimeout=1000";
+    options.InstanceName = "jean_";
+});
+
+/* 构造注入IDistributedCache缓存 */
+private readonly IDistributedCache distributedCache;
+public TestController(IDistributedCache distributedCache)
+{
+    this.distributedCache = distributedCache;
+}
+
+/* 缓存使用 */
+public TResult? GetOrCreate<TResult>(string cacheKey, Func<DistributedCacheEntryOptions, TResult?> valueFactory, int expireSeconds = 60)
+{
+    string? resultString = cache.GetString(cacheKey);
+    /* Redis如果遇到null数据存入缓存会将null转成字符串"null"存入缓存,
+        * 取用时反序列化会将"null"转化成null,从而校验为null的话返回[没获取到数据],
+        * 可以用来区分是缓存中不存在该数据还是缓存中存入[数据库不存在该数据]两种情况 */
+    if (resultString == null)
+    {
+        var options = new DistributedCacheEntryOptions();
+        var result = valueFactory(options);
+        InitOptionsExpireSeconds(options, expireSeconds);
+        cache.SetString(cacheKey, JsonSerializer.Serialize(result), options);
+        return result;
+    }
+    else
+    {
+        //Refresh()方法可以手动刷新该键对应值的滑动过期时间，调用GetString()方法获取键值时也会触发相同的重置效果
+        cache.Refresh(cacheKey);
+        return JsonSerializer.Deserialize<TResult>(resultString);
+    }
+}
+
+```
+
+## 配置系统集成
+
 
 
 
