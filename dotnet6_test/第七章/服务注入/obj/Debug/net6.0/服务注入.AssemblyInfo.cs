@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("服务注入")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a716dbbe161323de968dee915483488d68303518")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+096277821618e3230e1b80dda70e0ad4b98c9f6a")]
 [assembly: System.Reflection.AssemblyProductAttribute("服务注入")]
 [assembly: System.Reflection.AssemblyTitleAttribute("服务注入")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

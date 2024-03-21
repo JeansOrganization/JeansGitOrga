@@ -5,7 +5,7 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "服务注入", "服务注入\服务注入.csproj", "{33C79633-3F47-4525-AB6A-E471E1B3462D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DI服务注入", "DI服务注入", "{E9C808C1-918D-4298-8789-FA337EA6ACF7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "服务注入", "服务注入", "{E9C808C1-918D-4298-8789-FA337EA6ACF7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "School", "School\School.csproj", "{2CEC9049-97F2-4090-B36F-74070CEDB8C2}"
 EndProject
@@ -21,7 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "内存缓存", "内存缓�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "分布式缓存", "分布式缓存\分布式缓存.csproj", "{7B126E93-CE90-4302-9729-5900492D6F43}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "配置系统集成", "配置系统集成\配置系统集成.csproj", "{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "配置系统集成", "配置系统集成\配置系统集成.csproj", "{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "分层项目中EFCore", "分层项目中EFCore", "{7A0D5399-B740-41FB-83EA-5F35BE70242E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore测试用WebAPI项目", "EFCore测试用WebAPI项目\EFCore测试用WebAPI项目.csproj", "{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore", "EFCore\EFCore.csproj", "{751DF617-2825-4364-B739-354DD93D95D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +67,14 @@ Global
 		{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{751DF617-2825-4364-B739-354DD93D95D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{751DF617-2825-4364-B739-354DD93D95D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{751DF617-2825-4364-B739-354DD93D95D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{751DF617-2825-4364-B739-354DD93D95D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +87,8 @@ Global
 		{53D79803-B57E-4151-AD9C-57649F93DA26} = {24F328E1-2458-4B3B-8560-F17CEB42E754}
 		{06A7FAF8-F409-4FA6-9F59-7988008FEA3B} = {24F328E1-2458-4B3B-8560-F17CEB42E754}
 		{7B126E93-CE90-4302-9729-5900492D6F43} = {24F328E1-2458-4B3B-8560-F17CEB42E754}
+		{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09} = {7A0D5399-B740-41FB-83EA-5F35BE70242E}
+		{751DF617-2825-4364-B739-354DD93D95D8} = {7A0D5399-B740-41FB-83EA-5F35BE70242E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {409665FA-5E73-4CD2-B78D-097F576C716B}

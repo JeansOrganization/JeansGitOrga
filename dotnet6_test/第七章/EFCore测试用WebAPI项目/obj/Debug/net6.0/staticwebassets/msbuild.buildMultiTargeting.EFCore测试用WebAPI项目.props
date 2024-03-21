@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EFCore测试用WebAPI项目.props" />
+</Project>

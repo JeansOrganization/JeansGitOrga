@@ -1,4 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 
 namespace 配置系统集成.Controllers
 {
@@ -8,12 +10,21 @@ namespace 配置系统集成.Controllers
     {
         private readonly IConfiguration _configuration;
         private readonly IWebHostEnvironment webHostEnvironment;
-        private readonly IWebHost webHost;
-        public HomeController(IConfiguration _configuration, IWebHostEnvironment webHostEnvironment, IWebHost webHost)
+        private readonly IOptionsSnapshot<SmtpOptions> smtpOptions;
+        private readonly IDistributedCacheHelper disCacheHelper;
+        private readonly BookService bookService;
+        private readonly ILogger<HomeController> logger;
+        public HomeController(IConfiguration _configuration, IWebHostEnvironment webHostEnvironment,
+            IOptionsSnapshot<SmtpOptions> smtpOptions, IDistributedCacheHelper disCacheHelper, BookService bookService, 
+            ILogger<HomeController> logger)
         {
             this._configuration = _configuration;
             this.webHostEnvironment = webHostEnvironment;
-            this.webHost = webHost;
+            this.smtpOptions = smtpOptions;
+            this.disCacheHelper = disCacheHelper;
+            this.bookService = bookService;
+            this.logger = logger;
+
         }
 
         [HttpGet]
@@ -47,10 +58,27 @@ namespace 配置系统集成.Controllers
                 $"webHostEnvironment_EnvironmentName:{webHostEnvironment_EnvironmentName}";
         }
 
+
+
         [HttpGet]
-        public async Task HostStop()
+        public ActionResult<Book> GetBookById(int id)
         {
-            await webHost.StopAsync();
+            string key = "Book_" + id;
+            Book? book = disCacheHelper.GetOrCreate(key, e =>
+            {
+                logger.LogInformation($"XXXXXXXXXX\r\n缓存中不存在，开始查找数据库中id为{id}的书\r\nXXXXXXXXXX");
+                return bookService.GetBookById(id);
+            }, 30);
+
+            if (book == null)
+            {
+                logger.LogInformation($"没找到ID为{id}的书");
+                return NotFound($"没找到ID为{id}的书");
+            }
+            logger.LogInformation($"查找成功，ID为{id}的书名是{book.BookName}");
+            Console.WriteLine(smtpOptions.Value);
+            return book;
+
         }
     }
 }

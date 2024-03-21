@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\EFCore测试用WebAPI项目.props" />
+</Project>

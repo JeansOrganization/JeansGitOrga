@@ -1057,6 +1057,43 @@ public TResult? GetOrCreate<TResult>(string cacheKey, Func<DistributedCacheEntry
 
 ## 配置系统集成
 
+### ASP.Net Core默认添加的配置提供者
+1. 加载现有的IConfiguration
+2. 加载项目根目录下的appsettings.json
+3. 加载项目根目录下的appsettings.{Environment}.json
+4. 当程序运行在开发环境下，程序会加载"用户机密"配置
+5. 加载环境变量中的配置
+6. 加载命令行中的配置
+- 如果有同名的配置，后加载的会覆盖前面加载的
+
+### 运行环境配置
+- 运行环境:由环境变量ASPNETCORE_ENVIRONMENT决定,能选择性的读取特定的appsettings.{Environment}.json配置 
+- appsettings.{Environment}.json: Development(开发环境)、Production(生产环境)、 Staging(待发布测试环境)、Testing(测试环境)
+- 读取方法:app.Environment.IsDevelopment()、app.Environment.EnvironmentName
+
+### 配置系统综合案例
+- 将主要的配置放置到专门存储配置的数据库，借用第三方库[Zack.AnyDBConfigProvider]实现从数据库获取配置到Configuration
+- 存储配置数据库的sql语句存储在用户机密配置中
+```C#
+builder.Host.ConfigureAppConfiguration((_, configure) =>
+{
+    //获取所在环境对应的sql连接字符串
+    string connStr = builder.Configuration.GetConnectionString("MySql");
+    //连接数据库并获取相应配置到Configuration
+    configure.AddDbConfiguration(() => new MySqlConnection(connStr));
+});
+/* 从数据库获取的配置 */
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    
+    options.Configuration = builder.Configuration.GetSection("Redis:configuration").Value;
+    options.InstanceName = builder.Configuration.GetSection("Redis:instanceName").Value;
+});
+builder.Services.Configure<SmtpOptions>(builder.Configuration.GetSection("SmtpOptions"));
+builder.Services.AddScoped<IDistributedCacheHelper, DistributedCacheHelper>();
+builder.Services.AddScoped<BookService>();
+```
+
 
 
 
