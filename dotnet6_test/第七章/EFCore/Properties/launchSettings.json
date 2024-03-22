@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "EFCore": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "MySqlConnStr": "server=127.0.0.1;port=3306;user=Jean;password=123456;database=JeanTest",
+        "Version": "8.2.0"
+      }
+    }
+  }
+}

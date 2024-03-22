@@ -3,8 +3,48 @@
   "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\schoolefcore\\schoolconfigfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|solutionrelative:schoolefcore\\schoolconfigfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\schoolefcore\\schoolefcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|solutionrelative:schoolefcore\\schoolefcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\schoolefcore\\schooldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|solutionrelative:schoolefcore\\schooldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\schoolefcore\\schoolconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|solutionrelative:schoolefcore\\schoolconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\efcore\\efcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
       "RelativeMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|solutionrelative:efcore\\efcore.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\schoolefcore\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB74728B-85FD-41C2-A889-5F1ECF785F55}|SchoolEFCore\\SchoolEFCore.csproj|solutionrelative:schoolefcore\\school.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}|EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\efcore\u6D4B\u8BD5\u7528webapi\u9879\u76EE\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}|EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE.csproj|solutionrelative:efcore\u6D4B\u8BD5\u7528webapi\u9879\u76EE\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}|EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\efcore\u6D4B\u8BD5\u7528webapi\u9879\u76EE\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B2D88F2-64EF-4FB6-8B85-0A95B6F30D09}|EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE.csproj|solutionrelative:efcore\u6D4B\u8BD5\u7528webapi\u9879\u76EE\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\Migrations\\20240322063334_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EFCore\\Migrations\\20240322063334_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\efcore\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|solutionrelative:efcore\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\efcore\\efcore.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|solutionrelative:efcore\\efcore.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\efcore\\bookconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -13,33 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\efcore\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{751DF617-2825-4364-B739-354DD93D95D8}|EFCore\\EFCore.csproj|solutionrelative:efcore\\book.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{33C79633-3F47-4525-AB6A-E471E1B3462D}|\u670D\u52A1\u6CE8\u5165\\\u670D\u52A1\u6CE8\u5165.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u670D\u52A1\u6CE8\u5165\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{33C79633-3F47-4525-AB6A-E471E1B3462D}|\u670D\u52A1\u6CE8\u5165\\\u670D\u52A1\u6CE8\u5165.csproj|solutionrelative:\u670D\u52A1\u6CE8\u5165\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\smtpoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|solutionrelative:\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\smtpoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|solutionrelative:\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|solutionrelative:\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|solutionrelative:\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{F692B7C3-43E8-46E9-A538-D7F1C65F4FC6}|\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj|solutionrelative:\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,45 +67,161 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EFCore.csproj",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\EFCore.csproj",
-              "RelativeDocumentMoniker": "EFCore\\EFCore.csproj",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\EFCore.csproj",
-              "RelativeToolTip": "EFCore\\EFCore.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-21T08:42:57.002Z",
+              "Title": "SchoolConfigFactory.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolConfigFactory.cs",
+              "RelativeDocumentMoniker": "SchoolEFCore\\SchoolConfigFactory.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolConfigFactory.cs",
+              "RelativeToolTip": "SchoolEFCore\\SchoolConfigFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T08:14:49.187Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u670D\u52A1\u6CE8\u5165\\Program.cs",
-              "RelativeDocumentMoniker": "\u670D\u52A1\u6CE8\u5165\\Program.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u670D\u52A1\u6CE8\u5165\\Program.cs",
-              "RelativeToolTip": "\u670D\u52A1\u6CE8\u5165\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAmAAAA",
+              "DocumentIndex": 2,
+              "Title": "SchoolDbContext.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolDbContext.cs",
+              "RelativeDocumentMoniker": "SchoolEFCore\\SchoolDbContext.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolDbContext.cs",
+              "RelativeToolTip": "SchoolEFCore\\SchoolDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T08:40:38.86Z",
+              "WhenOpened": "2024-03-22T08:12:08.417Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "SchoolEFCore",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolEFCore.csproj",
+              "RelativeDocumentMoniker": "SchoolEFCore\\SchoolEFCore.csproj",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolEFCore.csproj",
+              "RelativeToolTip": "SchoolEFCore\\SchoolEFCore.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-22T08:10:59.402Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SchoolConfig.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolConfig.cs",
+              "RelativeDocumentMoniker": "SchoolEFCore\\SchoolConfig.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\SchoolConfig.cs",
+              "RelativeToolTip": "SchoolEFCore\\SchoolConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T08:10:35.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "School.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\School.cs",
+              "RelativeDocumentMoniker": "SchoolEFCore\\School.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\SchoolEFCore\\School.cs",
+              "RelativeToolTip": "SchoolEFCore\\School.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T08:09:37.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "20240322063334_init.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\Migrations\\20240322063334_init.cs",
+              "RelativeDocumentMoniker": "EFCore\\Migrations\\20240322063334_init.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\Migrations\\20240322063334_init.cs",
+              "RelativeToolTip": "EFCore\\Migrations\\20240322063334_init.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T06:33:34.88Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Controllers\\TestController.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Controllers\\TestController.cs",
+              "RelativeToolTip": "EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Controllers\\TestController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T06:36:00.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EFCore",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\EFCore.csproj",
+              "RelativeDocumentMoniker": "EFCore\\EFCore.csproj",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\EFCore.csproj",
+              "RelativeToolTip": "EFCore\\EFCore.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-22T06:20:50.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EFCore",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\EFCore.csproj",
+              "RelativeDocumentMoniker": "EFCore\\EFCore.csproj",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\EFCore.csproj",
+              "RelativeToolTip": "EFCore\\EFCore.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-03-22T05:57:59.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Program.cs",
+              "RelativeDocumentMoniker": "EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Program.cs",
+              "RelativeToolTip": "EFCore\u6D4B\u8BD5\u7528WebAPI\u9879\u76EE\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAAsAAABYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T03:21:50.497Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "EFCore\\MyDbContext.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\MyDbContext.cs",
+              "RelativeToolTip": "EFCore\\MyDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAvwA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-22T03:17:13.225Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
               "Title": "BookConfig.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\BookConfig.cs",
               "RelativeDocumentMoniker": "EFCore\\BookConfig.cs",
               "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\BookConfig.cs",
               "RelativeToolTip": "EFCore\\BookConfig.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAFAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T08:35:58.315Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 12,
               "Title": "Book.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\EFCore\\Book.cs",
               "RelativeDocumentMoniker": "EFCore\\Book.cs",
@@ -101,82 +230,6 @@
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-21T08:35:56.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Microsoft.PackageDependencyResolution.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\Sdks\\Microsoft.NET.Sdk\\targets\\Microsoft.PackageDependencyResolution.targets",
-              "ViewState": "AQIAAP0AAAAAAAAAAAAvwAkBAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2024-03-21T08:33:51.155Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj",
-              "RelativeDocumentMoniker": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj",
-              "RelativeToolTip": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-03-21T08:12:53.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\appsettings.Development.json",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\appsettings.Development.json",
-              "RelativeToolTip": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\appsettings.Development.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-21T06:17:54.343Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SmtpOptions.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\SmtpOptions.cs",
-              "RelativeDocumentMoniker": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\SmtpOptions.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\SmtpOptions.cs",
-              "RelativeToolTip": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\SmtpOptions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswAUAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-21T03:22:17.001Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAABYAAAAAAAAAAAAYwE4AAAAvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T07:24:38.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Program.cs",
-              "RelativeDocumentMoniker": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Program.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E03\u7AE0\\\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Program.cs",
-              "RelativeToolTip": "\u914D\u7F6E\u7CFB\u7EDF\u96C6\u6210\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAIBJwBEAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T07:24:30.023Z",
               "EditorCaption": ""
             }
           ]

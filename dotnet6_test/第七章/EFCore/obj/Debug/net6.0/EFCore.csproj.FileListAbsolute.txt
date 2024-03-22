@@ -11,3 +11,5 @@ D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore\obj\Debug\net6.0\refint\EFCor
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore\obj\Debug\net6.0\EFCore.pdb
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore\obj\Debug\net6.0\ref\EFCore.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore\obj\Debug\net6.0\EFCore.csproj.AssemblyReference.cache
+D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore\bin\Debug\net6.0\EFCore.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore\obj\Debug\net6.0\EFCore.genruntimeconfig.cache

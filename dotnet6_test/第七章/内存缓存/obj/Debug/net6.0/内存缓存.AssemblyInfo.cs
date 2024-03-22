@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("内存缓存")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+096277821618e3230e1b80dda70e0ad4b98c9f6a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+395912a1d94888b0a998009aa7bcbc8fd8c63683")]
 [assembly: System.Reflection.AssemblyProductAttribute("内存缓存")]
 [assembly: System.Reflection.AssemblyTitleAttribute("内存缓存")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

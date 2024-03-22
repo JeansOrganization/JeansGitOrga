@@ -4,14 +4,14 @@
     "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj": {}
   },
   "projects": {
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj": {
+    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\EFCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
-        "projectName": "EFCore测试用WebAPI项目",
-        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
+        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\EFCore.csproj",
+        "projectName": "EFCore",
+        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\EFCore.csproj",
         "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\obj\\",
+        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,9 +45,103 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.28, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
+        "projectName": "EFCore测试用WebAPI项目",
+        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
+        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
+        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\EFCore.csproj": {
+                "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\EFCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.28, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
+            },
+            "Zack.Commons": {
+              "target": "Package",
+              "version": "[1.1.11, )"
+            },
+            "Zack.Infrastructure": {
+              "target": "Package",
+              "version": "[1.1.3, )"
             }
           },
           "imports": [
