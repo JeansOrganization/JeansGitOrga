@@ -11,3 +11,16 @@ D:\File\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\refint\School.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.pdb
 D:\File\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\ref\School.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\bin\Debug\net6.0\School.deps.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\bin\Debug\net6.0\School.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\bin\Debug\net6.0\School.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.csproj.AssemblyReference.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.AssemblyInfoInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.AssemblyInfo.cs
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.csproj.CoreCompileInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.sourcelink.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\refint\School.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\School.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\School\obj\Debug\net6.0\ref\School.dll

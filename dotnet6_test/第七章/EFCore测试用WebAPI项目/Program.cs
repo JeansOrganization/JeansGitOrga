@@ -1,7 +1,5 @@
-using EFCore;
 using EFCore²âÊÔÓÃWebAPIÏîÄ¿;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using Zack.Commons;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,7 +19,7 @@ builder.Services.AddAllDbContexts(options =>
     options.UseMySql(connStr, ServerVersion.Parse(version));
 } ,assemblies);
 
-//builder.Services.AddDbContext<MyDbContext>(options =>
+//builder.Services.AddDbContext<BookDbContext>(options =>
 //{
 //    string connStr = builder.Configuration.GetConnectionString("MySqlConnStr");
 //    string version = builder.Configuration.GetConnectionString("Version");

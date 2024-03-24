@@ -1,4 +1,5 @@
-using EFCore;
+using BookEFCore;
+using CarEFCore;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EFCore测试用WebAPI项目.Controllers
@@ -7,17 +8,22 @@ namespace EFCore测试用WebAPI项目.Controllers
     [Route("[controller]/[Action]")]
     public class TestController : ControllerBase
     {
-        private readonly MyDbContext dbContext;
+        private readonly BookDbContext dbContext;
+        private readonly CarDbContext carDbContext;
 
-        public TestController(MyDbContext dbContext)
+        public TestController(BookDbContext dbContext, CarDbContext carDbContext)
         {
             this.dbContext = dbContext;
+            this.carDbContext = carDbContext;
         }
 
         [HttpGet]
-        public ActionResult<List<Book>> GetBooks()
+        public ActionResult<List<object>> GetAllData()
         {
-            return dbContext.Books.ToList();
+            List<Book> bookList = dbContext.Books.ToList();
+            List<Car> carList = carDbContext.Cars.ToList();
+            var list = new List<object>() { bookList, carList };
+            return list;
         }
     }
 }

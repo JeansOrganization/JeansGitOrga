@@ -11,3 +11,16 @@ D:\File\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.d
 D:\File\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\refint\Hispital.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.pdb
 D:\File\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\ref\Hispital.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\bin\Debug\net6.0\Hispital.deps.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\bin\Debug\net6.0\Hispital.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\bin\Debug\net6.0\Hispital.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.csproj.AssemblyReference.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.AssemblyInfoInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.AssemblyInfo.cs
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.csproj.CoreCompileInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.sourcelink.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\refint\Hispital.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\Hispital.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\Hispital\obj\Debug\net6.0\ref\Hispital.dll
