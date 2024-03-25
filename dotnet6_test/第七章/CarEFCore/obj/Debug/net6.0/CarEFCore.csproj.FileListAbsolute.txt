@@ -1,0 +1,15 @@
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\bin\Debug\net6.0\CarEFCore.deps.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\bin\Debug\net6.0\CarEFCore.runtimeconfig.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\bin\Debug\net6.0\CarEFCore.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\bin\Debug\net6.0\CarEFCore.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.csproj.AssemblyReference.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.AssemblyInfoInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.AssemblyInfo.cs
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.csproj.CoreCompileInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.sourcelink.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\refint\CarEFCore.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\CarEFCore.genruntimeconfig.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\CarEFCore\obj\Debug\net6.0\ref\CarEFCore.dll

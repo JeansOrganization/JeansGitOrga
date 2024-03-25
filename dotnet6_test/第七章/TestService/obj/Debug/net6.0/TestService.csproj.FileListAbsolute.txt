@@ -1,0 +1,12 @@
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\bin\Debug\net6.0\TestService.deps.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\bin\Debug\net6.0\TestService.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\bin\Debug\net6.0\TestService.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\TestService.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\TestService.AssemblyInfoInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\TestService.AssemblyInfo.cs
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\TestService.csproj.CoreCompileInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\TestService.sourcelink.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\TestService.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\refint\TestService.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\TestService.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\TestService\obj\Debug\net6.0\ref\TestService.dll

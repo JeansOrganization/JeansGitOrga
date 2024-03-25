@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "cgEIHJ/914sU18gGH9aLdXH3aF2E7lz0A9WE/kOU1Bo=",
+  "Source": "请求限流器",
+  "BasePath": "_content/请求限流器",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

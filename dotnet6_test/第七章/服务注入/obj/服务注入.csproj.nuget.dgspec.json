@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj": {}
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj": {}
   },
   "projects": {
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj": {
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj",
+        "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj",
         "projectName": "Hispital",
-        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj",
-        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\obj\\",
+        "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj",
+        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
+        "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,17 +74,21 @@
         }
       }
     },
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj": {
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj",
+        "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj",
         "projectName": "School",
-        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj",
-        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\School\\obj\\",
+        "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj",
+        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
+        "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\School\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -136,17 +144,21 @@
         }
       }
     },
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj": {
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj",
+        "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj",
         "projectName": "服务注入",
-        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj",
-        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\obj\\",
+        "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\服务注入.csproj",
+        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
+        "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\服务注入\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -160,11 +172,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj": {
-                "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj"
+              "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj": {
+                "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\Hispital\\Hispital.csproj"
               },
-              "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj": {
-                "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj"
+              "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj": {
+                "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\School\\School.csproj"
               }
             }
           }

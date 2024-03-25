@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\异常筛选器.props" />
+</Project>

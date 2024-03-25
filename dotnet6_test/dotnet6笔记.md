@@ -1094,6 +1094,229 @@ builder.Services.AddScoped<IDistributedCacheHelper, DistributedCacheHelper>();
 builder.Services.AddScoped<BookService>();
 ```
 
+## 多层EFCore项目
+### 多层项目EFCore的使用
+- 给实体类单独建一个项目，多个实体类可以建一个或者多个项目，再编写具体的配置信息、上下文DbContext
+- DbContext里不再配置数据库连接，而是增加入参为DbContextOptions<当前上下文>的构造函数供WebAPI启动端进行注册(services.AddDbContext)并配置数据库连接
+
+- 如果有CoreFirst的需求，则需要在实体项目里增加一个类实现IDesignTimeDbContextFactory，在实现方法里构造DbContextOptionsBuilder配置数据库连接
+- 最后将builder.options作为入参传入实体类上下文构造函数入参内，则代码完成，将启动项目和包管理的默认项目都更改为EFCore项目进行Add-migration和update-database就可以进行CoreFirst了
+```C#
+/* 上下文构造函数 */
+public class BookDbContext : DbContext
+{
+    public BookDbContext(DbContextOptions<BookDbContext> options):base(options)
+    {
+        
+    }
+}
+/* EFCore临时启动类 */
+public class BookDbContextFactory : IDesignTimeDbContextFactory<BookDbContext>
+{
+    public BookDbContext CreateDbContext(string[] args)
+    {
+        var builder =  new DbContextOptionsBuilder<BookDbContext>();
+        builder.UseMySql("server=127.0.0.1;port=3306;user=Jean;password=123456;database=JeanTest", ServerVersion.Parse("8.2.0"));
+        var myDbContext = new BookDbContext(builder.Options);
+        return myDbContext;
+    }
+}
+/* 上下文注入(带Options) */
+builder.Services.AddDbContext<BookDbContext>(options =>
+{
+   string connStr = builder.Configuration.GetConnectionString("MySqlConnStr");
+   string version = builder.Configuration.GetConnectionString("Version");
+   options.UseMySql(connStr, ServerVersion.Parse(version));
+});
+```
+
+## Filter(筛选器or过滤器)
+- ASP.NET Core中的Filter的五种类型:Authorization filter(权限筛选器)、Resource filter(资源筛选器)、Action filter(动作筛选器)、Exception filter(异常过滤器)、Result filter(结果筛选器)。
+- 所有筛选器一般有同步和异步两个版本，比如IActionFilter、IAsyncActionFilter接口
+### Exception Filter(异常筛选器)
+- 新建一个类实现接口 IAsyncExceptionFilter(异步) OR IExceptionFilter(同步) 
+- 实现 OnExceptionAsync OR OnException 方法,只要项目里面抛出异常就会被捕捉执行该方法
+- 在program.cs通过 builder.Services.Configure<MvcOptions>(options=>{options.Filters.Add<My2ExceptionFilter>();}) 注入
+- 可以有多个异常筛选器,多个筛选器捕捉顺序按注入顺序的反序执行,谁后注入谁先执行
+```C#
+/* 筛选器 */
+public class MyExceptionFilter : IAsyncExceptionFilter
+{
+    public Task OnExceptionAsync(ExceptionContext context)
+    {
+        Exception exception = context.Exception;
+        string message = exception.Message;
+        ObjectResult result = new ObjectResult(new {code = 500,message});
+        result.StatusCode = 500; //HTTP状态码
+        context.Result = result;
+        context.ExceptionHandled = true; //表示异常是否已解决，true的话异常不会再被其他筛选器捕捉
+        return Task.CompletedTask;
+    }
+}
+/* 筛选器注入(后注入的先执行) */
+builder.Services.Configure<MvcOptions>(options =>
+{
+    options.Filters.Add<My2ExceptionFilter>();
+    options.Filters.Add<MyExceptionFilter>();
+});
+```
+
+### Action Filter(动作筛选器)
+- 新建一个类实现接口 IAsyncActionFilter(异步) OR IActionFilter(同步) 
+- 实现 OnActionExecutionAsync OR OnActionExecution 方法,在调用Action之前会调用该方法
+- 同时如果不执行 await next(),则不会再往后面的ActionFilter或者Action执行,而是直接退出,如果执行next()则会执行下一个ActionFilter或者Action
+- 在program.cs通过 builder.Services.Configure<MvcOptions>(options=>{options.Filters.Add<MyActionFilter>();}) 注入
+- 可以有多个动作筛选器,多个筛选器捕捉顺序按注入顺序的正序执行,谁先注入谁先执行,Action执行完后按反序执行next()
+```C#
+/* 筛选器 */
+public class MyActionFilter1 : IAsyncActionFilter
+{
+    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+    {
+        Console.WriteLine("MyActionFilter1:执行成功");
+        var r = await next();
+        if(r.Exception == null)
+        {
+            Console.WriteLine("MyActionFilter1.next:执行成功");
+        }
+        else
+        {
+            Console.WriteLine("MyActionFilter1.next:执行失败");
+        }
+    }
+}
+/* 筛选器注入 */
+builder.Services.Configure<MvcOptions>(options =>
+{
+    options.Filters.Add<MyActionFilter1>();
+    options.Filters.Add<MyActionFilter2>();
+});
+```
+
+### 自动启用事务的筛选器
+- 通过构造TransactionScope实例实现,其中共有两个方法:Complete()、Dispose()
+- 可通过特性Attribute判断哪些方法需要进行事务控制
+```C#
+/* 自动启用事务筛选器 */
+public class TransactionScopeFilter : IAsyncActionFilter
+{
+    public async Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+    {
+        bool hasNotTransactionalAttribute = false;
+        if (context.ActionDescriptor is ControllerActionDescriptor)
+        {
+            hasNotTransactionalAttribute = ((ControllerActionDescriptor)context.ActionDescriptor).
+                MethodInfo.IsDefined(typeof(NotTransactionalAttribute));
+        }
+        if (hasNotTransactionalAttribute)
+        {
+            await next();
+            return;
+        }
+        using var transactionScope =  new TransactionScope(TransactionScopeAsyncFlowOption.Enabled);
+        var result = await next();
+        if(result.Exception == null)
+        {
+            transactionScope.Complete();
+        }
+    }
+}
+/* 自定义特性,标注的对象不进行事务控制 */
+[AttributeUsage(AttributeTargets.Method)]//作用目标:Method
+public class NotTransactionalAttribute : Attribute
+{
+}
+```
+
+### 请求限流器
+- 实现1秒钟内只允许同个IP访问一次
+```C#
+public class RateLimitFilter : IAsyncActionFilter
+{
+    private readonly IMemoryCache memoryCache;
+    public RateLimitFilter(IMemoryCache memoryCache)
+    {
+        this.memoryCache = memoryCache;
+    }
+    public Task OnActionExecutionAsync(ActionExecutingContext context, ActionExecutionDelegate next)
+    {
+        string? ipAddress = context.HttpContext.Connection.RemoteIpAddress?.ToString();
+        string key = "LastVisitTick_" + ipAddress;
+        long? ticks = memoryCache.Get<long?>(key);
+        long curTicks = Environment.TickCount64;
+        if (ticks == null || curTicks - ticks > 1000)
+        {
+            memoryCache.Set(key, curTicks, TimeSpan.FromSeconds(10));
+            return next();
+        }
+        context.Result = new ContentResult { StatusCode = 429 };
+        return Task.CompletedTask;
+    }
+}
+```
+
+## 中间件
+### 中间件基础写法
+```C#
+/* program.cs */
+var builder = WebApplication.CreateBuilder(args);
+var app = builder.Build();
+app.Map("/test", async pipeBuilder =>
+{
+    pipeBuilder.UseMiddleware<CheckMiddleware>();
+    pipeBuilder.Use(async (context, next) =>
+    {
+        await context.Response.WriteAsync("1-start</br>");
+        await next.Invoke();
+        await context.Response.WriteAsync("1-end</br>");
+    });
+    pipeBuilder.Use(async (context, next) =>
+    {
+        await context.Response.WriteAsync("2-start</br>");
+        await next.Invoke();
+        await context.Response.WriteAsync("2-end</br>");
+    });
+    pipeBuilder.Run(async context =>
+    {
+        var obj = context.Items["BodyJson"];
+        await context.Response.WriteAsync(obj + "Run</br>");
+        
+    });
+});
+app.Run();
+/* 中间类的写法 */
+public class CheckMiddleware
+{
+    private readonly RequestDelegate next;
+    /* 必须有一个构造函数带RequestDelegate参数 */
+    public CheckMiddleware(RequestDelegate next)
+    {
+        this.next = next;
+    }
+
+    /* 必须有一个Invoke或者InvokeAsync方法带context参数，且InvokeAsync方法返回值得是Task */
+    public async Task InvokeAsync(HttpContext context)
+    {
+        await context.Response.WriteAsync("CheckMiddleware-start");
+        var password = context.Request.Query["password"];
+        if (password == "123")
+        {
+            if (context.Request.HasJsonContentType())
+            {
+                var stream = context.Request.BodyReader.AsStream();
+                var jsonObj = DJson.Parse(stream);
+                context.Items["BodyJson"] = jsonObj;
+            }
+            await next.Invoke(context);
+        }
+        else
+        {
+            context.Response.StatusCode = 401;
+        }
+        await context.Response.WriteAsync("CheckMiddleware-end");
+    }
+}
+```
 
 
 
@@ -1175,6 +1398,134 @@ static async Task<int> ProduceNumberAsync(int seed)
 {
     await Task.Delay(1000);
     return 2 * seed;
+}
+```
+
+## 特性(Attribute)
+- 特性（Attribute）是用于在运行时传递程序中各种元素（比如类、方法、结构、枚举、组件等）的行为信息的声明性标签。
+- 特性使用中括号声明，特性是一个类且必须直接或者间接继承 Attribute。 一个声明性标签是通过放置在它所应用的元素前面的方括号（[ ]）来描述的。
+### 自定义特性(CustomAttribute)
+- 必须直接或者间接地继承 Attribute
+- 关联的元素:程序集(assembly)、模块(module)、类型(type)、属性(property)、事件(event)、字段(field)、方法(method)、参数(param)、返回值(return)
+- 约定:所有自定义的特性名称都应该有个Attribute后缀。因为当你的Attribute施加到一个程序的元素上的时候，编译器先查找你的Attribute的定义，如果没有找到，那么它就会查找“Attribute名称"+Attribute的定义
+- Attribute类是在编译的时候被实例化的，而不是像通常的类那样在运行时候才实例化
+```C#
+/* 特性 */
+public class CustomAttribute : Attribute {
+    public string Desc { get; set; }
+    public CustomAttribute()
+    {
+        Console.WriteLine("CustomAttribute构造函数");
+    }
+    public CustomAttribute(string desc) { 
+        this.Desc = desc;
+        Console.WriteLine("CustomAttribute有参构造函数");
+    }
+}
+/* 使用了特性的类 */
+[Custom("我在类上使用")]
+public class Student {
+    [Custom("我在字段上使用")]
+    public string name;
+    [Custom("我在属性上使用")]
+    public string Name { get { return name; } set { name = value; } }
+
+    [Custom("我在方法上使用")]
+    [return: Custom("我在返回值上")]
+    public string GetName([Custom("参数")] int Id) {
+        return name;
+    }
+}
+/* 体现特性作用 */
+static void Main(string[] args)
+{
+    Type type = typeof(Student);
+    //判断是否在类上使用特性
+    if (type.IsDefined(typeof(CustomAttribute), true))
+    {
+        CustomAttribute customAttribute = (CustomAttribute)type.GetCustomAttribute(typeof(CustomAttribute), true);
+        Console.WriteLine(customAttribute.Desc);
+    }
+
+    MethodInfo method = type.GetMethod("GetName");
+    //判断是否在方法上使用特性
+    if (method.IsDefined(typeof(CustomAttribute), true))
+    {
+        CustomAttribute customAttribute = (CustomAttribute)method.GetCustomAttribute(typeof(CustomAttribute), true);
+        Console.WriteLine(customAttribute.Desc);
+    }
+    Console.ReadKey();
+}
+```
+
+### 特性的实际运用(数据校验)
+- 定义一个抽象类，继承自Attribute
+- 定义一个 LongAttribute
+- 定义一个用户表 User ，标上LongAttribute特性
+- 定义一个 Validate 的扩展类与扩展方法
+- 实例化 User并校验数据
+```C#
+/* 定义一个抽象类，继承自Attribute */
+public abstract class AbstractValidateAttribute : Attribute
+{
+    public abstract bool Validate(object oValue);
+}
+/* 定义一个 LongAttribute */
+public class LongAttribute : AbstractValidateAttribute
+{
+    private int min { get; set; }
+    private int max { get; set; }
+    public LongAttribute(int min, int max)
+    {
+        this.min = min;
+        this.max = max;
+    }
+    public override bool Validate(object oValue)
+    {
+        return oValue != null && int.TryParse(oValue.ToString(), out int num) && num >= this.min && num <= this.max;
+    }
+}
+/* 定义一个用户表 User ，标上LongAttribute特性 */
+public class User
+{
+    public string Name { get; set; }
+    [Long(1, 100)]
+    public int Age
+    {
+        get; set;
+    }
+}
+/* 定义一个 Validate 的扩展类与扩展方法 */
+public static class ValidateExtension
+{
+    public static bool Validate(this object val)
+    {
+        Type type = val.GetType();
+        foreach (var prop in type.GetProperties())
+        {
+            if (prop.IsDefined(typeof(LongAttribute), true))
+            {
+                LongAttribute longAttribute = (LongAttribute)prop.GetCustomAttribute(typeof(LongAttribute), true);
+                if (!longAttribute.Validate(prop.GetValue(val)))
+                {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+}
+/* 实例化 User并校验数据 */
+static void Main(string[] args)
+{
+    User user1 = new User();
+    user1.Age = -1;
+
+    User user2 = new User();
+    user2.Age = 23;
+    Console.WriteLine(user1.Validate());
+
+    Console.ReadKey();
 }
 ```
 

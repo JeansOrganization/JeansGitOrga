@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj": {}
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj": {}
   },
   "projects": {
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj": {
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj",
+        "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj",
         "projectName": "配置系统集成",
-        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj",
-        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\obj\\",
+        "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\配置系统集成.csproj",
+        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
+        "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\配置系统集成\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

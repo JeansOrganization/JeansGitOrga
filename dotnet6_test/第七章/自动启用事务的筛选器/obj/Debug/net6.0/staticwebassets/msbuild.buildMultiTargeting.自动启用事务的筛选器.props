@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\自动启用事务的筛选器.props" />
+</Project>

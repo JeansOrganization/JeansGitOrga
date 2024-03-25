@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\动作筛选器.props" />
+</Project>

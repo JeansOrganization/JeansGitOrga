@@ -894,17 +894,30 @@
           "lib/net6.0/Zack.Infrastructure.dll": {}
         }
       },
-      "EFCore/1.0.0": {
+      "BookEFCore/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
         },
         "compile": {
-          "bin/placeholder/EFCore.dll": {}
+          "bin/placeholder/BookEFCore.dll": {}
         },
         "runtime": {
-          "bin/placeholder/EFCore.dll": {}
+          "bin/placeholder/BookEFCore.dll": {}
+        }
+      },
+      "CarEFCore/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
+        },
+        "compile": {
+          "bin/placeholder/CarEFCore.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CarEFCore.dll": {}
         }
       }
     }
@@ -2357,15 +2370,21 @@
         "zack.infrastructure.nuspec"
       ]
     },
-    "EFCore/1.0.0": {
+    "BookEFCore/1.0.0": {
       "type": "project",
-      "path": "../EFCore/EFCore.csproj",
-      "msbuildProject": "../EFCore/EFCore.csproj"
+      "path": "../BookEFCore/BookEFCore.csproj",
+      "msbuildProject": "../BookEFCore/BookEFCore.csproj"
+    },
+    "CarEFCore/1.0.0": {
+      "type": "project",
+      "path": "../CarEFCore/CarEFCore.csproj",
+      "msbuildProject": "../CarEFCore/CarEFCore.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "EFCore >= 1.0.0",
+      "BookEFCore >= 1.0.0",
+      "CarEFCore >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 6.0.28",
       "Pomelo.EntityFrameworkCore.MySql >= 6.0.2",
       "Swashbuckle.AspNetCore >= 6.5.0",
@@ -2374,19 +2393,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JeanG\\.nuget\\packages\\": {}
+    "C:\\Users\\Jean\\.nuget\\packages\\": {},
+    "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
+      "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
       "projectName": "EFCore测试用WebAPI项目",
-      "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
-      "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-      "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\obj\\",
+      "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
+      "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
+      "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2400,8 +2424,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\EFCore.csproj": {
-              "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore\\EFCore.csproj"
+            "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\BookEFCore\\BookEFCore.csproj": {
+              "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\BookEFCore\\BookEFCore.csproj"
+            },
+            "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\CarEFCore\\CarEFCore.csproj": {
+              "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\CarEFCore\\CarEFCore.csproj"
             }
           }
         }

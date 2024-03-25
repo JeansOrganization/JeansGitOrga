@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v6.0": {
       "EFCore测试用WebAPI项目/1.0.0": {
         "dependencies": {
-          "EFCore": "1.0.0",
+          "BookEFCore": "1.0.0",
+          "CarEFCore": "1.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "6.0.28",
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2",
           "Swashbuckle.AspNetCore": "6.5.0",
@@ -499,12 +500,20 @@
           }
         }
       },
-      "EFCore/1.0.0": {
+      "BookEFCore/1.0.0": {
         "dependencies": {
           "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
         },
         "runtime": {
-          "EFCore.dll": {}
+          "BookEFCore.dll": {}
+        }
+      },
+      "CarEFCore/1.0.0": {
+        "dependencies": {
+          "Pomelo.EntityFrameworkCore.MySql": "6.0.2"
+        },
+        "runtime": {
+          "CarEFCore.dll": {}
         }
       }
     }
@@ -900,7 +909,12 @@
       "path": "zack.infrastructure/1.1.3",
       "hashPath": "zack.infrastructure.1.1.3.nupkg.sha512"
     },
-    "EFCore/1.0.0": {
+    "BookEFCore/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CarEFCore/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

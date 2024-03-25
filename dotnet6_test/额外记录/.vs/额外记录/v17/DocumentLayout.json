@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\validataextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\validataextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\lengthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\lengthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\abstractvalidateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\abstractvalidateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ValidataExtension.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
+              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T13:58:44.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LengthAttribute.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
+              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAgwCQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T13:50:36.63Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AbstractValidateAttribute.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
+              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAABOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T13:48:02.139Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestController.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
+              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
+              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T13:45:52.417Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

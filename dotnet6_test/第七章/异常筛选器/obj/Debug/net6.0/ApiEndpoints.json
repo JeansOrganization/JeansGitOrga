@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "\u5F02\u5E38\u7B5B\u9009\u5668.Controllers.TestController",
+    "Method": "GetMessage",
+    "RelativePath": "Test/GetMessage",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

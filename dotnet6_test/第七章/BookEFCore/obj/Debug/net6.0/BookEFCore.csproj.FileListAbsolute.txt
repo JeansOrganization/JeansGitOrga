@@ -1,0 +1,15 @@
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.GeneratedMSBuildEditorConfig.editorconfig
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.AssemblyInfoInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.AssemblyInfo.cs
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.csproj.CoreCompileInputs.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.sourcelink.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.csproj.AssemblyReference.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\bin\Debug\net6.0\BookEFCore.deps.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\bin\Debug\net6.0\BookEFCore.runtimeconfig.json
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\bin\Debug\net6.0\BookEFCore.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\bin\Debug\net6.0\BookEFCore.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\refint\BookEFCore.dll
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.pdb
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\BookEFCore.genruntimeconfig.cache
+E:\GitFile\JeansGitOrga\dotnet6_test\第七章\BookEFCore\obj\Debug\net6.0\ref\BookEFCore.dll
