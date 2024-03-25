@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "Identity\u6807\u8BC6\u6846\u67B6.Controllers.TestController",
+    "Method": "InitAdminAndUser",
+    "RelativePath": "Test/InitAdminAndUser",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Identity\u6807\u8BC6\u6846\u67B6.Controllers.TestController",
+    "Method": "Login",
+    "RelativePath": "Test/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Identity\u6807\u8BC6\u6846\u67B6.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Identity\u6807\u8BC6\u6846\u67B6.Controllers.TestController",
+    "Method": "ResetPassword",
+    "RelativePath": "Test/ResetPassword",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Identity\u6807\u8BC6\u6846\u67B6.Controllers.ResetPasswordByOldRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

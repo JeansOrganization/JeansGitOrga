@@ -1325,8 +1325,121 @@ public class CheckMiddleware
 - 优先选择使用中间件；但是如果这个组件只针对MVC或者需要调用一些MVC相关的类的时候，我们就只能选择Filter。
 
 
+# 第八章
+## Identity标识框架
+- 标识（Identity）框架：采用基于角色的访问控制（Role-Based Access Control，简称RBAC）策略，内置了对用户、角色等表的管理以及相关的接口，支持外部登录、2FA等。
+- 标识框架使用EF Core对数据库进行操作，因此标识框架支持几乎所有数据库。
+### 标识框架的使用
+- Nuget包:Microsoft.AspNetCore.Identity.EntityFrameworkCore
+- IdentityUser<TKey>、IdentityRole<TKey>，TKey代表主键的类型。我们一般编写继承自IdentityUser<TKey>、IdentityRole<TKey>等的自定义类，可以增加自定义属性
+- 创建继承自IdentityDbContext的类
+- 可以通过IdDbContext类来操作数据库，不过框架中提供了RoleManager、UserManager等类来简化对数据库的操作。
+```C#
+/* User类继承IdentityUser<long> */
+public class User : IdentityUser<long>
+{
+}
+/* Role类继承IdentityRole<long> */
+public class Role : IdentityRole<long>
+{
+}
+/* MyDbContext继承IdentityDbContext<User,Role,long>,采用构造函数带DbContextOptions<MyDbContext>参数写法,可使用服务注入,在program.cs配置连接字符串 */
+public class MyDbContext : IdentityDbContext<User,Role,long>
+{
+    public MyDbContext(DbContextOptions<MyDbContext> options) : base(options)
+    {
+    }
+    protected override void OnModelCreating(ModelBuilder builder)
+    {
+        base.OnModelCreating(builder);
+        builder.ApplyConfigurationsFromAssembly(this.GetType().Assembly);
+    }
+}
+/* 关于program.cs里的配置及服务注入 */
+builder.Services.AddDbContext<MyDbContext>(options =>
+{
+    options.UseMySql("server=localhost;port=3306;user=Jean;password=123456;database=JeanTest", ServerVersion.Parse("8.2.0"));
+});
+builder.Services.AddDataProtection();
+builder.Services.AddIdentityCore<User>(options =>
+{
+    options.Password.RequireDigit = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequiredLength = 6;
+    options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultEmailProvider;
+    options.Tokens.EmailConfirmationTokenProvider = TokenOptions.DefaultEmailProvider;
+});
+var identityBuilder = new IdentityBuilder(typeof(User), typeof(Role), builder.Services);
+identityBuilder.AddEntityFrameworkStores<MyDbContext>().AddDefaultTokenProviders().
+AddUserManager<UserManager<User>>().AddRoleManager<RoleManager<Role>>();
+```
 
-
+### UserManager与RoleManager的使用
+```C#
+/* 初始化管理员方法 */
+public async Task<ActionResult> InitAdminAndUser()
+{
+    var roleExist = await roleManager.RoleExistsAsync("admin");
+    if (!roleExist)
+    {
+        Role role = new Role() { Name = "admin" };
+        var r = await roleManager.CreateAsync(role);
+        if (!r.Succeeded) return BadRequest(r.Errors);
+    }
+    var user = await userManager.FindByNameAsync("jean");
+    if(user == null)
+    {
+        user = new User() { UserName = "jean", Email = "771058475@qq.com",EmailConfirmed = true };
+        var r = await userManager.CreateAsync(user,"123456");
+        if (!r.Succeeded) return BadRequest(r.Errors);
+        var result = await userManager.AddToRoleAsync(user, "admin");
+        if (!result.Succeeded) return BadRequest(result.Errors);
+    }
+    return Ok();
+}
+/* 登录方法 */
+public async Task<ActionResult<string>> Login(LoginRequest req)
+{
+    string username = req.username;
+    string password = req.password;
+    var user = await userManager.FindByNameAsync(username);
+    if (user == null) return NotFound("用户不存在:" + username);
+    if (await userManager.IsLockedOutAsync(user)) return BadRequest("正在锁定中，请稍后重试");
+    var checkPassword = await userManager.CheckPasswordAsync(user, password);
+    if (!checkPassword)
+    {
+        var r = await userManager.AccessFailedAsync(user);
+        return BadRequest("密码错误!!");
+    }
+    else
+    {
+        await userManager.ResetAccessFailedCountAsync(user);
+        return "登录成功";
+    }
+}
+/* 通过旧密码修改密码 */
+public async Task<ActionResult> ResetPassword(ResetPasswordByOldRequest req)
+{
+    string username = req.username;
+    string password = req.password;
+    string oldpassword = req.oldpassword;
+    var r = await Login(new LoginRequest(username, oldpassword));
+    if (r.Value == "登录成功")
+    {
+        var user = await userManager.FindByNameAsync(username);
+        string token = await userManager.GeneratePasswordResetTokenAsync(user);
+        var result = await userManager.ResetPasswordAsync(user, token, password);
+        if (!result.Succeeded)
+        {
+            return BadRequest(result.Errors);
+        }
+        return Ok("修改成功");
+    }
+    return BadRequest("密码验证错误");
+}
+```
 
 
 

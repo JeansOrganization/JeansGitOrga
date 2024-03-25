@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Identity标识框架.props" />
+</Project>
