@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("分布式缓存")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+395912a1d94888b0a998009aa7bcbc8fd8c63683")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cce9d237de4972e9c1c52bb24ecac320ff295d08")]
 [assembly: System.Reflection.AssemblyProductAttribute("分布式缓存")]
 [assembly: System.Reflection.AssemblyTitleAttribute("分布式缓存")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
