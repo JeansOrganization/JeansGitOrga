@@ -437,24 +437,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jean\\.nuget\\packages\\": {},
-    "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages": {}
+    "C:\\Users\\JeanG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\客户端响应缓存\\客户端响应缓存.csproj",
+      "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\客户端响应缓存\\客户端响应缓存.csproj",
       "projectName": "客户端响应缓存",
-      "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\客户端响应缓存\\客户端响应缓存.csproj",
-      "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
-      "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\客户端响应缓存\\obj\\",
+      "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\客户端响应缓存\\客户端响应缓存.csproj",
+      "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
+      "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\客户端响应缓存\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

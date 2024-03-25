@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jxDp5UtFJQZLN+Og/49uqwP8XnwepbY9uHUvkfmFpAnbzM48vWfSgJ4+MMxRI59hJIA9S2gzzn1N6smKPvyaTQ==",
+  "dgSpecHash": "ULFLL/4iBSsMN+fJSZKMzPl+GY8FLpx4kp8jpebSG/vG3VmheLRCzkccShmbIsOH5MJH/fnA/QLWnykxDajNvA==",
   "success": true,
-  "projectFilePath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\TestService\\TestService.csproj",
+  "projectFilePath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\TestService\\TestService.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

@@ -453,24 +453,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jean\\.nuget\\packages\\": {},
-    "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages": {}
+    "C:\\Users\\JeanG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\异常筛选器.csproj",
+      "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\异常筛选器.csproj",
       "projectName": "异常筛选器",
-      "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\异常筛选器.csproj",
-      "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
-      "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\obj\\",
+      "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\异常筛选器.csproj",
+      "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
+      "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -484,8 +479,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\TestService\\TestService.csproj": {
-              "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\TestService\\TestService.csproj"
+            "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\TestService\\TestService.csproj": {
+              "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\TestService\\TestService.csproj"
             }
           }
         }

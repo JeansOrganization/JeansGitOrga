@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("请求限流器")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cce9d237de4972e9c1c52bb24ecac320ff295d08")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4782cde8b71a19e8bfa8e6ea8424d38b1504fcc9")]
 [assembly: System.Reflection.AssemblyProductAttribute("请求限流器")]
 [assembly: System.Reflection.AssemblyTitleAttribute("请求限流器")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

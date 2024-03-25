@@ -2393,24 +2393,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jean\\.nuget\\packages\\": {},
-    "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages": {}
+    "C:\\Users\\JeanG\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
+      "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
       "projectName": "EFCore测试用WebAPI项目",
-      "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
-      "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
-      "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\obj\\",
+      "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\EFCore测试用WebAPI项目.csproj",
+      "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
+      "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\EFCore测试用WebAPI项目\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2424,11 +2419,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\BookEFCore\\BookEFCore.csproj": {
-              "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\BookEFCore\\BookEFCore.csproj"
+            "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\BookEFCore\\BookEFCore.csproj": {
+              "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\BookEFCore\\BookEFCore.csproj"
             },
-            "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\CarEFCore\\CarEFCore.csproj": {
-              "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\CarEFCore\\CarEFCore.csproj"
+            "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\CarEFCore\\CarEFCore.csproj": {
+              "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\CarEFCore\\CarEFCore.csproj"
             }
           }
         }

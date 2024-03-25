@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj": {}
+    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj": {}
   },
   "projects": {
-    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj": {
+    "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj",
+        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj",
         "projectName": "分布式缓存",
-        "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj",
-        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
-        "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\obj\\",
+        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\分布式缓存.csproj",
+        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
+        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\分布式缓存\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

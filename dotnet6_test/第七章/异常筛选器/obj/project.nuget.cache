@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "BBM5nOrFAJs3Q9BtsziAhShyl/QVR1t1UdmIK6yjfu9t1nsNJvFxYAjYAwb8GjFZ9Wgz73dkDSEU47ESDLcTPA==",
+  "dgSpecHash": "7CTdzu+t6ZURiKaMuHEs3O395f8aIXPLYyIgAVEqFS2uTiYWIvup8OPfBjvlPkIEbfgUOwvJ6X1mLwwkBZNGBA==",
   "success": true,
-  "projectFilePath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\异常筛选器.csproj",
+  "projectFilePath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\异常筛选器\\异常筛选器.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Jean\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore\\6.5.0\\swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.5.0\\swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.5.0\\swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.5.0\\swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512"
   ],
   "logs": []
 }
