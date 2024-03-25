@@ -1318,10 +1318,15 @@ public class CheckMiddleware
 }
 ```
 
+### Middleware(中间件) 与 Filter(筛选器) 的区别
+- 中间件是ASP.NET Core这个基础提供的功能，而Filter是ASP.NET Core MVC中提供的功能。ASP.NET Core MVC是由MVC中间件提供的框架，而Filter属于MVC中间件提供的功能。
+- 中间件可以处理所有的请求，而Filter只能处理对控制器的请求；中间件运行在一个更底层、更抽象的级别，因此在中间件中无法处理MVC中间件特有的概念。
+- 中间件和Filter可以完成很多相似的功能。“未处理异常中间件”和“未处理异常Filter”；“请求限流中间件”和“请求限流Filter”的区别。
+- 优先选择使用中间件；但是如果这个组件只针对MVC或者需要调用一些MVC相关的类的时候，我们就只能选择Filter。
 
 
 
-# 简书地址:https://www.jianshu.com/p/9f09fe043564
+
 
 
 

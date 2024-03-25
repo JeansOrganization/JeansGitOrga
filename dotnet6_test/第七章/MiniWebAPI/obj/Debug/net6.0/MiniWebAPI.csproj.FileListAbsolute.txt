@@ -1,0 +1,12 @@
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\bin\Debug\net6.0\MiniWebAPI.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\bin\Debug\net6.0\MiniWebAPI.dll
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\bin\Debug\net6.0\MiniWebAPI.pdb
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\MiniWebAPI.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\MiniWebAPI.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\MiniWebAPI.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\MiniWebAPI.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\MiniWebAPI.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\MiniWebAPI.dll
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\refint\MiniWebAPI.dll
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\MiniWebAPI.pdb
+D:\File\JeansGitOrga\dotnet6_test\第七章\MiniWebAPI\obj\Debug\net6.0\ref\MiniWebAPI.dll

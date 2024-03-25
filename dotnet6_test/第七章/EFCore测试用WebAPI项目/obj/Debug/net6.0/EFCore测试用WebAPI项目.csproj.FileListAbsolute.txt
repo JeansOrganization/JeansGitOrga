@@ -41,8 +41,6 @@ D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debu
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\MySqlConnector.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\Pomelo.EntityFrameworkCore.MySql.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
-D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\EFCore.dll
-D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\EFCore.pdb
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\AsmResolver.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\AsmResolver.DotNet.dll
 D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\AsmResolver.PE.dll
@@ -136,3 +134,7 @@ E:\GitFile\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\D
 E:\GitFile\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\CarEFCore.pdb
 E:\GitFile\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\BookEFCore.dll
 E:\GitFile\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\BookEFCore.pdb
+D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\BookEFCore.dll
+D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\CarEFCore.dll
+D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\BookEFCore.pdb
+D:\File\JeansGitOrga\dotnet6_test\第七章\EFCore测试用WebAPI项目\bin\Debug\net6.0\CarEFCore.pdb

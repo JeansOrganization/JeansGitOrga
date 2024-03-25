@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "sO5i1CkAjGqpii1+pE7CapYIkQJZrXMB6XxnY9zHvr4=",
+  "Source": "MiniWebAPIDemo",
+  "BasePath": "_content/MiniWebAPIDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "MiniWebAPIDemo\\wwwroot",
+      "Source": "MiniWebAPIDemo",
+      "ContentRoot": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\MiniWebAPIDemo\\wwwroot\\",
+      "BasePath": "_content/MiniWebAPIDemo",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\MiniWebAPIDemo\\wwwroot\\index.html",
+      "SourceId": "MiniWebAPIDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\MiniWebAPIDemo\\wwwroot\\",
+      "BasePath": "_content/MiniWebAPIDemo",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\MiniWebAPIDemo\\wwwroot\\mvp.png",
+      "SourceId": "MiniWebAPIDemo",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\MiniWebAPIDemo\\wwwroot\\",
+      "BasePath": "_content/MiniWebAPIDemo",
+      "RelativePath": "mvp.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\mvp.png"
+    }
+  ]
+}

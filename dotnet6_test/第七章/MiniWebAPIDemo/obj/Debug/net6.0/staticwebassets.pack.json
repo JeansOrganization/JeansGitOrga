@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\MiniWebAPIDemo\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\File\\JeansGitOrga\\dotnet6_test\\第七章\\MiniWebAPIDemo\\wwwroot\\mvp.png",
+      "PackagePath": "staticwebassets\\mvp.png"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.MiniWebAPIDemo.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.MiniWebAPIDemo.props",
+      "PackagePath": "build\\MiniWebAPIDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.MiniWebAPIDemo.props",
+      "PackagePath": "buildMultiTargeting\\MiniWebAPIDemo.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.MiniWebAPIDemo.props",
+      "PackagePath": "buildTransitive\\MiniWebAPIDemo.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

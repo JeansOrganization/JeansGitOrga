@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "MiniWebAPIDemo/1.0.0": {
+        "dependencies": {
+          "MiniWebAPI": "1.0.0"
+        },
+        "runtime": {
+          "MiniWebAPIDemo.dll": {}
+        }
+      },
+      "MiniWebAPI/1.0.0": {
+        "runtime": {
+          "MiniWebAPI.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MiniWebAPIDemo/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MiniWebAPI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
