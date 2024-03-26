@@ -1,14 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\",
+  "WorkspaceRootPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{18C53986-1A7E-40B3-B4BD-35A637A86E0E}|\u89E3\u7801JWT\u4EE4\u724C\\\u89E3\u7801JWT\u4EE4\u724C.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u89E3\u7801jwt\u4EE4\u724C\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{18C53986-1A7E-40B3-B4BD-35A637A86E0E}|\u89E3\u7801JWT\u4EE4\u724C\\\u89E3\u7801JWT\u4EE4\u724C.csproj|solutionrelative:\u89E3\u7801jwt\u4EE4\u724C\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D396CF89-5850-4A98-8FF6-B9C1D3279FC4}|ASPNETCore_JWT\\ASPNETCore_JWT.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\aspnetcore_jwt\\controllers\\demo2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D396CF89-5850-4A98-8FF6-B9C1D3279FC4}|ASPNETCore_JWT\\ASPNETCore_JWT.csproj|solutionrelative:aspnetcore_jwt\\controllers\\demo2controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E3CAE3B7-1868-42B3-845B-C8475968287D}|\u751F\u6210JWT\u4EE4\u724C\\\u751F\u6210JWT\u4EE4\u724C.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u751F\u6210jwt\u4EE4\u724C\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E3CAE3B7-1868-42B3-845B-C8475968287D}|\u751F\u6210JWT\u4EE4\u724C\\\u751F\u6210JWT\u4EE4\u724C.csproj|solutionrelative:\u751F\u6210jwt\u4EE4\u724C\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D396CF89-5850-4A98-8FF6-B9C1D3279FC4}|ASPNETCore_JWT\\ASPNETCore_JWT.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\aspnetcore_jwt\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D396CF89-5850-4A98-8FF6-B9C1D3279FC4}|ASPNETCore_JWT\\ASPNETCore_JWT.csproj|solutionrelative:aspnetcore_jwt\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D396CF89-5850-4A98-8FF6-B9C1D3279FC4}|ASPNETCore_JWT\\ASPNETCore_JWT.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\aspnetcore_jwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D396CF89-5850-4A98-8FF6-B9C1D3279FC4}|ASPNETCore_JWT\\ASPNETCore_JWT.csproj|solutionrelative:aspnetcore_jwt\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C29545A-B723-4987-AE14-4F92D42007C9}|Identity\u6807\u8BC6\u6846\u67B6\\Identity\u6807\u8BC6\u6846\u67B6.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\identity\u6807\u8BC6\u6846\u67B6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C29545A-B723-4987-AE14-4F92D42007C9}|Identity\u6807\u8BC6\u6846\u67B6\\Identity\u6807\u8BC6\u6846\u67B6.csproj|solutionrelative:identity\u6807\u8BC6\u6846\u67B6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,27 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u89E3\u7801JWT\u4EE4\u724C\\Program.cs",
-              "RelativeDocumentMoniker": "\u89E3\u7801JWT\u4EE4\u724C\\Program.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u89E3\u7801JWT\u4EE4\u724C\\Program.cs",
-              "RelativeToolTip": "\u89E3\u7801JWT\u4EE4\u724C\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABcAAAAAAAAA",
+              "Title": "Demo2Controller.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\ASPNETCore_JWT\\Controllers\\Demo2Controller.cs",
+              "RelativeDocumentMoniker": "ASPNETCore_JWT\\Controllers\\Demo2Controller.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\ASPNETCore_JWT\\Controllers\\Demo2Controller.cs",
+              "RelativeToolTip": "ASPNETCore_JWT\\Controllers\\Demo2Controller.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAqwBYAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T09:37:52.133Z",
+              "WhenOpened": "2024-03-26T16:35:17.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\Identity\u6807\u8BC6\u6846\u67B6\\Program.cs",
+              "RelativeDocumentMoniker": "Identity\u6807\u8BC6\u6846\u67B6\\Program.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\Identity\u6807\u8BC6\u6846\u67B6\\Program.cs",
+              "RelativeToolTip": "Identity\u6807\u8BC6\u6846\u67B6\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T16:06:52.675Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u751F\u6210JWT\u4EE4\u724C\\Program.cs",
-              "RelativeDocumentMoniker": "\u751F\u6210JWT\u4EE4\u724C\\Program.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u751F\u6210JWT\u4EE4\u724C\\Program.cs",
-              "RelativeToolTip": "\u751F\u6210JWT\u4EE4\u724C\\Program.cs",
-              "ViewState": "AQIAAAIAAAAAAAAAAAAAAA4AAAAjAAAA",
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\ASPNETCore_JWT\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "ASPNETCore_JWT\\Controllers\\DemoController.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\ASPNETCore_JWT\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "ASPNETCore_JWT\\Controllers\\DemoController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-26T06:16:04.546Z",
+              "WhenOpened": "2024-03-26T15:29:01.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\ASPNETCore_JWT\\Program.cs",
+              "RelativeDocumentMoniker": "ASPNETCore_JWT\\Program.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\ASPNETCore_JWT\\Program.cs",
+              "RelativeToolTip": "ASPNETCore_JWT\\Program.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T15:28:22.966Z",
               "EditorCaption": ""
             }
           ]

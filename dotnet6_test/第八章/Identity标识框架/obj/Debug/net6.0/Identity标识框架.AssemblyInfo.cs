@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Identity标识框架")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ada3eb070abef6c9fa98ae18b3bdfaea3ccf481")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9081dab1bc5fd11a4d0cd15e434942c2507bea2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("Identity标识框架")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Identity标识框架")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

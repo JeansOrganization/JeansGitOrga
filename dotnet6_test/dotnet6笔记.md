@@ -1442,6 +1442,287 @@ public async Task<ActionResult> ResetPassword(ResetPasswordByOldRequest req)
 ```
 
 ## JWT
+- JSON Web Token（简称JWT），是一个开放标准（RFC 7519），它定义了一种紧凑且自包含的方式，用于在各方之间作为JSON对象安全地传输信息。
+- 适用场景:
+1. 授权：适用于单点登录。例：当用户登录成功时，服务器会返回一个token给当前登录用户，且用户登录后访问系统的各个模块都应携带该token进行请求，当token过期时，则不允许用户访问系统模块。
+2. 信息交换：jwt是各端（客户端、服务器端）之间安全地传输信息的好方法。因为可以对JWT进行签名（例如，使用公钥/私钥对），发送方与接收方可通过约定好的加密秘钥进行数据的解析。
+
+### JWT令牌结构
+- header(头部):头部是令牌的第一部分，通常由两部分组成：令牌的类型（即JWT）和令牌所使用的签名算法，如SHA256、HMAC等。
+- payload(有效载荷):有效载荷是令牌的第二部分，其中包含声明。声明是有关实体(通常是用户)和其他数据的声明。主要有以下三种类型： registered(注册的), public(公开的)和 private claims(私有的声明)。
+1. 注册声明（非强制性声明）：主要包含iss（jwt发布者）、sub（面向的用户）、aud（接收方）、exp（过期时间）、iat（jwt签发时间）、jti（jwt身份标识）、nbf（在某个时间点前的token不可用）
+2. 公开的声明：使用JWT的人员可以随意定义上述声明
+3. 私有声明：提供方和接收方共同定义的声明
+- signature(签名):签名是令牌的第三部分，由header和payload进行64位编码后再使用加密算法加密
+```C#
+/* header(头部) */
+//编码后:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9
+{
+  "alg": "HS256",
+  "typ": "JWT"
+}
+
+/* payload(有效载荷) */
+//编码后:eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ
+{
+  "sub": "1234567890",
+  "name": "John Doe",
+  "admin": true
+}
+
+/* signature(签名) */
+//编码后:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+HMACSHA256(base64UrlEncode(header) + "." +base64UrlEncode(payload),secret);//secret为自定义的密码，如进行SHA256加密后的密码,一般长度大于等于16
+
+/* 可在JWT官网(https://jwt.io/#debugger-io)中进行数据的解析 */
+```
+
+### JWT的基本使用-生成、校验、解析Token
+```
+<!-- 重要对象 -->
+JwtSecurityToken:代表一个jwt token，可以直接用此对象生成token字符串，也可以使用token字符串创建此对象
+SecurityToken:JwtSecurityToken的基类，包含基础数据
+JwtSecurityTokenHandler:创建、校验token，返回ClaimsPrincipal
+CanReadToken():确定字符串是否是格式良好的Json Web令牌(JWT)
+ReadJwtToken(string token):token字符串转为JwtSecurityToken对象
+ValidateToken(string token、TokenValidationParameters parameter，out SecurityToken validatedToken):校验token，返回ClaimsIdentity，
+```
+#### 方式一(推荐):引用NuGet包：System.IdentityModel.Tokens.Jwt
+```C#
+static void Main(string[] args)
+{
+    //引用System.IdentityModel.Tokens.Jwt
+    DateTime utcNow = DateTime.UtcNow;
+    string key = "f47b558d-7654-458c-99f2-13b190ef0199";
+    SecurityKey securityKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key));
+
+    var claims = new List<Claim>() {
+        new Claim("ID","1"),
+        new Claim("Name","fan")
+    };
+    JwtSecurityToken jwtToken = new JwtSecurityToken(
+        issuer: "fan",
+        audience: "audi~~!",
+        claims: claims,
+        notBefore: utcNow,
+        expires: utcNow.AddYears(1),
+        signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
+        );
+
+    //生成token方式1
+    string token1 = new JwtSecurityTokenHandler().WriteToken(jwtToken);
+    //A Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor that contains details of contents of the token.
+
+    var tokenDescriptor = new SecurityTokenDescriptor // 创建一个 Token 的原始对象
+    {
+        Issuer = "fan",
+        Audience = "audi",
+        Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim(ClaimTypes.Name, "")
+                }),
+        Expires = DateTime.Now.AddMinutes(60),
+        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(Encoding.ASCII.GetBytes(key)), SecurityAlgorithms.HmacSha256)
+    };
+    //生成token方式2
+    SecurityToken securityToken = new JwtSecurityTokenHandler().CreateToken(tokenDescriptor);
+    var token2 = new JwtSecurityTokenHandler().WriteToken(securityToken);
+
+    //校验token
+    var validateParameter = new TokenValidationParameters()
+    {
+        ValidateLifetime = true,
+        ValidateAudience = true,
+        ValidateIssuer = true,
+        ValidateIssuerSigningKey = true,
+        ValidIssuer = "fan",
+        ValidAudience = "audi~~!",
+        IssuerSigningKey = securityKey,
+    };
+    //不校验，直接解析token
+    //jwtToken = new JwtSecurityTokenHandler().ReadJwtToken(token1);
+    try
+    {
+        //校验并解析token
+        var claimsPrincipal = new JwtSecurityTokenHandler().ValidateToken(token1, validateParameter, out SecurityToken validatedToken);//validatedToken:解密后的对象
+        var jwtPayload = ((JwtSecurityToken)validatedToken).Payload.SerializeToJson(); //获取payload中的数据 
+        
+    }
+    catch (SecurityTokenExpiredException)
+    {
+        //表示过期
+    }
+    catch (SecurityTokenException)
+    {
+        //表示token错误
+    }
+}
+```
+#### 方式二:引用Nuget包：JWT
+```C#
+/// <summary>
+/// 创建token
+/// </summary>
+/// <returns></returns>
+public static string CreateJwtToken(IDictionary<string, object> payload, string secret, IDictionary<string, object> extraHeaders = null)
+{
+    IJwtAlgorithm algorithm = new HMACSHA256Algorithm();
+    IJsonSerializer serializer = new JsonNetSerializer();
+    IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
+    IJwtEncoder encoder = new JwtEncoder(algorithm, serializer, urlEncoder);
+    var token = encoder.Encode(payload, secret);
+    return token;
+}
+/// <summary>
+/// 校验解析token
+/// </summary>
+/// <returns></returns>
+public static string ValidateJwtToken(string token, string secret)
+{
+    try
+    {
+        IJsonSerializer serializer = new JsonNetSerializer();
+        IDateTimeProvider provider = new UtcDateTimeProvider();
+        IJwtValidator validator = new JwtValidator(serializer, provider);
+        IBase64UrlEncoder urlEncoder = new JwtBase64UrlEncoder();
+        IJwtAlgorithm alg = new HMACSHA256Algorithm();
+        IJwtDecoder decoder = new JwtDecoder(serializer, validator, urlEncoder, alg);
+        var json = decoder.Decode(token, secret, true);
+        //校验通过，返回解密后的字符串
+        return json;
+    }
+    catch (TokenExpiredException)
+    {
+        //表示过期
+        return "expired";
+    }
+    catch (SignatureVerificationException)
+    {
+        //表示验证不通过
+        return "invalid";
+    }
+    catch (Exception)
+    {
+        return "error";
+    }
+}
+
+//-------------客户端调用---------------
+public static void Main(string[] args)
+{
+    var sign = "123";
+    var extraHeaders = new Dictionary<string, object>
+                {
+                                    { "myName", "limaru" },
+            };
+    //过期时间(可以不设置，下面表示签名后 10秒过期)
+    double exp = (DateTime.UtcNow.AddSeconds(10) - new DateTime(1970, 1, 1)).TotalSeconds;
+    var payload = new Dictionary<string, object>
+                {
+                                    { "userId", "001" },
+                    { "userAccount", "fan" },
+                    { "exp",exp }
+                                };
+    var token = CreateJwtToken(payload, sign, extraHeaders);
+    var text = ValidateJwtToken(token, sign);
+    Console.ReadKey();
+}
+
+```
+
+#### 方式三:手写jwt算法
+```C#
+/* 
+JWT组成
+样式："xxxxxxxxxxxx.xxxxxxxxxxxxx.xxxxxxxxxxxxxxxx"由三部分组成.
+(1).Header头部：{"alg":"HS256","typ":"JWT"}基本组成,也可以自己添加别的内容,然后对最后的内容进行Base64编码.
+(2).Payload负载：iss、sub、aud、exp、nbf、iat、jti基本参数,也可以自己添加别的内容,然后对最后的内容进行Base64编码.
+(3).Signature签名：将Base64后的Header和Payload通过.组合起来，然后利用Hmacsha256+密钥进行加密。 
+*/
+#region Base64编码
+/// <summary>
+/// Base64编码
+/// </summary>
+/// <param name="text">待编码的文本字符串</param>
+/// <returns>编码的文本字符串</returns>
+public string Base64UrlEncode(string text)
+{
+    var plainTextBytes = Encoding.UTF8.GetBytes(text);
+    var base64 = Convert.ToBase64String(plainTextBytes).Replace('+', '-').Replace('/', '_').TrimEnd('=');
+    return base64;
+}
+#endregion
+
+#region Base64解码
+/// <summary>
+/// Base64解码
+/// </summary>
+/// <param name="base64UrlStr"></param>
+/// <returns></returns>
+
+public string Base64UrlDecode(string base64UrlStr)
+{
+    base64UrlStr = base64UrlStr.Replace('-', '+').Replace('_', '/');
+    switch (base64UrlStr.Length % 4)
+    {
+        case 2:
+            base64UrlStr += "==";
+            break;
+        case 3:
+            base64UrlStr += "=";
+            break;
+    }
+    var bytes = Convert.FromBase64String(base64UrlStr);
+    return Encoding.UTF8.GetString(bytes);
+}
+#endregion Base64编码和解码
+
+/// <summary>
+/// 手写JWT算法
+/// </summary>
+public bool TestJwt1()
+{
+    string secretKey = Configuration["SecretKey"];
+    //1.加密
+    //1.1 表头的处理
+    string headerBase64Url = this.Base64UrlEncode("{\"alg\":\"HS256\",\"typ\":\"JWT\"}");
+    //1.2 PayLoad的处理
+    var jwtPayLoad = new
+    {
+        expire = DateTime.Now.AddMinutes(15),
+        userId = "00000000001",
+        userAccount = "admin"
+    };
+    string payloadBase64Url = this.Base64UrlEncode(JsonConvert.SerializeObject(jwtPayLoad));
+    //1.3 Sign的处理
+    string sign = $"{headerBase64Url}.{payloadBase64Url}".HMACSHA256(secretKey);
+    //1.4 最终的jwt字符串
+    string jwtStr = $"{headerBase64Url}.{payloadBase64Url}.{sign}";
+
+    //2.校验token是否正确
+    bool result;   //True表示通过，False表示未通过
+    //2.1. 获取token中的PayLoad中的值,并做过期校验
+    JwtData myData = JsonConvert.DeserializeObject<JwtData>(this.Base64UrlDecode(jwtStr.Split('.')[1]));  //这一步已经获取到了payload中的值，并进行转换了
+    var nowTime = DateTime.Now;
+    if (nowTime > myData.expire)
+    {
+        //表示token过期，校验未通过
+        result = false;
+        return result;
+    }
+    else
+    {
+        //2.2 做准确性校验
+        var items = jwtStr.Split('.');
+        var oldSign = items[2];
+        string newSign = $"{items[0]}.{items[1]}".HMACSHA256(secretKey);
+        result = oldSign == newSign;  //true表示检验通过，false表示检验未通过
+        return result;
+    }
+}
+```
+
+
 
 JWT网址
 https://blog.csdn.net/qq_40600379/article/details/107102802
