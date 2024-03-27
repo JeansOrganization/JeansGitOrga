@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "\u6258\u7BA1\u670D\u52A1.Controllers.DemoController",
+    "Method": "Get",
+    "RelativePath": "Demo/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

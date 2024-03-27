@@ -1,0 +1,48 @@
+[
+  {
+    "ContainingType": "ASPNETCore_JWT.Controllers.DemoController",
+    "Method": "Login",
+    "RelativePath": "Demo/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "ASPNETCore_JWT.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASPNETCore_JWT.Controllers.Demo2Controller",
+    "Method": "Hello",
+    "RelativePath": "Demo2/Hello",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASPNETCore_JWT.Controllers.Demo2Controller",
+    "Method": "Hello2",
+    "RelativePath": "Demo2/Hello2",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ASPNETCore_JWT.Controllers.Demo2Controller",
+    "Method": "Hello3",
+    "RelativePath": "Demo2/Hello3",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

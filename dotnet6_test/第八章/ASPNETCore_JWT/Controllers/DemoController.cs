@@ -30,7 +30,7 @@ namespace ASPNETCore_JWT.Controllers
             return jwt;
         }
 
-        [HttpGet]
+        [HttpPost]
         public async Task<ActionResult> Login(LoginRequest req, [FromServices] IOptionsSnapshot<JwtSetting> jwtSetting)
         {
             string username = req.username;
@@ -41,6 +41,7 @@ namespace ASPNETCore_JWT.Controllers
             {
                 List<Claim> claims = new List<Claim>();
                 claims.Add(new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()));
+                claims.Add(new Claim(ClaimTypes.Name, user.UserName.ToString()));
                 var roles = await userManager.GetRolesAsync(user);
                 foreach (var role in roles)
                 {

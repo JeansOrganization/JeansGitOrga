@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "\u5E38\u9A7B\u540E\u53F0\u7684\u6570\u636E\u5BFC\u51FA\u670D\u52A1.Controllers.DemoController",
+    "Method": "InsertAnyUser",
+    "RelativePath": "Demo/InsertAnyUser",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

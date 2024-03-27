@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\托管服务.props" />
+</Project>

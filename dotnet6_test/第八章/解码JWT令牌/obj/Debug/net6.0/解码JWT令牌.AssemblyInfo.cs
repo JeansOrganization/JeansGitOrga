@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("解码JWT令牌")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9081dab1bc5fd11a4d0cd15e434942c2507bea2e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cae9d0a83eec187ce8a8dfcd7fcd690e1589abdf")]
 [assembly: System.Reflection.AssemblyProductAttribute("解码JWT令牌")]
 [assembly: System.Reflection.AssemblyTitleAttribute("解码JWT令牌")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

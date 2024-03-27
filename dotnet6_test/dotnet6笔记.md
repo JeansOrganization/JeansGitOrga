@@ -1487,6 +1487,7 @@ CanReadToken():确定字符串是否是格式良好的Json Web令牌(JWT)
 ReadJwtToken(string token):token字符串转为JwtSecurityToken对象
 ValidateToken(string token、TokenValidationParameters parameter，out SecurityToken validatedToken):校验token，返回ClaimsIdentity，
 ```
+
 #### 方式一(推荐):引用NuGet包：System.IdentityModel.Tokens.Jwt
 ```C#
 static void Main(string[] args)
@@ -1558,6 +1559,7 @@ static void Main(string[] args)
     }
 }
 ```
+
 #### 方式二:引用Nuget包：JWT
 ```C#
 /// <summary>
@@ -1722,11 +1724,100 @@ public bool TestJwt1()
 }
 ```
 
+### JWT封装
+- Nuget包:Microsoft.AspNetCore.Authentication.JwtBearer
+- 配置JWT节点，创建SigningKey(密钥)、ExpireSeconds(过期间隔/秒)两个配置项，新建JwtOptions配置类接收配置
+- 服务调用services.AddAuthentication().AddJwtBearer()方法，添加默认授权机制并配置令牌校验，在app.UseAuthorization()之前执行app.UseAuthentication()
+- 在LoginAction里验证登录成功则生成Token，在其他需要进行登录验证控制器类或者Action方法上添加特性[Authorize],令牌自动解码数据会存放到this.User里
+- 当控制类添加[Authorize]后，默认控制器下全部Action都需要验证，此时加上[AllowAnonymous]就可以不需要验证
+```C#
+/* Swagger添加Token输入 */
+builder.Services.AddSwaggerGen(c =>
+{
+    var scheme = new OpenApiSecurityScheme()
+    {
+        Description = "Authorization header. \r\nExample: 'Bearer 12345abcdef'",
+        Reference = new OpenApiReference
+        {
+            Type = ReferenceType.SecurityScheme,
+            Id = "Authorization"
+        },
+        Scheme = "oauth2",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+    };
+    c.AddSecurityDefinition("Authorization", scheme);
+    var requirement = new OpenApiSecurityRequirement();
+    requirement[scheme] = new List<string>();
+    c.AddSecurityRequirement(requirement);
+});
+
+/* JWT服务注入 */
+builder.Services.Configure<JwtSetting>(builder.Configuration.GetSection("JWT"));
+//默认授权机制名称JwtBearerDefaults.AuthenticationScheme
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    var jwtSetting = builder.Configuration.GetSection("JWT").Get<JwtSetting>();
+    var secKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting.SigningKey!));
+    //配置令牌校验
+    options.TokenValidationParameters = new()
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        IssuerSigningKey = secKey,
+        ValidateIssuerSigningKey = true
+    };
+});
+
+/* appsettings.json添加JWT配置 */
+{
+  "JWT": {
+    "SigningKey": "LIJIAJINGISABADBOY",
+    "ExpireSeconds": "86400"
+  }
+}
+
+/* Authorize配置是否需要验证token */
+[ApiController]
+[Route("[controller]/[Action]")]
+[Authorize]
+public class Demo2Controller : ControllerBase
+{
+    [Authorize]
+    [HttpGet]
+    public IActionResult Hello()
+    {
+        string id = this.User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+        string userName = this.User.FindFirst(ClaimTypes.Name)!.Value;
+        IEnumerable<Claim> roleClaims = this.User.FindAll(ClaimTypes.Role);
+        string roleNames = string.Join(',', roleClaims.Select(c => c.Value));
+        return Ok($"id={id},userName={userName},roleNames ={roleNames}");
+    }
+
+    [AllowAnonymous]
+    [HttpGet]
+    public IActionResult Hello2()
+    {
+        string id = this.User.FindFirst(ClaimTypes.NameIdentifier)!.Value;
+        string userName = this.User.FindFirst(ClaimTypes.Name)!.Value;
+        IEnumerable<Claim> roleClaims = this.User.FindAll(ClaimTypes.Role);
+        string roleNames = string.Join(',', roleClaims.Select(c => c.Value));
+        return Ok($"id={id},userName={userName},roleNames ={roleNames}");
+    }
+}
+```
+
+## 托管服务
 
 
-JWT网址
-https://blog.csdn.net/qq_40600379/article/details/107102802
-https://blog.csdn.net/WuLex/article/details/117033939
+
+# 末尾占位
+
+
+
+
 
 
 

@@ -59,6 +59,9 @@ namespace Identity标识框架.Migrations
                         .IsConcurrencyToken()
                         .HasColumnType("longtext");
 
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime(6)");
+
                     b.Property<string>("Email")
                         .HasMaxLength(256)
                         .HasColumnType("varchar(256)");
