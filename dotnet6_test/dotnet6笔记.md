@@ -1811,6 +1811,8 @@ public class Demo2Controller : ControllerBase
 
 ## 托管服务
 
+https://blog.csdn.net/xxxcAxx/article/details/128391524
+https://blog.csdn.net/ousetuhou/article/details/135081996
 
 
 # 末尾占位
