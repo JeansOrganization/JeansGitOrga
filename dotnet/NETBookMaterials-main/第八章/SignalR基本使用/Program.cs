@@ -13,7 +13,7 @@ builder.Services.AddSignalR().AddStackExchangeRedis("127.0.0.1", options => {
     options.Configuration.ChannelPrefix = "Test1_";
 });
 
-string[] urls = new[] { "http://localhost:3000" };
+string[] urls = new[] { "http://localhost:8080" };
 builder.Services.AddCors(options =>
     options.AddDefaultPolicy(builder => builder.WithOrigins(urls)
         .AllowAnyMethod().AllowAnyHeader().AllowCredentials())

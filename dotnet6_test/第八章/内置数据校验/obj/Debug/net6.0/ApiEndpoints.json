@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "\u5185\u7F6E\u6570\u636E\u6821\u9A8C.Controllers.DemoController",
+    "Method": "Login1",
+    "RelativePath": "Demo/Login1",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "\u5185\u7F6E\u6570\u636E\u6821\u9A8C.Login1Request",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\FluentValidation的基本使用.props" />
+</Project>

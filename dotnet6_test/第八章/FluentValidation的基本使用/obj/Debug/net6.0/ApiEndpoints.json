@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "FluentValidation\u7684\u57FA\u672C\u4F7F\u7528.Controllers.DemoController",
+    "Method": "Login1",
+    "RelativePath": "Demo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "FluentValidation\u7684\u57FA\u672C\u4F7F\u7528.Login2Request",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

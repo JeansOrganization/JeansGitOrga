@@ -10,12 +10,14 @@ namespace 常驻后台的数据导出服务
         private readonly UserManager<User> userManager;
         private readonly ILogger<ExplortStatisticBgService> logger;
         private readonly IServiceScope serviceScope;
+        private readonly IdDbContext dbContext;
 
         public ExplortStatisticBgService(ILogger<ExplortStatisticBgService> logger, IServiceScopeFactory factory)
         {
             this.logger = logger;
             this.serviceScope = factory.CreateScope();
             this.userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<User>>();
+            this.dbContext = serviceScope.ServiceProvider.GetRequiredService<IdDbContext>();
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -37,7 +39,7 @@ namespace 常驻后台的数据导出服务
 
         private async Task DoExecuteAsync()
         {
-            var list = userManager.Users.GroupBy(r => r.CreateTime.ToShortDateString()).Select(r => new { createDate = r.Key, count = r.Count() }).ToList();
+            var list = dbContext.Users.GroupBy(r => r.CreateTime.Date).Select(r => new { createDate = r.Key, count = r.Count() });
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Date:" + DateTime.Now.ToString());
             foreach (var li in list)
@@ -45,9 +47,9 @@ namespace 常驻后台的数据导出服务
                 sb.Append($"时间:{li.createDate}").AppendLine($"数量:{li.count}");
             }
             logger.LogInformation( sb.ToString() );
-            string content = await File.ReadAllTextAsync("C:\\Users\\JeanG\\Desktop\\test.txt");
+            string content = await File.ReadAllTextAsync("E:\\Users\\Jean\\Desktop\\test.txt");
             content = content + "\r\n\r\n" + sb.ToString();
-            await File.WriteAllTextAsync("C:\\Users\\JeanG\\Desktop\\test.txt",content);
+            await File.WriteAllTextAsync("E:\\Users\\Jean\\Desktop\\test.txt", content);
         }
 
         public override void Dispose()

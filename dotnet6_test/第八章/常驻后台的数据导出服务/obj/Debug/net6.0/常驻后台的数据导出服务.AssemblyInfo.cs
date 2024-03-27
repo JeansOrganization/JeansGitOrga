@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("常驻后台的数据导出服务")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cae9d0a83eec187ce8a8dfcd7fcd690e1589abdf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f80651160db16f677a186c6020f87fa9cbd7b018")]
 [assembly: System.Reflection.AssemblyProductAttribute("常驻后台的数据导出服务")]
 [assembly: System.Reflection.AssemblyTitleAttribute("常驻后台的数据导出服务")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

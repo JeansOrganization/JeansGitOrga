@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\FluentValidation中注入服务.props" />
+</Project>

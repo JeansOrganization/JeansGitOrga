@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "SignalR\u7684\u57FA\u672C\u4F7F\u7528.Controllers.DemoController",
+    "Method": "Get",
+    "RelativePath": "Demo/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

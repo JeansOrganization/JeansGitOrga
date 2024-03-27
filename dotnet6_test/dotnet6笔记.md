@@ -1810,10 +1810,122 @@ public class Demo2Controller : ControllerBase
 ```
 
 ## 托管服务
+- 托管服务是一种在应用程序启动时运行的服务，通常用于初始化和配置应用程序资源
+### ASP.NET Core中的托管服务
+- 在 ASP.NET Core 中，后台任务是作为托管服务（Hosted Service）实现的。 想要实现后台任务可以实现IHostedService接口或者直接继承BackgroundService抽象类
+- 通常托管服务更多用来做定时任务，结合Timer计时器可以实现后台定时任务。这种方案比较适合简单的场景，对于任务的定时规则设置也很单一，也不用去监控任务的执行状态
+- 对于更加复杂的应用场景，也可以使用功能更加强大的任务调度框架，来实现定时任务。这样的框架有:QuartZ.NET、HangFire
+
+### ASP.NET Core中的托管服务的基本使用
+- IHostedService接口(托管服务接口):
+1. StartAsync(CancellationToken):当应用程序主机准备好启动服务时触发该方法
+2. StopAsync(CancellationToken)：当应用程序主机执行正常关闭时触发该方法
+- BackgroundService类:实现了IHostedService接口的抽象类,其中有一个抽象方法 ExecuteAsync(CancellationToken),只继承BackgroundService抽象类就满足大部分要求了
+- 注册托管服务:builder.Services.AddHostedService<MyHostedService>();
+- 由于托管服务是通过单例注入，所以没法在构造函数注入其他(scope)范围服务,可以通过注入IServiceScopeFactory类来创建IServiceScope再获取其他的范围服务
+```C#
+/* 托管服务类+伪定时 */
+public class ExplortStatisticBgService : BackgroundService
+{
+    private readonly UserManager<User> userManager;
+    private readonly ILogger<ExplortStatisticBgService> logger;
+    private readonly IServiceScope serviceScope;
+    private readonly IdDbContext dbContext;
+
+    public ExplortStatisticBgService(ILogger<ExplortStatisticBgService> logger, IServiceScopeFactory factory)
+    {
+        this.logger = logger;
+        this.serviceScope = factory.CreateScope();
+        //通过注入的IServiceScopeFactory来获取其他服务实例
+        this.userManager = serviceScope.ServiceProvider.GetRequiredService<UserManager<User>>();
+        this.dbContext = serviceScope.ServiceProvider.GetRequiredService<IdDbContext>();
+    }
+
+    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        while (!stoppingToken.IsCancellationRequested)
+        {   
+            /* 托管服务中发生未处理异常的时候，程序就会自动停止并退出，所以需要在trycatch内部进行任务的布置 */
+            try
+            {
+                await DoExecuteAsync();
+                await Task.Delay(10000);
+            }
+            catch (Exception ex)
+            {
+                logger.LogInformation(ex.Message);
+                await Task.Delay(1000);
+            }
+        }
+    }
+    //需要重写Dispose方法在释放时将一些非托管资源释放
+    public override void Dispose()
+    {
+        base.Dispose();
+        serviceScope.Dispose();
+    }
+}
+/* 单例服务注入 */
+builder.Services.AddHostedService<ExplortStatisticBgService>();
+```
 
 https://blog.csdn.net/xxxcAxx/article/details/128391524
 https://blog.csdn.net/ousetuhou/article/details/135081996
 
+## 数据校验
+
+### 内置数据校验(DataAnnotations)
+- 命名空间System.ComponentModel.DataAnnotations内置数据校验支持
+- 直接在模型类属性上使用[*]即可进行数据校验:[Required]、[EmailAddress] 、[RegularExpression]、CustomValidationAttribute(自定义验证)、IValidatableObject接口
+- 内置的校验机制的问题：校验规则都是和模型类耦合在一起，违反“单一职责原则”；很多常用的校验都需要编写自定义校验规则
+```C#
+/* 内置数据校验 */
+public class Login1Request
+{
+    [Required]
+    [EmailAddress]
+    [RegularExpression("^.*@(qq|163)\\.com$", ErrorMessage = "只支持QQ和163邮箱")]
+    public string Email { get; set; }
+    [Required]
+    [StringLength(16,MinimumLength = 8)]
+    public string password { get; set; }
+    [Compare(nameof(password),ErrorMessage = "两次密码必须相同")]
+    public string password2 { get; set; }
+}
+```
+
+### FluentValidation数据校验
+- Nuget包:FluentValidation.AspNetCore
+- 通过创建继承了AbstractValidator<Model>的ModelValidator,在其构造函数里编写校验规则RuleFor()
+- 如需在校验类内注入其他服务，直接在构造函数注入即可
+```C#
+/* 模型校验类 */
+public class Login2RequestValidator : AbstractValidator<Login2Request>
+{
+    public Login2RequestValidator(IdDbContext ctx)
+    {
+        //每个校验规则后面可跟WithMessage()用来定义报错信息
+        RuleFor(x => x.username)
+            .NotNull().WithMessage("用户名不能为空")
+            .Must(r => ctx.Users.Any(t => t.UserName == r)).WithMessage("不存在于数据库中！");
+        RuleFor(x => x.Email)
+            .NotNull().WithMessage("邮箱不能为空")
+            .EmailAddress().WithMessage("不是正确的邮箱地址")
+            .Must(r => r.EndsWith("qq.com") || r.EndsWith("163.com")).WithMessage("您的邮箱不是qq邮箱或者网易邮箱");
+        RuleFor(x => x.password)
+            .NotNull().WithMessage("密码不能为空")
+            .Length(8, 16).WithMessage("密码必须是8到16位");
+        RuleFor(x=>x.password2)
+            .Equal(r=>r.password).WithMessage("密码必须一致");
+    }
+}
+/* 服务注册(貌似弃用) */
+builder.Services.AddFluentValidation(fv =>
+{
+    Assembly assembly = Assembly.GetExecutingAssembly();
+    fv.RegisterValidatorsFromAssembly(assembly);
+});
+```
 
 # 末尾占位
 
