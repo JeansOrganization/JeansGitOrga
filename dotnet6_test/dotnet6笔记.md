@@ -2019,8 +2019,37 @@ export default {
 }
 </script>
 ```
-
-#
+### Signal协议协商问题
+- 问题:“协商”请求被服务器A处理，而接下来的WebSocket请求却被服务器B处理
+- 解决方法：粘性会话和禁用协商。
+- 粘性会话:把来自同一个客户端的请求都转发给同一台服务器上。交给负载均衡服务器。 缺点：因为共享公网IP等造成请求无法被平均的分配到服务器集群；扩容的自适应性不强
+- 禁用协商:直接向服务器发出WebSocket请求。WebSocket连接一旦建立后，在客户端和服务器端直接就建立了持续的网络连接通道，在这个WebSocket连接中的后续往返WebSocket通信都是由同一台服务器来处理。缺点：无法降级到“服务器发送事件”或“长轮询”，不过不是大问题。(更推荐)
+```javascript
+/* 组件挂载时创建连接 */
+onMounted(async function(){
+    const options = {skipNegotiation:true,transport: signalR.HttpTransportType.WebSockets}//跳过协商=true,运输:WebSockets
+    connection = new signalR.HubConnectionBuilder()
+    .withUrl('https://localhost:7069/Hub/CharHub',options)//接入URL的同时应用Options
+    .withAutomaticReconnect().build();
+    console.log(connection)
+    await connection.start();
+    connection.on('ReceiptPublicMessage',msg=>{
+    state.allMessage.push(msg)
+    });
+})
+```
+### Signal分布式部署问题
+- 问题:用户发送到某个服务端的消息只有连接那个服务端的用户能接收到，连接其他服务端的人接收不到
+- 解决方案:所有服务器连接到同一个消息中间件(官方方案:Redis backplane)。前提条件：启用粘性会话，或者跳过协商
+- Nuget包:Microsoft.AspNetCore.SignalR.StackExchangeRedis
+```C#
+/* program.cs */
+builder.Services.AddSignalR().AddStackExchangeRedis("127.0.0.1",options =>
+{
+    options.Configuration.ChannelPrefix = "JeanSignal_";
+});
+```
+ 
 
 
 # 末尾占位

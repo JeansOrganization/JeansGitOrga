@@ -9,8 +9,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSignalR();
-    
+builder.Services.AddSignalR().AddStackExchangeRedis("127.0.0.1",options =>
+{
+    options.Configuration.ChannelPrefix = "JeanSignal_";
+});
 
 var app = builder.Build();
 

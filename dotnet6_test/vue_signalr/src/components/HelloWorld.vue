@@ -21,8 +21,9 @@ export default {
     }
 
     onMounted(async function(){
+      const options = {skipNegotiation:true,transport: signalR.HttpTransportType.WebSockets}
       connection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:7069/Hub/CharHub')
+      .withUrl('https://localhost:7069/Hub/CharHub',options)
       .withAutomaticReconnect().build();
       console.log(connection)
       await connection.start();

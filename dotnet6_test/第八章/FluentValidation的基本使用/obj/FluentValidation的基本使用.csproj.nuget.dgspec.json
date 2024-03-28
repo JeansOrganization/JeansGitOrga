@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj": {}
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj": {}
   },
   "projects": {
-    "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj": {
+    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj",
+        "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj",
         "projectName": "FluentValidation的基本使用",
-        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj",
-        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\obj\\",
+        "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\FluentValidation的基本使用.csproj",
+        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
+        "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\FluentValidation的基本使用\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
