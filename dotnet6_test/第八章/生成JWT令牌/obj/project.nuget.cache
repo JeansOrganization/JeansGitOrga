@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "asbL48hcTs5en5ouc+bQYGOILXzFvfXz+EXXHKi6Zx0W/OFjSfc+OCnOExNEvHwv9uGZwJxqwvEeN7/RtaKuYw==",
+  "dgSpecHash": "2uFbJNKwzrzt7jAaQGmuPQ5POssYF6P37jkYwZDPoKX+g9fbfNzehjLyRs35zzs3Q9bvL7z1qsJy/uDlal8weQ==",
   "success": true,
-  "projectFilePath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\生成JWT令牌\\生成JWT令牌.csproj",
+  "projectFilePath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\生成JWT令牌\\生成JWT令牌.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Jean\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.14.1\\microsoft.identitymodel.jsonwebtokens.6.14.1.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\microsoft.identitymodel.logging\\6.14.1\\microsoft.identitymodel.logging.6.14.1.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.14.1\\microsoft.identitymodel.tokens.6.14.1.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.14.1\\system.identitymodel.tokens.jwt.6.14.1.nupkg.sha512",
-    "C:\\Users\\Jean\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.14.1\\microsoft.identitymodel.jsonwebtokens.6.14.1.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.identitymodel.logging\\6.14.1\\microsoft.identitymodel.logging.6.14.1.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.14.1\\microsoft.identitymodel.tokens.6.14.1.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.14.1\\system.identitymodel.tokens.jwt.6.14.1.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

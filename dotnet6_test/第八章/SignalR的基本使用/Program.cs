@@ -10,15 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSignalR();
-//builder.Services.AddCors(options =>
-//{
-//    options.AddPolicy("Cors", builder => builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
-//});
-string[] urls = new[] { "http://localhost:8080/" };
-builder.Services.AddCors(options =>
-    options.AddDefaultPolicy(builder => builder.WithOrigins(urls)
-        .AllowAnyMethod().AllowAnyHeader().AllowCredentials())
-);
+    
 
 var app = builder.Build();
 
@@ -29,14 +21,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseCors("Cors");
-app.UseCors();
-
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapHub<CharHub>("/Hub/CharHub");
 app.MapControllers();
+app.UseCors(opt =>
+{
+    //不要允许所有源，因为这样编译会报错
+    opt.WithOrigins("http://localhost:8080").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+});
+app.MapHub<CharHub>("/Hub/CharHub");
+
 
 app.Run();

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("生成JWT令牌")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f80651160db16f677a186c6020f87fa9cbd7b018")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9106e35060e217a0e1ade28532d64e5be0d3241")]
 [assembly: System.Reflection.AssemblyProductAttribute("生成JWT令牌")]
 [assembly: System.Reflection.AssemblyTitleAttribute("生成JWT令牌")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

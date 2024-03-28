@@ -1,7 +1,7 @@
 <template>
   <input type="text" v-model="state.userMessage" @keypress="keyPress">
   <ul>
-    <li v-for="msg in allMessage" :key="msg.index">{{msg}}</li>
+    <li v-for="(msg,index) in state.allMessage" :key="index">{{msg}}</li>
   </ul>
 </template>
 
@@ -16,19 +16,17 @@ export default {
 
     async function keyPress(e){
       if(e.keyCode != 13) return;
-      console.log(state.userMessage)
       await connection.invoke('SendPublicMessage',state.userMessage)
       state.userMessage = ''
     }
 
     onMounted(async function(){
       connection = new signalR.HubConnectionBuilder()
-      .withUrl('https://localhost:7112/Hubs/ChatRoomHub')
+      .withUrl('https://localhost:7069/Hub/CharHub')
       .withAutomaticReconnect().build();
       console.log(connection)
       await connection.start();
-      connection.on('ReceivePublicMessage',msg=>{
-        console.log(222)
+      connection.on('ReceiptPublicMessage',msg=>{
         state.allMessage.push(msg)
       });
     })

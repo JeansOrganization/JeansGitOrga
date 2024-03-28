@@ -1927,6 +1927,102 @@ builder.Services.AddFluentValidation(fv =>
 });
 ```
 
+## SignalR
+### 双向通信技术 WebSocket 和 SignalR
+- WebSocket:是一种在单个 TCP 连接上提供全双工通信的协议。它通过在客户端和服务器之间建立持久连接，实现了双向通信，可以在客户端和服务器之间发送消息，而不需要频繁地创建和关闭连接。
+1. 双向通信：WebSocket 允许客户端和服务器之间实现双向通信，这使得实时应用程序开发变得更加简单和高效。
+2. 持久连接：WebSocket 在初始握手后，保持持久连接，避免了每次通信都需要重新建立连接的开销。
+3. 较低的开销：相比传统的 HTTP 请求，WebSocket 通信的开销较低，因为不需要频繁地建立和关闭连接。
+
+- SignalR:是由 Microsoft 开发的 ASP.NET Core 框架中的一个库，用于实现实时双向通信。它使用了多种传输方式（包括 WebSocket、Server-Sent Events（SSE）、长轮询等），以确保在不同环境下都能提供实时通信的能力。
+1. 跨平台支持：SignalR 可以在多种客户端和服务器环境中运行，包括 Web、移动设备和桌面应用程序。
+2. 自适应传输：SignalR 使用多种传输方式，自动选择最佳传输方式以适应不同的客户端和服务器环境。
+3. 高级 API：SignalR 提供了高级的 API，使开发实时应用程序更加简单和方便。它允许你定义服务器到客户端和客户端到服务器的消息传递方式，同时处理连接管理和错误处理。
+4. 扩展性：SignalR 支持水平扩展，可以在多个服务器节点上处理实时通信，从而满足大规模应用程序的需求。
+
+- 总结:
+1. WebSocket 是一种底层的协议，它提供了持久化的、双向的通信，可以在单个 TCP 连接上实现全双工通信。
+2. SignalR 是一个高级的实时通信框架，它建立在 WebSocket 和其他传输方式之上，提供了更高级的 API 和跨平台支持，使实时应用程序的开发更加方便。
+
+### SignalR架构
+- Hub：Hub 是 SignalR 的核心组件，它是一个连接服务器和客户端的接口。Hub 提供了一种简单的方式来定义服务器端的方法和事件，这些方法和事件可以被客户端调用
+- 连接器：连接器是 SignalR 的底层组件，它负责建立和管理服务器和客户端之间的连接。连接器可以处理各种协议，如 HTTP 和 WebSocket。
+- 消息传递：SignalR 使用消息传递来在服务器和客户端之间进行通信。消息可以是文本、JSON 或其他格式。
+- 传输协议：SignalR 支持多种传输协议，如 HTTP 长轮询、WebSocket 和 Server-Sent Events。传输协议的选择取决于客户端和服务器支持的协议。
+
+### SignalR的基本使用
+- 服务端:
+1. 创建一个类继承Hub类，在类里编写一个反参是Task的方法，方法名为客户端调用Send()里的方法名
+2. 需要在服务池里注册SignalR:builder.Services.AddSignalR()
+3. 需要调用app.MapHub<ChatRoomHub>(“/Hubs/ChatRoomHub”)，字符串表示客户端创建链接时所使用的URL后缀
+- 客户端:
+1. 需要安装 @microsoft/signalr:npm install @microsoft/signalr
+2. 在客户端挂载时先创建connection连接,URL格式:https://{ip地址}:{端口号}{后端所配置的后缀}
+3. 开启链接:await connection.start()后绑定后端的回调方法名
+4. 绑定事件执行发送消息方法
+```C#
+/* Hub继承类 */
+public class CharHub : Hub
+{
+    //SendPublicMessage与前端发送方法对应
+    public Task SendPublicMessage(string msg)
+    {
+        var connectionId = this.Context.ConnectionId;
+        string message = $"{connectionId}--{DateTime.Now.ToString("yyyy年MM月dd日 HH:mm:ss")}--{msg}";
+        //ReceiptPublicMessage绑定前端回调方法
+        return this.Clients.All.SendAsync("ReceiptPublicMessage", message);
+    }
+}
+
+/* program.cs */
+builder.Services.AddSignalR();
+var app = builder.Build();
+
+app.MapControllers();
+app.UseCors(opt =>
+{
+    //不要允许所有源，因为这样编译会报错，单独筛选http://localhost:8080前端的域名
+    opt.WithOrigins("http://localhost:8080").AllowAnyHeader().AllowAnyMethod().AllowCredentials();
+});
+app.MapHub<CharHub>("/Hub/CharHub");//前端连接URL后缀
+app.Run();
+
+/* 前端代码 */
+<script>
+import { onMounted, reactive } from 'vue'
+import * as signalR from '@microsoft/signalr'
+let connection
+export default {
+  name: 'HelloWorld',
+  setup(){
+    let state = reactive({userMessage:'',allMessage:[]})
+    async function keyPress(e){
+      if(e.keyCode != 13) return;
+      await connection.invoke('SendPublicMessage',state.userMessage)
+      state.userMessage = ''
+    }
+    onMounted(async function(){
+      connection = new signalR.HubConnectionBuilder()
+      .withUrl('https://localhost:7069/Hub/CharHub')
+      .withAutomaticReconnect().build();
+      console.log(connection)
+      await connection.start();
+      connection.on('ReceiptPublicMessage',msg=>{
+        state.allMessage.push(msg)
+      });
+    })
+    return {
+      state,
+      keyPress
+    }
+  }
+}
+</script>
+```
+
+#
+
+
 # 末尾占位
 
 
