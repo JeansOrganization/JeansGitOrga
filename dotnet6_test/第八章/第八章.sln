@@ -21,15 +21,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "常驻后台的数据导出
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "数据校验", "数据校验", "{808031C8-3273-4336-BE04-08798812F77E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "内置数据校验", "内置数据校验\内置数据校验.csproj", "{867A5D87-335F-4E62-87E1-0305230E8325}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "内置数据校验", "内置数据校验\内置数据校验.csproj", "{867A5D87-335F-4E62-87E1-0305230E8325}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation的基本使用", "FluentValidation的基本使用\FluentValidation的基本使用.csproj", "{276FC385-A044-43E6-B531-960ACEA59688}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidation的基本使用", "FluentValidation的基本使用\FluentValidation的基本使用.csproj", "{276FC385-A044-43E6-B531-960ACEA59688}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentValidation中注入服务", "FluentValidation中注入服务\FluentValidation中注入服务.csproj", "{AFBDD226-C446-459B-8D1F-09CC8C88E642}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluentValidation中注入服务", "FluentValidation中注入服务\FluentValidation中注入服务.csproj", "{AFBDD226-C446-459B-8D1F-09CC8C88E642}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SignalR", "SignalR", "{9679BAD2-78E1-4082-B76C-A059A9495C7B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR的基本使用", "SignalR的基本使用\SignalR的基本使用.csproj", "{BDE24595-CBCE-44AA-8DC3-D77D8995562B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR的基本使用", "SignalR的基本使用\SignalR的基本使用.csproj", "{BDE24595-CBCE-44AA-8DC3-D77D8995562B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR身份认证", "SignalR身份认证\SignalR身份认证.csproj", "{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "导入英汉字典", "导入英汉字典\导入英汉字典.csproj", "{2BA46640-EF64-4532-8942-E5EB4F294E4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -77,6 +81,14 @@ Global
 		{BDE24595-CBCE-44AA-8DC3-D77D8995562B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDE24595-CBCE-44AA-8DC3-D77D8995562B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDE24595-CBCE-44AA-8DC3-D77D8995562B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BA46640-EF64-4532-8942-E5EB4F294E4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BA46640-EF64-4532-8942-E5EB4F294E4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BA46640-EF64-4532-8942-E5EB4F294E4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BA46640-EF64-4532-8942-E5EB4F294E4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +104,8 @@ Global
 		{276FC385-A044-43E6-B531-960ACEA59688} = {808031C8-3273-4336-BE04-08798812F77E}
 		{AFBDD226-C446-459B-8D1F-09CC8C88E642} = {808031C8-3273-4336-BE04-08798812F77E}
 		{BDE24595-CBCE-44AA-8DC3-D77D8995562B} = {9679BAD2-78E1-4082-B76C-A059A9495C7B}
+		{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9} = {9679BAD2-78E1-4082-B76C-A059A9495C7B}
+		{2BA46640-EF64-4532-8942-E5EB4F294E4B} = {9679BAD2-78E1-4082-B76C-A059A9495C7B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1FB368EB-F53D-4829-9268-D6AC3233DBB9}

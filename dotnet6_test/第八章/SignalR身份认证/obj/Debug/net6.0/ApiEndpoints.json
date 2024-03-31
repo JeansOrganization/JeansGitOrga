@@ -1,0 +1,28 @@
+[
+  {
+    "ContainingType": "SignalR\u8EAB\u4EFD\u8BA4\u8BC1.Controllers.DemoController",
+    "Method": "Login",
+    "RelativePath": "Demo/Login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "SignalR\u8EAB\u4EFD\u8BA4\u8BC1.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "SignalR\u8EAB\u4EFD\u8BA4\u8BC1.Controllers.ResultResponse\u00601[[SignalR\u8EAB\u4EFD\u8BA4\u8BC1.User, SignalR\u8EAB\u4EFD\u8BA4\u8BC1, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  }
+]

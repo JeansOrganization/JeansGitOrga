@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("托管服务")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+840f7861ac9dd004d187ab352204297e463cd226")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+339cd0f00423431579fef11128a93af21915d4dd")]
 [assembly: System.Reflection.AssemblyProductAttribute("托管服务")]
 [assembly: System.Reflection.AssemblyTitleAttribute("托管服务")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
