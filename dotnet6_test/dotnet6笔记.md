@@ -2138,6 +2138,9 @@ async function OpenConnection(){
 - Service Fabric:是微软公司开发的一套支撑高可用、高伸缩的云服务框架，核心是一个分布式系统平台，用于构建可扩展的应用
 - .Net Core微服务构件:1、服务治理；2、API网关 Ocelot；3、作业调度 Quartz.NET、Hangfire；4、分布式日志 Exceptionless；5、ESB；6、APM
 
+#### 单体结构项目
+- 缺点:耦合度高，技术栈统一，软件包版本锁定，其中一个模块奔溃，其他模块也会受影响，升级周期长，无法局部扩容
+
 ## DDD(Domain Driven Design-领域驱动设计)
 领域驱动设计 (DDD) 提出是从系统的分析到软件建模的一套方法论。将业务概念和业务规则转换成软件系统中的概念和规则，从而降低或隐藏业务复杂性，使系统具有更好的扩展性，以应对复杂多变的现实业务问题。总结它是一套完整而系统的设计方法、是一种设计思维、一种方法论，并不是 "系统架构"，一种架构设计原则、思维。
 
@@ -2201,6 +2204,52 @@ else
 Console.WriteLine($"账号登录{(isok ? "成功" : "失败")},当前账号信用分为{user.Credits}");
 Console.ReadKey();
 /* 充血模型 */
+```
+
+### EFCore对实体属性操作的秘密
+- EF Core在读写实体对象的属性时，会查找属性对应的成员变量，如果能找到，EF Core会直接读写这个成员变量的值，而不是通过set和get代码块来读写
+- EF Core会尝试按照命名规则去直接读写属性对应的成员变量，只有无法根据命名规则找到对应成员变量的时候，EF Core才会通过属性的get、set代码块来读写属性值
+- 都是为了EF Core实现充血模型做准备
+```C#
+/* 当存在命名规则时EFCore读写属性的不同 */
+public class Dog
+{
+   public long Id { get; set; }
+    //命名规则相关时会直接读取该属性
+   private string name;
+   public string Name
+   {
+       get
+       {
+           Console.WriteLine("Getter被调用");
+           return name;
+       }
+       set
+       {
+           this.name = value;
+           Console.WriteLine("Setter被调用");
+       }
+   }
+}
+public class Dog
+{
+    public long Id { get; set; }
+    //命名规则不相关时会读取GetSet方法
+    private string xingming;
+    public string Name
+    {
+        get
+        {
+            Console.WriteLine("Getter被调用");
+            return xingming;
+        }
+        set
+        {
+            this.xingming = value;
+            Console.WriteLine("Setter被调用");
+        }
+    }
+}
 ```
 
 
