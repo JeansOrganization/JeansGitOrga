@@ -773,7 +773,9 @@ Console.ReadLine();
 ```
 
 # 第六章
+
 ## WebAPI
+
 ### WebAPI简介
 - WebAPI(Web Application Programming Interface 网络应用程序接口):是一个可以对接各种客户端（浏览器、移动设备），构建 http 服务的框架。是 .net 技术体系下分布式开发的首选技术。与 WebService 和 WCF 相比较，更加的轻量级，传输效率更高。
 
@@ -795,7 +797,9 @@ Console.ReadLine();
 4. [FromHeader]从请求报文头中获取值的[FromHeader]
 
 # 第七章
+
 ## 服务注入
+
 ### 服务注入实现
 - 在program类服务池里注册服务:builder.Services.AddScoped<MyService>();
 - 构造函数引入与Action方法引入[FromServices] MyService myService
@@ -1326,9 +1330,11 @@ public class CheckMiddleware
 
 
 # 第八章
+
 ## Identity标识框架
 - 标识（Identity）框架：采用基于角色的访问控制（Role-Based Access Control，简称RBAC）策略，内置了对用户、角色等表的管理以及相关的接口，支持外部登录、2FA等。
 - 标识框架使用EF Core对数据库进行操作，因此标识框架支持几乎所有数据库。
+
 ### 标识框架的使用
 - Nuget包:Microsoft.AspNetCore.Identity.EntityFrameworkCore
 - IdentityUser<TKey>、IdentityRole<TKey>，TKey代表主键的类型。我们一般编写继承自IdentityUser<TKey>、IdentityRole<TKey>等的自定义类，可以增加自定义属性
@@ -2019,7 +2025,8 @@ export default {
 }
 </script>
 ```
-### Signal协议协商问题
+
+### SignalR协议协商问题
 - 问题:“协商”请求被服务器A处理，而接下来的WebSocket请求却被服务器B处理
 - 解决方法：粘性会话和禁用协商。
 - 粘性会话:把来自同一个客户端的请求都转发给同一台服务器上。交给负载均衡服务器。 缺点：因为共享公网IP等造成请求无法被平均的分配到服务器集群；扩容的自适应性不强
@@ -2038,7 +2045,8 @@ onMounted(async function(){
     });
 })
 ```
-### Signal分布式部署问题
+
+### SignalR分布式部署问题
 - 问题:用户发送到某个服务端的消息只有连接那个服务端的用户能接收到，连接其他服务端的人接收不到
 - 解决方案:所有服务器连接到同一个消息中间件(官方方案:Redis backplane)。前提条件：启用粘性会话，或者跳过协商
 - Nuget包:Microsoft.AspNetCore.SignalR.StackExchangeRedis
@@ -2049,6 +2057,56 @@ builder.Services.AddSignalR().AddStackExchangeRedis("127.0.0.1",options =>
     options.Configuration.ChannelPrefix = "JeanSignal_";
 });
 ```
+
+### SignalR身份认证
+- 后端服务:
+1. 在program.cs里AddJwtBearer(options=>)方法里添加options.Events(JwtBearerEvents)事件的OnMessageReceived函数
+2. 获取前端请求中的accessToken和path，校验该请求是否符合SignalR请求且需要校验，如是则赋值context.Token = accessToken
+前端服务:
+1. 定义options对象，给options.accessTokenFactory添加箭头函数 () => state.token，传入登录时获取到的token
+2. 在建立连接connection时将options对象作为入参传入.withUrl()方法中
+
+```C#
+/* 后端服务 */
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+{
+    var jwtSetting = builder.Configuration.GetSection("JWT").Get<JwtOptions>();
+    var secKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSetting.SigningKey!));
+    options.TokenValidationParameters = new()
+    {
+        ValidateIssuer = false,
+        ValidateAudience = false,
+        ValidateLifetime = true,
+        IssuerSigningKey = secKey,
+        ValidateIssuerSigningKey = true
+    };
+    options.Events = new JwtBearerEvents()
+    {
+        OnMessageReceived = context =>
+        {
+            var accessToken = context.Request.Query["access_token"];
+            var path = context.HttpContext.Request.Path;
+            if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/Hub/ChatHub"))
+                context.Token = accessToken;
+            return Task.CompletedTask;
+        }
+    };
+});
+/* 前端服务 */
+async function OpenConnection(){
+    const options = {skipNegotiation:true,transport: signalR.HttpTransportType.WebSockets}
+    options.accessTokenFactory = () => state.token;
+    connection = new signalR.HubConnectionBuilder()
+    .withUrl('https://localhost:7055/Hub/ChatHub',options)
+    .withAutomaticReconnect().build();
+    await connection.start();
+    connection.on('ReceivePrivateMessage',(msg,id)=>{
+    state.fromUserMessage.push(msg)
+    console.log('获取到id啦:' + id)
+    });
+}
+```
+
  
 
 

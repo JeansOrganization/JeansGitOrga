@@ -1,21 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\",
+  "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}|SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\SignalR\u8EAB\u4EFD\u8BA4\u8BC1.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\signalr\u8EAB\u4EFD\u8BA4\u8BC1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}|SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\SignalR\u8EAB\u4EFD\u8BA4\u8BC1.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\signalr\u8EAB\u4EFD\u8BA4\u8BC1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{500C8B6F-DB9F-407A-ADD9-5EA4A8523CC9}|SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\SignalR\u8EAB\u4EFD\u8BA4\u8BC1.csproj|solutionrelative:signalr\u8EAB\u4EFD\u8BA4\u8BC1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|solutionrelative:\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|solutionrelative:\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\connstroptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\connstroptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2BA46640-EF64-4532-8942-E5EB4F294E4B}|\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178.csproj|solutionrelative:\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\connstroptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -32,11 +32,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\Program.cs",
               "RelativeDocumentMoniker": "SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\Program.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\Program.cs*",
-              "RelativeToolTip": "SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\Program.cs*",
-              "ViewState": "AQIAADYAAAAAAAAAAAAAAEsAAAAAAAAA",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\Program.cs",
+              "RelativeToolTip": "SignalR\u8EAB\u4EFD\u8BA4\u8BC1\\Program.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAAAEYAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-03-30T09:45:59.472Z",
               "EditorCaption": ""
@@ -45,40 +45,37 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\Program.cs",
               "RelativeDocumentMoniker": "\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\Program.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\Program.cs",
               "RelativeToolTip": "\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T09:45:13.843Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-30T09:45:13.843Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json",
               "RelativeDocumentMoniker": "\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json",
               "RelativeToolTip": "\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\appsettings.json",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-03-30T08:58:47.868Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-30T08:58:47.868Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "ConnStrOptions.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\ConnStrOptions.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\ConnStrOptions.cs",
               "RelativeDocumentMoniker": "\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\ConnStrOptions.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\ConnStrOptions.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u516B\u7AE0\\\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\ConnStrOptions.cs",
               "RelativeToolTip": "\u5BFC\u5165\u82F1\u6C49\u5B57\u5178\\ConnStrOptions.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-30T08:55:08.639Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-30T08:55:08.639Z"
             }
           ]
         }

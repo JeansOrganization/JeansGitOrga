@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("内置数据校验")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+339cd0f00423431579fef11128a93af21915d4dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7f44f8f906484520ea9f418072e86a1239a994a")]
 [assembly: System.Reflection.AssemblyProductAttribute("内置数据校验")]
 [assembly: System.Reflection.AssemblyTitleAttribute("内置数据校验")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

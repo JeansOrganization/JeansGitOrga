@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj": {}
+    "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj": {}
   },
   "projects": {
-    "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj": {
+    "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj",
+        "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj",
         "projectName": "常驻后台的数据导出服务",
-        "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj",
-        "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
-        "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\obj\\",
+        "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\常驻后台的数据导出服务.csproj",
+        "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
+        "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第八章\\常驻后台的数据导出服务\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
