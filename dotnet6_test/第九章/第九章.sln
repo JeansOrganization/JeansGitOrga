@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "充血模型", "充血模型\充血模型.csproj", "{F6C0E931-96D7-4800-A91E-4E5823A39FF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore对实体属性操作的秘密", "EFCore对实体属性操作的秘密\EFCore对实体属性操作的秘密.csproj", "{7D1612F5-E348-4A22-B163-D13910273896}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6C0E931-96D7-4800-A91E-4E5823A39FF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C0E931-96D7-4800-A91E-4E5823A39FF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C0E931-96D7-4800-A91E-4E5823A39FF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C0E931-96D7-4800-A91E-4E5823A39FF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1612F5-E348-4A22-B163-D13910273896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1612F5-E348-4A22-B163-D13910273896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1612F5-E348-4A22-B163-D13910273896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1612F5-E348-4A22-B163-D13910273896}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F5EE4E79-EC3C-4C76-9AEF-DC3D86F1C075}
+	EndGlobalSection
+EndGlobal

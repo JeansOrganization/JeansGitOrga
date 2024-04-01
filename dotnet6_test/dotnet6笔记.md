@@ -2108,6 +2108,100 @@ async function OpenConnection(){
 ```
 
  
+# 第九章
+
+## 软件架构设计
+- 相关信息网址: https://blog.csdn.net/leftfist/article/details/123031397 、 https://zhuanlan.zhihu.com/p/603201577?utm_id=0
+- 软件架构为软件系统提供了一个结构、行为和属性的高级抽象；
+- 软件架构风格是特定应用领域的惯用模式，架构定义一个词汇表和一组约束
+
+### 架构模式
+- 经典架构风格
+1. 数据流风格:如批处理系统，管道等
+2. 调用/返回风格:如主程序/子程序等
+3. 独立构件风格:如事件驱动的系统。
+4. 虚拟机风格:如解释器
+5. 仓库风格:如数据库系统、超文本系统
+- 层次架构风格
+1. C/S架构
+2. 三层C/S架构
+3. B/S架构:BS架构本质上也算是三层CS架构。
+- 富互联网应用:Rich Internet Application，RIA，B/S架构的变种。所谓CS是胖客户端，BS是瘦客户端，说的是CS的客户端交互能力很强，可以做许多工作，BS就不同了，浏览器功能太弱，啥都提交到服务器，极端依赖服务器。但BS发展至今时今日，客户端功能越来越强，体验越来越好，之前的flex，slivelight就不说了，阿贾克斯，以及现在的单页应用，前后端分离，以及浏览器功能的增强，客户端也日益强壮富裕。窃以为，现在的BS程序，就是富互联网应用程序。
+
+## 微服务架构
+- 相关信息网址: https://www.zhihu.com/tardis/bd/art/591754665 、 https://blog.csdn.net/duijiudangge19/article/details/133212487
+微服务架构是一种架构概念，主要作用将功能分解到离散的各个服务当中，从而降低系统耦合性，并提供更加灵活的服务支持
+
+### 微服务架构概述
+- Spring Cloud： 简化了分布式系统基础设施的开发，如服务发现注册、配置中心、消息总线、负载均衡、断路器和数据监控等，都可以用Spring Boot的开发风格一键启动和部署，通过Spring Boot再进行封装屏蔽掉了复杂的配置和实现原理，最终给开发者留了一套简单易懂、易部署和易维护的分布式系统开发工具包
+- Kubernetes:简称K8s用8代表8个字符，它是一个开源的，用于管理云平台中多个主机上的容器化应用，目标让部署容器化的应用简单并且高校开发，还提供了应用部署、规划、更新、维护的一种机制
+- Service Fabric:是微软公司开发的一套支撑高可用、高伸缩的云服务框架，核心是一个分布式系统平台，用于构建可扩展的应用
+- .Net Core微服务构件:1、服务治理；2、API网关 Ocelot；3、作业调度 Quartz.NET、Hangfire；4、分布式日志 Exceptionless；5、ESB；6、APM
+
+## DDD(Domain Driven Design-领域驱动设计)
+领域驱动设计 (DDD) 提出是从系统的分析到软件建模的一套方法论。将业务概念和业务规则转换成软件系统中的概念和规则，从而降低或隐藏业务复杂性，使系统具有更好的扩展性，以应对复杂多变的现实业务问题。总结它是一套完整而系统的设计方法、是一种设计思维、一种方法论，并不是 "系统架构"，一种架构设计原则、思维。
+
+
+### 充血模型与贫血模型
+- 充血模型(事务脚本模式):一个类中既有属性、成员变量，也有方法
+1. 应用层(service层):这个层次的任务是描述业务逻辑，或和其它项目的应用层做交互。这层很薄，不包含任何业务规则或知识，仅用于调度和派发任务给下一层的领域模型。这层没有业务状态，但可以为用户或程序提供任务状态
+2. 领域层(或者叫模型层):表示业务逻辑、业务场景和规则。该层次会控制和使用业务状态，即使这些状态最终会交由持久化层来存储。总之，该层是软件核心
+
+- 贫血模型(领域模型模式):一个类中只有属性或者成员变量，没有方法
+1. 应用层(Logic/Service/Manager层):该层包含大量业务逻辑，相对臃肿，所有行为几乎都在该层执行
+2. 模型层:该层甚至不能称为领域层，因为该层不存在行为，不包含业务逻辑，只作为存放数据和传递数据的对象
+```C#
+/* 贫血模型 */
+User user = new User("Jean");
+user.PasswordHash = HashHelper.Hash("123456");
+string? password = null;
+while (string.IsNullOrEmpty(password))
+{
+   password = Console.ReadLine();
+}
+bool isok = false;
+if (HashHelper.Hash(password) == user.PasswordHash)
+{
+   user.Credits += 5;
+   isok = true;
+}
+else
+{
+   if(user.Credits < 3)
+   {
+       Console.WriteLine("当前用户积分已不足以扣除！！");
+       return;
+   }
+   user.Credits -= 3;
+   isok = false;
+}
+Console.WriteLine($"账号登录{(isok ? "成功" : "失败")},当前账号信用分为{user.Credits}");
+Console.ReadKey();
+/* 贫血模型 */
+
+/* 充血模型 */
+User user = new User("Jean");
+user.ChangePassword("123456");
+string? password = null;
+while (string.IsNullOrEmpty(password))
+{
+    password = Console.ReadLine();
+}
+bool isok = false;
+if (user.CheckPassword(password))
+{
+    user.AddCredits(5);
+    isok = true;
+}
+else
+{
+    if (!user.DeductCredits(3)) return;
+    isok = false;
+}
+Console.WriteLine($"账号登录{(isok ? "成功" : "失败")},当前账号信用分为{user.Credits}");
+Console.ReadKey();
+/* 充血模型 */
+```
 
 
 # 末尾占位

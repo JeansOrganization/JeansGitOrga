@@ -1,0 +1,15 @@
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\bin\Debug\net6.0\充血模型.exe
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\bin\Debug\net6.0\充血模型.deps.json
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\bin\Debug\net6.0\充血模型.runtimeconfig.json
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\bin\Debug\net6.0\充血模型.dll
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\bin\Debug\net6.0\充血模型.pdb
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.dll
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\refint\充血模型.dll
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.pdb
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\充血模型.genruntimeconfig.cache
+D:\File\JeansGitOrga\dotnet6_test\第九章\充血模型\obj\Debug\net6.0\ref\充血模型.dll
