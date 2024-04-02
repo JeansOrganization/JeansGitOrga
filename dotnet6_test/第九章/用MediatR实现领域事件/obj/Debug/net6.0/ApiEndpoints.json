@@ -1,0 +1,12 @@
+[
+  {
+    "ContainingType": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.Controllers.DemoController",
+    "Method": "Get",
+    "RelativePath": "Demo/Get",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

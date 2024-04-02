@@ -1,30 +1,42 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\",
+  "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\dog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|solutionrelative:efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\dog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|solutionrelative:efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|solutionrelative:efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\mydbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|solutionrelative:efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\mydbcontextfactory .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|solutionrelative:efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\migrations\\20240401095808_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D1612F5-E348-4A22-B163-D13910273896}|EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj|solutionrelative:efcore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\migrations\\20240401095808_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|solutionrelative:efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,81 +46,123 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TestNotificationHandler2.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:04:12.861Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "20240401095808_init.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Migrations\\20240401095808_init.cs",
-              "RelativeDocumentMoniker": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Migrations\\20240401095808_init.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Migrations\\20240401095808_init.cs",
-              "RelativeToolTip": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Migrations\\20240401095808_init.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Title": "TestRequest.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T09:58:08.843Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "MyDbContextFactory .cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContextFactory .cs",
-              "RelativeDocumentMoniker": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContextFactory .cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContextFactory .cs",
-              "RelativeToolTip": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContextFactory .cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T09:55:17.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj",
-              "RelativeDocumentMoniker": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj",
-              "RelativeToolTip": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6.csproj",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-04-01T09:31:16.003Z",
+              "WhenOpened": "2024-04-02T09:25:02.379Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "MyDbContext.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContext.cs",
-              "RelativeDocumentMoniker": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContext.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContext.cs",
-              "RelativeToolTip": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\MyDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAswAsAAAAxAAAA",
+              "Title": "TestRequestHandler1.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T09:33:02.58Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Dog.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Dog.cs",
-              "RelativeDocumentMoniker": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Dog.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Dog.cs",
-              "RelativeToolTip": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Dog.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T09:31:21.068Z",
+              "WhenOpened": "2024-04-02T09:26:08.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Program.cs",
-              "RelativeDocumentMoniker": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Program.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Program.cs",
-              "RelativeToolTip": "EFCore\u5BF9\u5B9E\u4F53\u5C5E\u6027\u64CD\u4F5C\u7684\u79D8\u5BC6\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAcAAAA",
+              "DocumentIndex": 0,
+              "Title": "TestRequestHandler2.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-01T09:29:11.765Z",
+              "WhenOpened": "2024-04-02T09:25:55.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T08:56:18.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAYwBkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:04:36.528Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TestNotificationHandler1.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs*",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:02:15.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TestNotification.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
+              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
+              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T09:00:28.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
+              "RelativeDocumentMoniker": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
+              "RelativeToolTip": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAXAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-02T03:34:01.315Z",
               "EditorCaption": ""
             }
           ]

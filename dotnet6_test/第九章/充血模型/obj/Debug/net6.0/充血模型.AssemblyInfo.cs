@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("充血模型")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a6f741fe622795a34ae45629a5ec2c7d4be3d475")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a708441e503dce61aff72aa12b187e185d53691")]
 [assembly: System.Reflection.AssemblyProductAttribute("充血模型")]
 [assembly: System.Reflection.AssemblyTitleAttribute("充血模型")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

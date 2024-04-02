@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\用MediatR实现领域事件.props" />
+</Project>

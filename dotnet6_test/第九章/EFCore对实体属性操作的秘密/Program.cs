@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 
 ServiceCollection services = new ServiceCollection();
 services.AddDbContext<MyDbContext>(options =>
-    options.UseMySql("server=localhost;port=3306;user=Jean;password=123456;database=JeanTest",
+    options.UseMySql("server=localhost;port=3306;user=Jean;password=123456;database=JeanTest2",
             ServerVersion.Parse("8.2.0"))
 );
 using var provider = services.BuildServiceProvider();

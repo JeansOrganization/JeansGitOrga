@@ -2209,6 +2209,7 @@ Console.ReadKey();
 ### EFCore对实体属性操作的秘密
 - EF Core在读写实体对象的属性时，会查找属性对应的成员变量，如果能找到，EF Core会直接读写这个成员变量的值，而不是通过set和get代码块来读写
 - EF Core会尝试按照命名规则去直接读写属性对应的成员变量，只有无法根据命名规则找到对应成员变量的时候，EF Core才会通过属性的get、set代码块来读写属性值
+- 如果采用string Name{get;set}形式，编译器会自动生成名字为<Name>k_BackingField的成员变量来保存属性的值，因此EF Core除了查找与属性名称相同的成员变量还会查找符合<Name>k_BackingField规则的成员变量
 - 都是为了EF Core实现充血模型做准备
 ```C#
 /* 当存在命名规则时EFCore读写属性的不同 */
@@ -2251,6 +2252,120 @@ public class Dog
     }
 }
 ```
+
+### EFCore中充血模型的实现
+- 特征一:属性是只读的，或者只能在类内部的代码修改(private):将set属性定义为private或者init，通过构造函数来初始值
+- 特征二:定义了有参的构造函数:1.再添加一个私有无参构造函数  2.构造函数的参数和属性名必须一直或者首字母大小写区别
+- 特征三:成员变量没有定义属性，但是需要在数据库中有相应的列:在配置实体类的时候，使用builder.Property("成员变量名")来配置,否则migration无法生成该列
+- 特征四:属性是只读的:在配置实体类的时候，使用HasField("成员变量名")来配置,否则migration无法生成该列
+- 特征五:有的属性不需要映射到数据库:使用Ignore来配置
+```C#
+/* 各种需求的具体实现 */
+public class User
+{
+    public int Id { get; init; }//特征一
+    public DateTime CreatedDateTime { get; init; }//特征一
+    public string UserName { get; private set; }//特征一
+    public int Credit { get; private set; }
+    private string? passwordHash;//特征三
+    private string? remark;
+    public string? Remark //特征四
+    {
+        get { return remark; }
+    }
+    public string? Tag { get; set; }//特征五
+    private User()//特征二
+    {
+    }
+    public User(string userName)//特征二
+    {
+        this.UserName = userName;
+        this.CreatedDateTime = DateTime.Now;
+        this.Credit = 10;
+    }
+}
+public class UserConfig : IEntityTypeConfiguration<User>
+{
+    public void Configure(EntityTypeBuilder<User> builder)
+    {
+        builder.Property("passwordHash");//特征三
+        builder.Property(x => x.Remark).HasField("remark");//特征四
+        builder.Ignore(x => x.Tag);//特征五
+    }
+}
+```
+
+### EFCore实现值对象
+- 实现值对象，就是将类中紧密相关的属性进行封装成一个单独的值对象，比如经度(longitude)纬度(latitude)封装成Location, 重量值(Value)和单位(Unit)封装成Weight值对象
+- 值对象需要使用Fluent API中的OwnsOne方法来配置，缺少配置的话相应的值对象生成数据库文件时会报缺少主键
+- 某些值范围很小的属性可以定义为枚举类型 如重量单位:g、kg,枚举类型存入数据库默认以整数类型保存(索引),如需使用字符串保存需在Fluent API使用HasConversion<string>()配置
+- 通过dbContext使用Linq语句获取特定的数据时，没法直接用值对象进行比较，只能用再具体到值对象的属性进行比较，比如var region2 = await dbContext.Regions.FirstOrDefaultAsync(r=>r.Name.Chinese == "陆丰" && r.Name.English == "lufeng"),此时可以借助第三方工具Zack.Infrastructure/EFCore/ExpressionHelper.cs或者自己手写对象属性比较方法去进行比较
+```C#
+/* 值对象实现精简版 */
+public class Region
+{
+    public long Id { get; init; }
+    public MultilingualString Name { get; init; }
+    public Area Area { get; init; }
+}
+public record Area(double Value,AreaUnitType Unit);
+public void Configure(EntityTypeBuilder<Region> builder)
+{
+    builder.ToTable("T_Region");
+    builder.OwnsOne(r => r.Area, nb =>
+    {
+        nb.Property(e => e.Unit).HasMaxLength(20)
+        .IsUnicode(false).HasConversion<string>();
+    });
+}
+```
+
+### 用MediatR实现领域事件
+- Nuget包:MediatR
+- 注册服务:builder.Services.AddMediatR(config => config.RegisterServicesFromAssembly(typeof(Program).Assembly))
+- 添加事件:public record TestNotification(string UserName) : INotification;   (或者 TestRequest(string UserName) : IRequest;)
+- 添加事件处理者:public class TestNotificationHandler1 : INotificationHandler<TestNotification>  (或者 TestRequestHandler1 : IRequestHandler<TestRequest>)
+- 发布事件:注入IMediator mediator,调用 mediator.Publish(notification);  (或者 mediator.Send(request);)
+- publish发布事件会触发所有NotificationHandler,send发送请求只会触发一个RequestHandler
+```C#
+/* 服务注册 */
+builder.Services.AddMediatR(config =>
+{
+    config.RegisterServicesFromAssembly(typeof(Program).Assembly);
+});
+/* 事件处理类继承INotificationHandler<INotification> */
+public class TestEventHandler1 : INotificationHandler<TestEvent>
+{
+    public Task Handle(TestEvent notification, CancellationToken cancellationToken)
+    {
+        Console.WriteLine($"TestEventHandler1被触发了,获取到参数：{notification.UserName}");
+        return Task.CompletedTask;
+    }
+}
+/* 事件类继承INotification */
+public record TestEvent(string UserName) : INotification;
+/* 发布事件 */
+public class DemoController : ControllerBase
+{
+    private readonly ILogger<DemoController> _logger;
+    private readonly IMediator mediator;
+
+    public DemoController(ILogger<DemoController> logger, IMediator mediator)
+    {
+        _logger = logger;
+        this.mediator = mediator;
+    }
+
+    [HttpGet]
+    public ActionResult Get()
+    {
+        TestEvent event1 = new TestEvent("JEAN");
+        mediator.Publish(event1);
+        return Ok(event1);
+    }
+}
+```
+
 
 
 # 末尾占位
