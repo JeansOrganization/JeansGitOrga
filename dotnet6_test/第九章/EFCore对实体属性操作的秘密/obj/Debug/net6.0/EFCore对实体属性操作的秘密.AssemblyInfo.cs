@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EFCore对实体属性操作的秘密")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8a708441e503dce61aff72aa12b187e185d53691")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76844731ba8227c0d774483dc9980c1f333c5c0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EFCore对实体属性操作的秘密")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EFCore对实体属性操作的秘密")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

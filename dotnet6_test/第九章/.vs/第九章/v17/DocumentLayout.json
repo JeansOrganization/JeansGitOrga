@@ -3,40 +3,12 @@
   "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\geo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|solutionrelative:efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\geo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequesthandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotificationhandler1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}|\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6.csproj|solutionrelative:\u7528mediatr\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\testnotification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|solutionrelative:efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}|EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}|EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A.csproj|solutionrelative:efcore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,123 +18,32 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "TestNotificationHandler2.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T09:04:12.861Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TestRequest.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA2AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T09:25:02.379Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TestRequestHandler1.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler1.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T09:26:08.176Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TestRequestHandler2.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestRequestHandler2.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAiAAAA",
+              "Title": "Geo.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
+              "RelativeDocumentMoniker": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
+              "RelativeToolTip": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T09:25:55.8Z",
+              "WhenOpened": "2024-04-03T09:17:47.082Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAaAAAA",
+              "Title": "User.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
+              "RelativeDocumentMoniker": "EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
+              "RelativeToolTip": "EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
+              "ViewState": "AQIAADQAAAAAAAAAAAAUwBMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T08:56:18.431Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "DemoController.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\Controllers\\DemoController.cs",
-              "ViewState": "AQIAAA0AAAAAAAAAAAAYwBkAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T09:04:36.528Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TestNotificationHandler1.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs*",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotificationHandler1.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T09:02:15.813Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TestNotification.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
-              "RelativeDocumentMoniker": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
-              "RelativeToolTip": "\u7528MediatR\u5B9E\u73B0\u9886\u57DF\u4E8B\u4EF6\\TestNotification.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T09:00:28.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
-              "RelativeDocumentMoniker": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
-              "RelativeToolTip": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Program.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABwAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-02T03:34:01.315Z",
+              "WhenOpened": "2024-04-03T08:29:11.322Z",
               "EditorCaption": ""
             }
           ]

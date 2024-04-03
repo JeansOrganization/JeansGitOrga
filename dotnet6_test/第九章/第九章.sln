@@ -7,11 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "充血模型", "充血模�
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore对实体属性操作的秘密", "EFCore对实体属性操作的秘密\EFCore对实体属性操作的秘密.csproj", "{7D1612F5-E348-4A22-B163-D13910273896}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore中实现充血模型", "EFCore中实现充血模型\EFCore中实现充血模型.csproj", "{507567F4-FFA5-42B5-AE08-308D5116B69A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore中实现充血模型", "EFCore中实现充血模型\EFCore中实现充血模型.csproj", "{507567F4-FFA5-42B5-AE08-308D5116B69A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore中实现值对象", "EFCore中实现值对象\EFCore中实现值对象.csproj", "{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore中实现值对象", "EFCore中实现值对象\EFCore中实现值对象.csproj", "{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "用MediatR实现领域事件", "用MediatR实现领域事件\用MediatR实现领域事件.csproj", "{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "用MediatR实现领域事件", "用MediatR实现领域事件\用MediatR实现领域事件.csproj", "{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EFCore中发布领域事件的合适时机", "EFCore中发布领域事件的合适时机\EFCore中发布领域事件的合适时机.csproj", "{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A2ECCC0A-19AF-47CD-A23D-CFD6E26F30CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

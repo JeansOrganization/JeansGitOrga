@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\EFCore中发布领域事件的合适时机.props" />
+</Project>

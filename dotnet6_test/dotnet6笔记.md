@@ -2366,7 +2366,93 @@ public class DemoController : ControllerBase
 }
 ```
 
+### EFCore中发布领域事件的合适时机
+- 应用服务还是领域服务最终都是通过调用聚合根中的方法来操作聚合，所以在聚合根有操作的时候发布是个合适时机
+- 当在执行聚合根构造方法或者其他方法时发布，存在后续SaveChanges时报错或者保存失败但是事件却发布了出去，所以不适合在构造方法或者其他方法时发布
+- 可以在确保SaveChanges执行成功的时候进行事件的发布，但是如果单纯去校验SaveChanges是否成功，成功就发布的话那么发布的代码会很多
+- 所以最终的方案是:
+1. 编写一个基地类BaseEntity继承IDomainEvents，IDomainEvents主要接口是对IEnumerable<INotification>的增删改查
+2. 所有操作数据需要发布事件的实体需要继承BaseEntity,每次行为都需要添加相应的事件到IEnumerable<INotification>
+3. 再编写一个BaseDbContext继承DbContext并重写SaveChanges方法，在重写方法里先进行数据的保存，如果成功就获取context相关的所有实体的所有事件依次进行发布并清空IEnumerable<INotification>
+4. 编写实际操作的DbContext去继承BaseDbContext按正常流程操作即可，每次保存成功将会自动发布对应的事件
+```C#
+/* 实体基底类 */
+public class BaseEntity : IDomainEvents
+{
+    private List<INotification> EventList = new List<INotification>();
+    public void AddDomainEvent(INotification eventItem)
+    {
+        this.EventList.Add(eventItem);
+    }
+    public void AddDomainEventIfAbsent(INotification eventItem)
+    {
+        if (!EventList.Contains(eventItem))
+        {
+            this.EventList.Add(eventItem);
+        }
+    }
+    public void ClearDomainEvents()
+    {
+        this.EventList.Clear();
+    }
+    public IEnumerable<INotification> GetDomainEvents()
+    {
+        return this.EventList;
+    }
+}
+/* 上下文基底类 */
+public class BaseDbContext : DbContext
+{
+    private readonly IMediator mediator;
+    public BaseDbContext(DbContextOptions options, IMediator mediator) : base(options)
+    {
+        this.mediator = mediator;
+    }
+    public override int SaveChanges()
+    {
+        throw new NotImplementedException("Don not call SaveChanges, please call SaveChangesAsync instead.");
+    }
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    {
+        var result = await base.SaveChangesAsync(cancellationToken);
+        if (result == 0) return result;
+        var entities = this.ChangeTracker.Entries<IDomainEvents>()
+            .Where(r => r.Entity.GetDomainEvents().Any()).ToList();
+        var domainEvents = entities.SelectMany(r => r.Entity.GetDomainEvents()).ToList();
+        entities.ForEach(r => r.Entity.ClearDomainEvents());
+        foreach (var e in domainEvents)
+        {
+            await mediator.Publish(e);
+        }
+        return result;
+    }
+}
+/* 实体构造函数及方法 */
+public User(string userName, string email)
+{
+    this.Id = Guid.NewGuid();
+    this.UserName = userName;
+    this.Email = email;
+    this.IsDeleted = false;
+    AddDomainEvent(new UserAddedEvent(this));
+}
+public void ChangeEmail(string newValue)
+{
+    this.Email = newValue;
+    AddDomainEventIfAbsent(new UserUpdatedEvent(this.Id));
+}
+```
 
+## RabbitMQ(消息队列)
+- MQ:
+1. 全称Message Queue(消息队列),是在消息的传输过程中保存消息的容器。多用于分布式系统之间进行通信。
+2. 负责接收生产者传送来的消息，并存放者供消费者使用
+- MQ的优点
+1. 应用解耦:原本相互的调用变成了通过中间人的数据传递，系统之间的依赖度会降低，彼此之间某个出了故障另外一个还能运行
+2. 异步提速:原本同步进程直接调用，和每一个系统交互的耗时都会统计起来，耗时量大，使用MQ只需要统计消费者调用MQ的耗时和与DB交互的耗时
+3. 削峰填谷:原本高峰期时请求量超出系统承载量会崩溃，使用MQ会将请求存储在MQ内，然后系统持续地从MQ获取本身能够承载的请求量进行处理，削掉原本的高峰，填平高峰后的谷地
+- MQ的缺点:
+https://blog.csdn.net/zyb18507175502/article/details/127504610
 
 # 末尾占位
 
