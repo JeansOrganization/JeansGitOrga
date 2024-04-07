@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "dgSpecHash": "JSi1039eTIyAyBsbrxZsPt5mq5VxSIeaKsGo4aRToUIn9x691jIkPP0lQgOkO7v47QuJ4YsTWgOfNRDPlvkWZg==",
+  "success": true,
+  "projectFilePath": "D:\\File\\JeansGitOrga\\dotnet6_test\\额外记录\\Nlog.AspNetCore\\Nlog.AspNetCore.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\microsoft.extensions.primitives\\2.2.0\\microsoft.extensions.primitives.2.2.0.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.memory\\4.5.1\\system.memory.4.5.1.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.1\\system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512",
+    "C:\\Users\\JeanG\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

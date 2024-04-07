@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "Nlog.WebApiDemo.Controllers.DemoController",
+    "Method": "Get",
+    "RelativePath": "Demo/Get",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "req",
+        "Type": "Nlog.WebApiDemo.Controllers.LoginRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

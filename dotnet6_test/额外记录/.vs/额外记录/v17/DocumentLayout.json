@@ -1,22 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\",
+  "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\validataextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\validataextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.webapidemo\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|solutionrelative:nlog.webapidemo\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\lengthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\lengthattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:2:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.webapidemo\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:2:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|solutionrelative:nlog.webapidemo\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\controllers\\testcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.webapidemo\\nlog.webapidemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|solutionrelative:nlog.webapidemo\\nlog.webapidemo.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\abstractvalidateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AF8AEB18-30CB-41F1-86E3-7CF875F036E3}|\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528.csproj|solutionrelative:\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\abstractvalidateattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{573AB450-4C6B-42AC-A449-0B98C5C84CB5}|Nlog.AspNetCore\\Nlog.AspNetCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.aspnetcore\\nloghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{573AB450-4C6B-42AC-A449-0B98C5C84CB5}|Nlog.AspNetCore\\Nlog.AspNetCore.csproj|solutionrelative:nlog.aspnetcore\\nloghelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.webapidemo\\filters\\customerglobalexceptionfilterasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|solutionrelative:nlog.webapidemo\\filters\\customerglobalexceptionfilterasync.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:1:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.webapidemo\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:1:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|solutionrelative:nlog.webapidemo\\controllers\\democontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.webapidemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|solutionrelative:nlog.webapidemo\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{573AB450-4C6B-42AC-A449-0B98C5C84CB5}|Nlog.AspNetCore\\Nlog.AspNetCore.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.aspnetcore\\logmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{573AB450-4C6B-42AC-A449-0B98C5C84CB5}|Nlog.AspNetCore\\Nlog.AspNetCore.csproj|solutionrelative:nlog.aspnetcore\\logmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,58 +42,110 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ValidataExtension.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
-              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
-              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\ValidataExtension.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T13:58:44.234Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LengthAttribute.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
-              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
-              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\LengthAttribute.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAgwCQAAAAIAAAA",
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAgwBcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T13:50:36.63Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AbstractValidateAttribute.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
-              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
-              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\AbstractValidateAttribute.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAQAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T13:48:02.139Z",
+              "WhenOpened": "2024-04-07T06:17:42.07Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "TestController.cs",
-              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
-              "RelativeDocumentMoniker": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
-              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
-              "RelativeToolTip": "\u81EA\u5B9A\u4E49\u7279\u6027\u7684\u8FD0\u7528\\Controllers\\TestController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAMAAAA",
+              "Title": "Nlog.WebApiDemo",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj",
+              "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj",
+              "RelativeToolTip": "Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-04-07T06:00:33.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LogMessage.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.AspNetCore\\LogMessage.cs",
+              "RelativeDocumentMoniker": "Nlog.AspNetCore\\LogMessage.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.AspNetCore\\LogMessage.cs",
+              "RelativeToolTip": "Nlog.AspNetCore\\LogMessage.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T13:45:52.417Z",
+              "WhenOpened": "2024-04-07T03:49:22.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "nlog.config",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\nlog.config",
+              "RelativeDocumentMoniker": "Nlog.WebApiDemo\\nlog.config",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\nlog.config",
+              "RelativeToolTip": "Nlog.WebApiDemo\\nlog.config",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAABwAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-07T03:31:53.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NlogHelper.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.AspNetCore\\NlogHelper.cs",
+              "RelativeDocumentMoniker": "Nlog.AspNetCore\\NlogHelper.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.AspNetCore\\NlogHelper.cs",
+              "RelativeToolTip": "Nlog.AspNetCore\\NlogHelper.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAA8wBcAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T03:05:42.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CustomerGlobalExceptionFilterAsync.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Filters\\CustomerGlobalExceptionFilterAsync.cs",
+              "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Filters\\CustomerGlobalExceptionFilterAsync.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Filters\\CustomerGlobalExceptionFilterAsync.cs",
+              "RelativeToolTip": "Nlog.WebApiDemo\\Filters\\CustomerGlobalExceptionFilterAsync.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAswBkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T02:57:53.479Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Program.cs",
+              "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Program.cs",
+              "RelativeToolTip": "Nlog.WebApiDemo\\Program.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAACkAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T01:53:06.573Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DemoController.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "RelativeToolTip": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAmwBQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-07T01:50:01.453Z",
               "EditorCaption": ""
             }
           ]

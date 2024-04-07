@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "Cyt63bqvWYOEiDtyTRPLNu8gLfKpspT/aTjYcrtMbpY=",
+  "Source": "Nlog.WebApiDemo",
+  "BasePath": "_content/Nlog.WebApiDemo",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

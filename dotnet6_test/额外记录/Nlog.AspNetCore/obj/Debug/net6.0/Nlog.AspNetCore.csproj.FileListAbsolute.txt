@@ -1,0 +1,13 @@
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\bin\Debug\net6.0\Nlog.AspNetCore.deps.json
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\bin\Debug\net6.0\Nlog.AspNetCore.dll
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\bin\Debug\net6.0\Nlog.AspNetCore.pdb
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.csproj.AssemblyReference.cache
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.GeneratedMSBuildEditorConfig.editorconfig
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.AssemblyInfoInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.AssemblyInfo.cs
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.csproj.CoreCompileInputs.cache
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.sourcelink.json
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.dll
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\refint\Nlog.AspNetCore.dll
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\Nlog.AspNetCore.pdb
+D:\File\JeansGitOrga\dotnet6_test\额外记录\Nlog.AspNetCore\obj\Debug\net6.0\ref\Nlog.AspNetCore.dll
