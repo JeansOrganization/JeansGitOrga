@@ -2671,17 +2671,32 @@ static void Main(string[] args)
 ## NLog日志系统实现
 ### 简答
 1. 这个日志系统是与His项目搭配使用的，His项目有一个公有日志库，是封装了日志框架NLog实现的，外部通过过滤器去捕捉中间件服务发生的异常和所有的请求，然后调用日志库去输出具体的报错或者其他信息到数据库里
-2. 因为像医院业务很复杂，有时候会有那种整个请求响应流程正常，但是业务数据有误，而且有时候没法直接通过看代码去分析具体的业务bug在哪里，所以需要根据请求的入反参去辅助判断
-3. 管理平台这边的话就是根据筛选条件去搜索相应的日志数据
+2. 输出数据库的话需要去配置文件NLOG.CONFIG配置输出数据库的Target以及相应的过滤规则Rule
+3. 因为像医院业务很复杂，有时候会有那种整个请求响应流程正常，但是业务数据有误，而且有时候没法直接通过看代码去分析具体的业务bug在哪里，所以需要根据请求的入反参去辅助判断
+4. 管理平台这边的话就是根据筛选条件去搜索相应的日志数据
 
-数据库定时清理
+
+### ORACLE数据库定时清理
+- 可设定保留规定时间内的日志记录，以免日志数据量过大影响数据库的整体性能
+```Sql
+Begin
+DBMS_SCHEDULER.CREATE_JOB(
+    job_name =&gt; 'delete_task',
+    job_type =&gt; 'PLSQL_BLOCK',
+    job_action =&gt; 'BEGIN DELETE FROM MY_TABLE WHERE ...END;',
+    start_date =&gt; SYSTIMESTAMP,
+    repeat_interval =&gt; 'FREQ=DAILY; BYHOUR=0',
+    end_date =&gt; NULL,
+    auto_drop =&gt; TRUE,
+    comments =&gt; 'Delete Task Job');
+END;
+```
 
 NLOG配置
 
-前端页面技术:
 
 
-https://www.jb51.net/article/242401.htm
+https://www.jb51.net/article/242401.html
 
 
 - ......
