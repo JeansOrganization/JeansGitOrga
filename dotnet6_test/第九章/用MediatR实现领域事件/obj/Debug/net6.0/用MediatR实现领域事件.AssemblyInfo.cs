@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("用MediatR实现领域事件")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76844731ba8227c0d774483dc9980c1f333c5c0b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+df7e17417f8940b99e2cd94857811036aa7af751")]
 [assembly: System.Reflection.AssemblyProductAttribute("用MediatR实现领域事件")]
 [assembly: System.Reflection.AssemblyTitleAttribute("用MediatR实现领域事件")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

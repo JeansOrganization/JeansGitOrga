@@ -822,19 +822,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\JeanG\\.nuget\\packages\\": {}
+    "C:\\Users\\Jean\\.nuget\\packages\\": {},
+    "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\File\\JeansGitOrga\\dotnet6_test\\第九章\\EFCore对实体属性操作的秘密\\EFCore对实体属性操作的秘密.csproj",
+      "projectUniqueName": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第九章\\EFCore对实体属性操作的秘密\\EFCore对实体属性操作的秘密.csproj",
       "projectName": "EFCore对实体属性操作的秘密",
-      "projectPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第九章\\EFCore对实体属性操作的秘密\\EFCore对实体属性操作的秘密.csproj",
-      "packagesPath": "C:\\Users\\JeanG\\.nuget\\packages\\",
-      "outputPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\第九章\\EFCore对实体属性操作的秘密\\obj\\",
+      "projectPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第九章\\EFCore对实体属性操作的秘密\\EFCore对实体属性操作的秘密.csproj",
+      "packagesPath": "C:\\Users\\Jean\\.nuget\\packages\\",
+      "outputPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\第九章\\EFCore对实体属性操作的秘密\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\DevSoftware\\Microsoft Visual Studio\\Shared\\Packages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\JeanG\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jean\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

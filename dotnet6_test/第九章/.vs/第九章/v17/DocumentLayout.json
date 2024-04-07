@@ -1,13 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\",
+  "WorkspaceRootPath": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\geo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B299596F-7469-4B36-B526-50C0B80B42CD}|Rabbit\u53D1\u9001\u7AEF\\Rabbit\u53D1\u9001\u7AEF.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\rabbit\u53D1\u9001\u7AEF\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B299596F-7469-4B36-B526-50C0B80B42CD}|Rabbit\u53D1\u9001\u7AEF\\Rabbit\u53D1\u9001\u7AEF.csproj|solutionrelative:rabbit\u53D1\u9001\u7AEF\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\geo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2ADBBDAC-EBE2-4808-A8AE-E99AEE7EE2C6}|EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61.csproj|solutionrelative:efcore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\geo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}|EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}|EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A.csproj|e:\\gitfile\\jeansgitorga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\efcore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ACA16564-DCF1-44F5-AA20-EA0DF934B76D}|EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A.csproj|solutionrelative:efcore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -23,10 +27,23 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\Rabbit\u53D1\u9001\u7AEF\\Program.cs",
+              "RelativeDocumentMoniker": "Rabbit\u53D1\u9001\u7AEF\\Program.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\Rabbit\u53D1\u9001\u7AEF\\Program.cs",
+              "RelativeToolTip": "Rabbit\u53D1\u9001\u7AEF\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-06T12:39:30.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Geo.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
               "RelativeDocumentMoniker": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
               "RelativeToolTip": "EFCore\u4E2D\u5B9E\u73B0\u503C\u5BF9\u8C61\\Geo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -35,16 +52,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "User.cs",
-              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
+              "DocumentMoniker": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
               "RelativeDocumentMoniker": "EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
-              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
+              "ToolTip": "E:\\GitFile\\JeansGitOrga\\dotnet6_test\\\u7B2C\u4E5D\u7AE0\\EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
               "RelativeToolTip": "EFCore\u4E2D\u53D1\u5E03\u9886\u57DF\u4E8B\u4EF6\u7684\u5408\u9002\u65F6\u673A\\User.cs",
               "ViewState": "AQIAADQAAAAAAAAAAAAUwBMAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T08:29:11.322Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-03T08:29:11.322Z"
             }
           ]
         }
