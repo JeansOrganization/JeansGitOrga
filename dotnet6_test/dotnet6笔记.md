@@ -2692,11 +2692,287 @@ DBMS_SCHEDULER.CREATE_JOB(
 END;
 ```
 
-NLOG配置
+## 前后端发送请求
 
 
+## 缓存
+### HIS本地数据缓存实现
+1. 我们的服务分两种类型，一种是中间件服务，一种是纯数据服务
+2. 进行字典数据的查询的时候，会通过服务码获取到数据源信息，根据里面的列配置对下拉框表格进行初始化，给下拉框设置列名还有其他的一些属性
+3. 通过服务码再去读取相对路径下的缓存数据，获取缓存的事件和数据库里的更新事件作对比校验当前缓存数据需不需要更新
+4. 不需要则直接返回缓存数据，如果需要的话就通过数据库查询然后更新缓存数据再返回
+缓存数据结构:json格式
 
-https://www.jb51.net/article/242401.html
+### 服务端缓存管理实现
+1. 通过服务码模糊搜索相关的字典服务配置，可以选择是否使用缓存，缓存数据查询语句更改，缓存更新等
+2. 是否使用缓存，直接更改数据源配置的缓存标记，PC端加载数据源时会根据缓存标记去判断是否获取缓存
+3. 缓存查询语句更改，修改数据源配置里的缓存查询语句，PC端在加载数据源时会通过缓存查询语句去数据库查询数据，并存为本地缓存
+4. 缓存更新，通过服务码获取到记录字典表是否更新数据的扩展表，更改里面的更新标记，PC端加载数据时校验了更新标记，会直接从数据库获取字典数据并覆盖更新本地缓存
+```C#
+/* 更新和保存本地缓存 */
+/// <summary>
+/// 读取数据
+/// </summary>
+private void ReadData()
+{
+    isCache = false;//当前是否是缓存数据的标识
+    if (File.Exists(cacheFilePath))//有缓存文件
+    {
+        string str = File.ReadAllText(cacheFilePath);//读取文件中的文本信息
+        A0404_FileModel<TestSelectModel> fileModel = JsonConvert.DeserializeObject<A0404_FileModel<TestSelectModel>>(str);//格式化成缓存数据模型
+        DateTime time = new SystemSqlServeBLL().GetUpdateDateTime("TestSelect");//获取数据库TestSelect表更新时间
+        //判断数据库更新时间和本地缓存时间是否一致，如果一致则直接获取缓存文件即可
+        if (time.ToString() == fileModel.Time.ToString())
+        {
+            userList = fileModel.DataList;
+            isCache = true;
+            MessageBox.Show("当前没有更新读取缓存文件");
+        }
+        else
+        {
+            userList = tSBLL.GetAllList();
+            MessageBox.Show("当前有更新读取数据库");
+        }
+    }
+    else//没有找到缓存文件继续从数据库内查找数据
+    {
+        userList = tSBLL.GetAllList();//读取数据库数据
+        MessageBox.Show("当前有更新读取数据库");
+    }
+    //将数据集合赋值给表格
+    var query = from i in userList orderby i.Id select i;
+    DataTable table = query.CopyToDataTable();
+    BindingSource source = new BindingSource();
+    source.DataSource = table;
+    this.dgv.DataSource = null;
+    this.dgv.AutoGenerateColumns = false;
+    this.dgv.DataSource = source;
+}
+/// <summary>
+/// 保存缓存数据
+/// </summary>
+private void SaveCacheData()
+{
+    //判断是否存在缓存文件，如果不存在先创建
+    if (!File.Exists(cacheFilePath))
+    {
+        FileStream fileStream = File.Create(cacheFilePath);//创建该文件
+        fileStream.Close();
+    }
+    string str = File.ReadAllText(cacheFilePath);//读取文件中的文本信息
+    A0404_FileModel<TestSelectModel> fileModel = JsonConvert.DeserializeObject<A0404_FileModel<TestSelectModel>>(str);//格式化成缓存数据模型
+    DateTime sqlTime = new SystemSqlServeBLL().GetUpdateDateTime("TestSelect");//获取数据库TestSelect表更新时间
+    //判断当前如果已有缓存文件并且缓存文件记录的时间和数据库上记录的时间一致的话则不需要继续保存文件了
+    if (sqlTime != null && sqlTime.ToString() == fileModel.Time.ToString())
+        return;
+    //构建需要保存的缓存文件对象
+    A0404_FileModel<TestSelectModel> newFileModel = new A0404_FileModel<TestSelectModel>()
+    {
+        Time = sqlTime,
+        DataList = userList
+    };
+    string fileStr = JsonConvert.SerializeObject(newFileModel);
+    File.WriteAllText(cacheFilePath, fileStr);
+}
+```
+
+
+## 接口平台
+
+## 医嘱自动分方
+
+### 具体规则
+1. 主体分类规则: 用药途径分类、毒麻分类分类、剂型大类分类、药品类型分类
+- 用药途径:皮下注射、静脉滴注、静脉注射、口服给药、经皮给药
+- 毒麻分类:麻精一(第一类精神类药品)、精二、毒性药品
+- 剂型大类:液体剂型、气体剂型、固体剂型
+- 药品类型:中药、西药、饮片、中成药
+2. 明细分类规则: 强制分方标记(ForceDivided分方)、合并分方标记(GroupMark分方)、同类分方(ObjectCode分方)、明细最大数量分方(DetailAmount分方)
+- 将处方分成强制分方标记为0或1的，再将其中有相同分组标记的分到一个处方内
+- 接下来如果有分组过的处方不需要再进行同类分方，而没有分组过的处方需要再进行同类分方
+- 再根据配置的当前同类规则最大数量，对处方进行拆分，且满足每个处方都能最大限度的接近最大数量但不超过
+3. 处方拆分规则: 最大处方数量拆分、最大处方金额拆分
+
+### 具体算法逻辑
+```C#
+/// <summary>
+/// 使处方按分方后处方数量能接近detailAmount的趋势排序
+/// </summary>
+/// <param name="prescriptionListOC"></param>
+/// <param name="detailAmount"></param>
+private void OperateListBySum(List<MzPrescriptionMainVoEntity> prescriptionListOC,int detailAmount)
+{
+    int maxSortSn = 9999;
+    int sortSn = 0;
+
+    foreach (var p in prescriptionListOC)
+    {
+        if (p.sortSn != 0) continue;
+        if (p.pwCount == 1) continue;
+        sortSn++;
+        if (p.pwCount >= detailAmount)
+        {
+            p.sortSn = sortSn;
+            continue;
+        }
+        else
+        {
+            p.sortSn = sortSn;
+            int num = detailAmount - p.pwCount;
+            List<MzPrescriptionMainVoEntity> cList = prescriptionListOC.Where(r => r.sortSn == 0).OrderBy(r => r.pwCount).ToList();
+            bool isOk = GetEqualSumList(cList, num, sortSn);
+            if (!isOk) p.sortSn = maxSortSn;
+        }
+    }
+    if (prescriptionListOC.Exists(r => r.sortSn == 0))
+    {
+        prescriptionListOC.FindAll(r => r.sortSn == 0).ForEach(t => t.sortSn = maxSortSn);
+    }
+
+    bool GetEqualSumList(List<MzPrescriptionMainVoEntity> cList, int sum, int sortSn)
+    {
+        if (cList == null || cList.Count == 0 || sum <= 0 || sortSn <= 0) return false;
+        if (cList.Sum(r => r.pwCount) < sum) return false;
+        MzPrescriptionMainVoEntity equalCountVo = cList.FirstOrDefault(r => r.pwCount == sum);
+        if (equalCountVo != null)
+        {
+            equalCountVo.sortSn = sortSn;
+            return true;
+        }
+        List<MzPrescriptionMainVoEntity> exclusionList = new List<MzPrescriptionMainVoEntity>();
+        List<MzPrescriptionMainVoEntity> cList0 = cList.Where(r => r.pwCount < sum && !exclusionList.Exists(t => t == r)).ToList();
+        foreach (var c in cList0)
+        {
+            int sum1 = sum - c.pwCount;
+            List<MzPrescriptionMainVoEntity> cList1 = cList0.Where(r => r != c).ToList();
+            bool isOk = GetEqualSumList(cList1, sum1, sortSn);
+            if (isOk)
+            {
+                c.sortSn = sortSn;
+                return true;
+            }
+            exclusionList.Add(c);
+        }
+        return false;
+    }
+}
+
+
+/// <summary>
+/// 通过最大限制金额对处方进行拆分再合并
+/// </summary>
+/// <param name="prescriptionList"></param>
+/// <param name="totalAmount"></param>
+/// <param name="dicP"></param>
+/// <param name="key"></param>
+private void OperateListByMoney(List<MzPrescriptionMainVoEntity> prescriptionList,decimal totalAmount, 
+    Dictionary<int, List<MzPrescriptionMainVoEntity>> dicP,int key = 10000)
+{
+    if (prescriptionList == null || prescriptionList.Count == 0) return;
+
+    //小于且最接近的子集的最大数量
+    int maxCount = 0;
+    //用于存放符合要求的mainList
+    List<MzPrescriptionMainVoEntity> returnList = new List<MzPrescriptionMainVoEntity>();
+    //用于储存元素，数量到达后打包放入returnList
+    List<MzPrescriptionMainVoEntity> mainList = new List<MzPrescriptionMainVoEntity>();
+
+    for (int i = prescriptionList.Count; i > 0; i--)
+    {
+        List<MzPrescriptionMainVoEntity> list = prescriptionList.Take(i).ToList();
+        if(list.Sum(r=>r.pwTotalAmount)< totalAmount)
+        {
+            maxCount = list.Count;
+            break;
+        }
+    }
+
+    //可能存在每个医嘱金额都大于最大限制金额，此时每个医嘱单独成处方
+    if(maxCount == 0)
+    {
+        foreach (var prescription in prescriptionList)
+        {
+            key++;
+            List<MzPrescriptionMainVoEntity> list = new List<MzPrescriptionMainVoEntity>() { prescription };
+            if (dicP.ContainsKey(key))
+            {
+                var prescriptionListReturn = dicP[key];
+                prescriptionListReturn.AddRange(list);
+            }
+            else
+            {
+                dicP.Add(key, list);
+            }
+        }
+        return;
+    }
+
+    key++;
+    decimal priceDifference = totalAmount;
+    GetClosestTotalAmountList(prescriptionList);
+    if (dicP.ContainsKey(key))
+    {
+        var prescriptionListReturn = dicP[key];
+        prescriptionListReturn.AddRange(returnList);
+    }
+    else
+    {
+        dicP.Add(key, returnList);
+    }
+    List<MzPrescriptionMainVoEntity> residueList = prescriptionList.Where(r => !returnList.Contains(r)).OrderBy(t=>t.pwTotalAmount).ToList();
+    if (residueList == null || residueList.Count == 0) return;
+    OperateListByMoney(residueList, totalAmount, dicP, key);//自循环
+
+    void GetClosestTotalAmountList(List<MzPrescriptionMainVoEntity> list,int index = -1)
+    {
+        foreach (var li in list)
+        {
+            #region 过滤不必要的遍历
+            int index0 = prescriptionList.IndexOf(li);
+            //index为当前集合前面的元素索引,index0 <= index表示当前元素处于上一个元素的左边或同一个元素，此操作重复，故跳出
+            //maxCount - mainList.Count表示剩余所需数
+            //prescriptionList.Count - (maxCount - mainList.Count)表示最后(maxCount - mainList.Count)个所需数的第一个数的索引
+            //位于上述索引右边的都跳出
+            if (index0 <= index) continue;
+            if (index0 > prescriptionList.Count - (maxCount - mainList.Count)) break;
+            #endregion
+
+            mainList.Add(li);
+
+            #region 到达最接近和最大数量
+            //数量到达总和小于的最大数目
+            if (mainList.Count >= maxCount)
+            {
+                decimal totalAmount0 = mainList.Sum(r => r.pwTotalAmount);
+                //总和是否小于最大金额限制且相差值小于外部实时更新的差异值
+                if (totalAmount0 < totalAmount && (totalAmount - totalAmount0) < priceDifference)
+                {
+                    priceDifference = totalAmount - totalAmount0;
+                    returnList.Clear();
+                    returnList.AddRange(mainList);
+                    if (mainList.Contains(li))
+                        mainList.Remove(li);
+                    continue;
+                }
+                //集合是按金额从小到达，如果此处存在否，则后续的元素也同样是否
+                else
+                {
+                    if (mainList.Contains(li))
+                        mainList.Remove(li);
+                    break;
+                }
+            }
+            #endregion
+
+            List<MzPrescriptionMainVoEntity> list0 = list.Where(r => r != li).ToList();
+            GetClosestTotalAmountList(list0, index0);//自循环
+            if (mainList.Contains(li))
+                mainList.Remove(li);
+        }
+    }
+}
+```
+
 
 
 - ......
