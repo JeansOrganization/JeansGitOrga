@@ -2778,7 +2778,14 @@ private void SaveCacheData()
 
 
 ## 接口平台
-通过抽象工厂模式BasicPlatform实现不同的接口平台
+### 通过抽象工厂模式BasicPlatform实现不同的接口平台
+1. 使用场景是一个HIS项目可能会不同的医院上线，不同医院需要对接的第三方平台接口其实有大部分是一样的，像处方推送，药房代煎那些
+2. 然后基本医院在与第三方接口对接的时候都不是直接对接，而是通过接口平台进行规范化的出入参
+3. 首先创建一个接口平台抽象基类，里面大概有每个平台提供的合作方ID，密钥，以及具体接口调用的虚方法
+4. 再创建基类的实现类，实现具体的接口调用方法，再创建工厂类通过反射去获取相应的平台实现类，去执行相应的方法
+注意:反射获取程序集可以用this.GetType().Assembly 或者 typeof(PlatformFactory).Assembly
+优点:代码规范、切换平台时只需要去更改相应的配置即可、降低耦合度
+获取实例两种方案:在代码里写Switch语句根据传入的标识符去返回相应的实例、直接通过反射获取实例
 https://www.cnblogs.com/wangboke/p/5622461.html
 
 ## 医嘱自动分方
@@ -2795,192 +2802,117 @@ https://www.cnblogs.com/wangboke/p/5622461.html
 3. 处方拆分规则: 最大处方数量拆分、最大处方金额拆分
 
 ### 算法逻辑口述
-1. 将处方集合以最能接近detailAmount的趋势排序
-- 将集合按配伍数量降序排序，遍历集合，同时声明一个排序码，从0开始递增
-- 遍历处方时判断当前明细的配伍数量是否大于明细数，如果大于则赋值排序码后跳到下一次遍历
-- 如果小于则通过递归以从小到大的配伍数量去合并处方，如果递归过程中发现没法凑整则直接跳出递归给该处方赋值int的最大值排序码
-- 如果可以凑整则将凑整的这些明细全部赋值相同的排序码
-- 等执行完排序码赋值后将集合按排序码进行正序排序，可以发现可凑整或者超出的处方有正常递增的排序码，而不可凑整且小于最大明细数的处方排序码为int的最大值
-- 接下来就是遍历集合将处方明细数往最大明细数补齐了
+1. 本质上都是求数组中小于且最接近目标值的子数组
+2. 递归循环
+- 首先将所有大于目标值的单体都分离出来
+- 通过递归里嵌套循环枚举所有的子集的和
+- 声明一个变量用来保存所有子集与目标值的最小差距，初始化用int.MaxValue，然后用枚举的和与目标值差值依次与校验值比较
+- 如果小于校验值，则更新校验值，全部遍历完后取差值最小的子集
+- 如果枚举和直接等于目标值则提前跳出递归循环
+- 将子集里的元素从父集剔除，再重新进行遍历
+3. 枚举+双指针
+- 将父集平均分成两个子集，枚举得出左右两个子集的子集和数组
+- 利用双指针计算左右子集的和，并计算最终最接近目标值的子集
 
 ### 具体算法逻辑
 ```C#
-/// <summary>
-/// 使处方按分方后处方数量能接近detailAmount的趋势排序
-/// </summary>
-/// <param name="prescriptionListOC"></param>
-/// <param name="detailAmount"></param>
-private void OperateListBySum(List<MzPrescriptionMainVoEntity> prescriptionListOC,int detailAmount)
-{
-    int maxSortSn = 9999;
-    int sortSn = 0;
+int difference = int.MaxValue;
+List<int> mainList = new List<int>();
+List<int> retList = new List<int>();
 
-    foreach (var p in prescriptionListOC)
+//List<int> numlist = new List<int>() {1,8, 5, 3,6,9,4};
+//int global = 10;
+List<int> numlist = new List<int>() {1,8, 5, 3,6,9,4};
+int global = 10;
+MinAbsDifference(numlist,global);
+#region 递归循环
+
+void MinAbsDifference(List<int> numList, int global)
+{
+    while (numlist.Count > 0)
     {
-        if (p.sortSn != 0) continue;
-        if (p.pwCount == 1) continue;
-        sortSn++;
-        if (p.pwCount >= detailAmount)
+        dfs(numList, global, 0, 0);
+        foreach (var num in mainList)
         {
-            p.sortSn = sortSn;
+            Console.Write(num + ",");
+        }
+        Console.WriteLine();
+        numList.RemoveAll(r => mainList.Contains(r));
+        mainList.Clear();
+        retList.Clear();
+        difference = int.MaxValue;
+    }
+}
+bool dfs(List<int> numList, int global,int index,int sum)
+{
+    if (global - sum < 0) return false;
+    if (difference > global - sum)
+    {
+        difference = global - sum;
+        mainList.Clear();
+        retList.ForEach(r => mainList.Add(r));
+    }
+    if (global - sum == 0) return true;
+
+    for(int i = index; i < numList.Count; i++)
+    {
+        retList.Add(numList[i]);
+        bool isok = dfs(numList, global, i + 1, sum + numList[i]);
+        if (!isok)
+        {
+            retList.Remove(numList[i]);
             continue;
         }
         else
         {
-            p.sortSn = sortSn;
-            int num = detailAmount - p.pwCount;
-            List<MzPrescriptionMainVoEntity> cList = prescriptionListOC.Where(r => r.sortSn == 0).OrderBy(r => r.pwCount).ToList();
-            bool isOk = GetEqualSumList(cList, num, sortSn);
-            if (!isOk) p.sortSn = maxSortSn;
-        }
-    }
-    if (prescriptionListOC.Exists(r => r.sortSn == 0))
-    {
-        prescriptionListOC.FindAll(r => r.sortSn == 0).ForEach(t => t.sortSn = maxSortSn);
-    }
-
-    bool GetEqualSumList(List<MzPrescriptionMainVoEntity> cList, int sum, int sortSn)
-    {
-        if (cList == null || cList.Count == 0 || sum <= 0 || sortSn <= 0) return false;
-        if (cList.Sum(r => r.pwCount) < sum) return false;
-        MzPrescriptionMainVoEntity equalCountVo = cList.FirstOrDefault(r => r.pwCount == sum);
-        if (equalCountVo != null)
-        {
-            equalCountVo.sortSn = sortSn;
             return true;
         }
-        List<MzPrescriptionMainVoEntity> exclusionList = new List<MzPrescriptionMainVoEntity>();
-        List<MzPrescriptionMainVoEntity> cList0 = cList.Where(r => r.pwCount < sum && !exclusionList.Exists(t => t == r)).ToList();
-        foreach (var c in cList0)
-        {
-            int sum1 = sum - c.pwCount;
-            List<MzPrescriptionMainVoEntity> cList1 = cList0.Where(r => r != c).ToList();
-            bool isOk = GetEqualSumList(cList1, sum1, sortSn);
-            if (isOk)
-            {
-                c.sortSn = sortSn;
-                return true;
-            }
-            exclusionList.Add(c);
-        }
-        return false;
     }
+    return false;
 }
 
+#endregion
 
-/// <summary>
-/// 通过最大限制金额对处方进行拆分再合并
-/// </summary>
-/// <param name="prescriptionList"></param>
-/// <param name="totalAmount"></param>
-/// <param name="dicP"></param>
-/// <param name="key"></param>
-private void OperateListByMoney(List<MzPrescriptionMainVoEntity> prescriptionList,decimal totalAmount, 
-    Dictionary<int, List<MzPrescriptionMainVoEntity>> dicP,int key = 10000)
+#region 枚举+双指针
+
+bool MinAbsDifference2(List<int> numList, int global)
 {
-    if (prescriptionList == null || prescriptionList.Count == 0) return;
+    int mid = numlist.Count / 2;
 
-    //小于且最接近的子集的最大数量
-    int maxCount = 0;
-    //用于存放符合要求的mainList
-    List<MzPrescriptionMainVoEntity> returnList = new List<MzPrescriptionMainVoEntity>();
-    //用于储存元素，数量到达后打包放入returnList
-    List<MzPrescriptionMainVoEntity> mainList = new List<MzPrescriptionMainVoEntity>();
+    List<int> leftNumList = new List<int>();
+    List<int> rightNumList = new List<int>();
 
-    for (int i = prescriptionList.Count; i > 0; i--)
+    dfs2(numlist, 0, mid - 1, 0, leftNumList);
+    dfs2(numlist, mid, numlist.Count-1, 0, rightNumList);
+    leftNumList = leftNumList.OrderBy(r => r).ToList();
+    rightNumList = rightNumList.OrderBy(r => r).ToList();
+
+    int ans = int.MaxValue;
+    int left = 0;
+    int right = rightNumList.Count-1;
+    while(left<leftNumList.Count && right >= 0)
     {
-        List<MzPrescriptionMainVoEntity> list = prescriptionList.Take(i).ToList();
-        if(list.Sum(r=>r.pwTotalAmount)< totalAmount)
+        int t = leftNumList[left] + rightNumList[right];
+        if (global < t)
         {
-            maxCount = list.Count;
-            break;
+            right--;
+            continue;
         }
-    }
-
-    //可能存在每个医嘱金额都大于最大限制金额，此时每个医嘱单独成处方
-    if(maxCount == 0)
-    {
-        foreach (var prescription in prescriptionList)
-        {
-            key++;
-            List<MzPrescriptionMainVoEntity> list = new List<MzPrescriptionMainVoEntity>() { prescription };
-            if (dicP.ContainsKey(key))
-            {
-                var prescriptionListReturn = dicP[key];
-                prescriptionListReturn.AddRange(list);
-            }
-            else
-            {
-                dicP.Add(key, list);
-            }
-        }
-        return;
-    }
-
-    key++;
-    decimal priceDifference = totalAmount;
-    GetClosestTotalAmountList(prescriptionList);
-    if (dicP.ContainsKey(key))
-    {
-        var prescriptionListReturn = dicP[key];
-        prescriptionListReturn.AddRange(returnList);
-    }
-    else
-    {
-        dicP.Add(key, returnList);
-    }
-    List<MzPrescriptionMainVoEntity> residueList = prescriptionList.Where(r => !returnList.Contains(r)).OrderBy(t=>t.pwTotalAmount).ToList();
-    if (residueList == null || residueList.Count == 0) return;
-    OperateListByMoney(residueList, totalAmount, dicP, key);//自循环
-
-    void GetClosestTotalAmountList(List<MzPrescriptionMainVoEntity> list,int index = -1)
-    {
-        foreach (var li in list)
-        {
-            #region 过滤不必要的遍历
-            int index0 = prescriptionList.IndexOf(li);
-            //index为当前集合前面的元素索引,index0 <= index表示当前元素处于上一个元素的左边或同一个元素，此操作重复，故跳出
-            //maxCount - mainList.Count表示剩余所需数
-            //prescriptionList.Count - (maxCount - mainList.Count)表示最后(maxCount - mainList.Count)个所需数的第一个数的索引
-            //位于上述索引右边的都跳出
-            if (index0 <= index) continue;
-            if (index0 > prescriptionList.Count - (maxCount - mainList.Count)) break;
-            #endregion
-
-            mainList.Add(li);
-
-            #region 到达最接近和最大数量
-            //数量到达总和小于的最大数目
-            if (mainList.Count >= maxCount)
-            {
-                decimal totalAmount0 = mainList.Sum(r => r.pwTotalAmount);
-                //总和是否小于最大金额限制且相差值小于外部实时更新的差异值
-                if (totalAmount0 < totalAmount && (totalAmount - totalAmount0) < priceDifference)
-                {
-                    priceDifference = totalAmount - totalAmount0;
-                    returnList.Clear();
-                    returnList.AddRange(mainList);
-                    if (mainList.Contains(li))
-                        mainList.Remove(li);
-                    continue;
-                }
-                //集合是按金额从小到达，如果此处存在否，则后续的元素也同样是否
-                else
-                {
-                    if (mainList.Contains(li))
-                        mainList.Remove(li);
-                    break;
-                }
-            }
-            #endregion
-
-            List<MzPrescriptionMainVoEntity> list0 = list.Where(r => r != li).ToList();
-            GetClosestTotalAmountList(list0, index0);//自循环
-            if (mainList.Contains(li))
-                mainList.Remove(li);
-        }
+        ans = Math.Min(ans, t);
+        left++;
     }
 }
+
+void dfs2(List<int> numList,int left,int right,int sum,List<int> leftNumList)
+{
+    leftNumList.Add(sum);
+    for(int i = left; i <= right; i++)
+    {
+        dfs2(numlist, i + 1, right, sum + numlist[i],leftNumList);
+    }
+}
+
+#endregion
 ```
 
 

@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "自定义特性的运用", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NlogDemo", "NlogDemo", "{3657498C-F99F-4531-9402-C228D1C6FD03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nlog.AspNetCore", "Nlog.AspNetCore\Nlog.AspNetCore.csproj", "{573AB450-4C6B-42AC-A449-0B98C5C84CB5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nlog.AspNetCore", "Nlog.AspNetCore\Nlog.AspNetCore.csproj", "{573AB450-4C6B-42AC-A449-0B98C5C84CB5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nlog.WebApiDemo", "Nlog.WebApiDemo\Nlog.WebApiDemo.csproj", "{3C1CC309-5B28-4249-9437-099BB87E1545}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nlog.WebApiDemo", "Nlog.WebApiDemo\Nlog.WebApiDemo.csproj", "{3C1CC309-5B28-4249-9437-099BB87E1545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "leetcode1755.最接近目标值的子序列和", "leetcode1755.最接近目标值的子序列和\leetcode1755.最接近目标值的子序列和.csproj", "{42E8310C-220A-4779-9D06-8A2CAF094521}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{3C1CC309-5B28-4249-9437-099BB87E1545}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C1CC309-5B28-4249-9437-099BB87E1545}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C1CC309-5B28-4249-9437-099BB87E1545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42E8310C-220A-4779-9D06-8A2CAF094521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E8310C-220A-4779-9D06-8A2CAF094521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E8310C-220A-4779-9D06-8A2CAF094521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E8310C-220A-4779-9D06-8A2CAF094521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

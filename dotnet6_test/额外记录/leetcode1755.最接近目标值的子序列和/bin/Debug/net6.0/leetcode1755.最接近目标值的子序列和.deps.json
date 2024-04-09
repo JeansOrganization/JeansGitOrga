@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "leetcode1755.最接近目标值的子序列和/1.0.0": {
+        "runtime": {
+          "leetcode1755.最接近目标值的子序列和.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "leetcode1755.最接近目标值的子序列和/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{42E8310C-220A-4779-9D06-8A2CAF094521}|leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42E8310C-220A-4779-9D06-8A2CAF094521}|leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C.csproj|solutionrelative:leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|d:\\file\\jeansgitorga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\nlog.webapidemo\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{3C1CC309-5B28-4249-9437-099BB87E1545}|Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj|solutionrelative:nlog.webapidemo\\nlog.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
@@ -42,11 +46,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\Program.cs",
+              "RelativeDocumentMoniker": "leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\Program.cs",
+              "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\Program.cs",
+              "RelativeToolTip": "leetcode1755.\u6700\u63A5\u8FD1\u76EE\u6807\u503C\u7684\u5B50\u5E8F\u5217\u548C\\Program.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-09T06:52:29.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "DemoController.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Controllers\\DemoController.cs",
               "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
@@ -54,13 +71,12 @@
               "RelativeToolTip": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAgwBcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T06:17:42.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T06:17:42.07Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Nlog.WebApiDemo",
+              "DocumentIndex": 3,
+              "Title": "Nlog.WebApiDemo.csproj",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj",
               "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj",
               "ToolTip": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Nlog.WebApiDemo.csproj",
@@ -72,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "LogMessage.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.AspNetCore\\LogMessage.cs",
               "RelativeDocumentMoniker": "Nlog.AspNetCore\\LogMessage.cs",
@@ -80,12 +96,11 @@
               "RelativeToolTip": "Nlog.AspNetCore\\LogMessage.cs",
               "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T03:49:22.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T03:49:22.329Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "nlog.config",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\nlog.config",
               "RelativeDocumentMoniker": "Nlog.WebApiDemo\\nlog.config",
@@ -98,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "NlogHelper.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.AspNetCore\\NlogHelper.cs",
               "RelativeDocumentMoniker": "Nlog.AspNetCore\\NlogHelper.cs",
@@ -106,12 +121,11 @@
               "RelativeToolTip": "Nlog.AspNetCore\\NlogHelper.cs",
               "ViewState": "AQIAAA8AAAAAAAAAAAA8wBcAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T03:05:42.288Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T03:05:42.288Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "CustomerGlobalExceptionFilterAsync.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Filters\\CustomerGlobalExceptionFilterAsync.cs",
               "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Filters\\CustomerGlobalExceptionFilterAsync.cs",
@@ -119,12 +133,11 @@
               "RelativeToolTip": "Nlog.WebApiDemo\\Filters\\CustomerGlobalExceptionFilterAsync.cs",
               "ViewState": "AQIAABgAAAAAAAAAAAAswBkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T02:57:53.479Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T02:57:53.479Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Program.cs",
               "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Program.cs",
@@ -132,12 +145,11 @@
               "RelativeToolTip": "Nlog.WebApiDemo\\Program.cs",
               "ViewState": "AQIAACAAAAAAAAAAAAAAACkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T01:53:06.573Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T01:53:06.573Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "DemoController.cs",
               "DocumentMoniker": "D:\\File\\JeansGitOrga\\dotnet6_test\\\u989D\u5916\u8BB0\u5F55\\Nlog.WebApiDemo\\Controllers\\DemoController.cs",
               "RelativeDocumentMoniker": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
@@ -145,8 +157,7 @@
               "RelativeToolTip": "Nlog.WebApiDemo\\Controllers\\DemoController.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAmwBQAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-07T01:50:01.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-07T01:50:01.453Z"
             }
           ]
         }

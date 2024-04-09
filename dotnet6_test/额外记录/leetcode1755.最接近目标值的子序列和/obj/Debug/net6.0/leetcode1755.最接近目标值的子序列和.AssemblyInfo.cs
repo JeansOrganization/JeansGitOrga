@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Nlog.WebApiDemo")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("leetcode1755.最接近目标值的子序列和")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b009b97fb51302ebfb44729ae14f33686543ca6d")]
-[assembly: System.Reflection.AssemblyProductAttribute("Nlog.WebApiDemo")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Nlog.WebApiDemo")]
+[assembly: System.Reflection.AssemblyProductAttribute("leetcode1755.最接近目标值的子序列和")]
+[assembly: System.Reflection.AssemblyTitleAttribute("leetcode1755.最接近目标值的子序列和")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。
