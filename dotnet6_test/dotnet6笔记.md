@@ -35,9 +35,9 @@ using (var conn = new MySqlConnection(connStr))
 ### record
 
 - record是.NET 5中的一种新特性，可以看作是一种概念上不可变的类。
-- records提供了重要的功能，如对象相等性、hashcode和解构。
+- record提供了重要的功能，如对象相等性、hashcode和解构。
 - record是不可变的类型，括号中声明的属性在构造之后不可变更。
-- records具有值语义。当比较两个records的实例时，比较的是这些实例的属性而非引用。(两个创建的实例只要属性相等实例就相等)
+- record具有值语义。当比较两个record的实例时，比较的是这些实例的属性而非引用。(两个创建的实例只要属性相等实例就相等)
 - 更适合用来声明一些简单的数据对象，如值对象和DTO
 
 ```C# 
@@ -2915,6 +2915,366 @@ void dfs2(List<int> numList,int left,int right,int sum,List<int> leftNumList)
 #endregion
 ```
 
+## RabbitMq
+1. 主要用来对客户端发送通知，其中有点对点和群发两种模式
+2. 核心概念
+- Server：又称Broker，接受客户端的连接，实现AMQP实体服务。
+- Connection：连接，应用程序与Broker的网络连接。
+- Channel：网络信道，几乎所有的操作都在Channel中进行，Channel是进行消息读写的通道。客户端可建立多个Channel，每个Channel代表一个会话任务。
+- Message：消息，服务器和应用程序之间传送的数据，由Properties和Body组成。Properties可以对消息进行修饰，比如消息的优先级、延迟等高级特性；Body则就是消息体内容。
+- Virtual Host：虚拟地址，用于进行逻辑隔离，最上层的消息路由。一个Virtual Host里面可以有若干个Exchange和Queue，同一个Virtual Host里面不能有相同名称的Exchange或Queue。
+- Exchange：交换机，接受消息，根据路由键转发消息到绑定的队列
+- Bingding：Exchange和Queue之间的虚拟连接，Binding中可以包含routing key。
+- Routing Key：一个路由规则，虚拟机可用它来确定如何路由一个特性消息。
+- Queue：也称为Message Queue，消息队列，保存消息并将它们转发给消费者。
 
+```C#
+/// <summary>
+/// 发送广播
+/// </summary>
+/// <param name="messageContext"></param>
+/// <returns></returns>
+private bool SendFanout(MessageContext messageContext)
+{
+    try
+    {
+
+        bool isFound = true;
+        if ((int)messageContext.MsgType == (int)MessageType.Broadcast)
+            isFound = InsertData(messageContext, MessageType.Broadcast);
+
+        if (isFound)
+        {
+            ConnectionFactory connectionFactory = InitConnectionFactory(rabbitMQConfig);
+            //创建连接
+            using (var connection = connectionFactory.CreateConnection())
+            {
+                //获取通道
+                using (var channel = connection.CreateModel())
+                {
+                    channel.ExchangeDeclare(ExchangeName.Exchanges_Fanout, ExchangeType.Fanout);
+                    channel.BasicQos(0, 1, false);
+                    string strMessage = JsonConvert.SerializeObject(messageContext);
+                    var body = Encoding.UTF8.GetBytes(strMessage);
+                    //不绑定RoutingKey过来，只把队列绑定到交换机上
+                    channel.BasicPublish(ExchangeName.Exchanges_Fanout, "", null, body);
+
+                }
+            }
+        }
+
+    }
+    catch (Exception ex)
+    {
+
+        //Writelog("RabbitMq Fanout发送失败" + ex.ToString());
+    }
+    return true;
+
+}
+
+
+/// <summary>
+/// 点对点发送（主题）
+/// </summary>
+/// <returns></returns>
+private bool SendTopic(MessageContext messageContext)
+{
+    try
+    {
+        if (InsertData(messageContext, MessageType.P2P))
+        {
+            ConnectionFactory connectionFactory = InitConnectionFactory(rabbitMQConfig);
+            //创建连接
+            using (var connection = connectionFactory.CreateConnection())
+            {
+                //获取通道
+                using (var channel = connection.CreateModel())
+                {
+                    channel.ExchangeDeclare(ExchangeName.Exchanges_Topic, ExchangeType.Topic);
+                    channel.BasicQos(0, 1, false);
+                    foreach (var item in messageContext.ReceiverUserEmp)
+                    {
+                        //channel.QueueDeclare(GetQueueName(messageContext.MessageType), true, false, false, null);
+                        //MessageContext messageContext2 = new MessageContext();
+                        //Framework.Common.Helper.ReflectionHelper.CopyProperties(MessageContext, messageContext2);
+                        channel.BasicQos(0, 1, false);
+                        messageContext.CurrentMessage = new MessageUserEmp(item.UserEmpSn, item.UserName, item.DepartmentID, item.DepartmentName);
+                        string strMessage = JsonConvert.SerializeObject(messageContext);
+                        var body = Encoding.UTF8.GetBytes(strMessage);
+                        string rookey = GetRoutingKey(messageContext.MessageType);
+                        channel.BasicPublish(ExchangeName.Exchanges_Topic, rookey, null, body);
+                    }
+                    return true;
+                }
+
+            }
+        }
+    }
+    catch (Exception ex)
+    {
+        
+        //Writelog("RabbitMq Topic发送失败" + ex.ToString());
+    }
+    return false;
+}
+```
+
+## 数据结构
+### 数据结构概述
+1. 数据结构是计算机存储、组织数据的方式，常用的数据结构有 数组（Array）、栈（Stack）、队列（Queue）、链表（Linked List）、树（Tree）、图（Graph）、堆（Heap）、散列表（Hash）等；
+- 栈:后进先出
+- 队列:先进先出
+- 列表（List）：有序集合，允许重复
+- 哈希表（HashTable）：键值对集合
+- 字典（Dictionary）：泛型版本的哈希表
+- 链表（LinkedList）：带节点的双向列表
+- 树（Tree）：如二叉搜索树
+
+
+## 设计模式
+
+### 详细说明和应用场景
+1. 单例模式 (Singleton)
+- 单例模式确保一个类只有一个实例，并提供一个全局访问点。这个模式通常用于那些只需要一个实例且频繁使用的对象，例如数据库连接池、日志对象、配置对象等。
+- 使用场景:应用程序需要一个全局的配置管理器来管理所有的配置信息。
+- 使用场景:在一个多线程的环境下，需要确保某个资源只被创建一次并在全局范围内访问。比如数据库连接池的实现。
+2. 工厂模式 (Factory Method)
+- 工厂模式定义了一个用于创建对象的接口，但让子类决定实例化哪一个类。工厂方法使一个类的实例化延迟到其子类中进行。
+- 使用场景:应用程序需要根据用户的选择创建不同类型的图形对象（如圆形、矩形）。
+3. 观察者模式 (Observer)
+- 观察者模式定义了一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都将得到通知并自动更新。
+- 使用场景:股票市场应用程序中，当股票价格发生变化时，需要通知所有订阅了该股票的投资者。
+- 使用场景:在一个新闻发布订阅系统中，当有新的新闻发布时，订阅者可以自动收到通知并显示最新的新闻内容。
+4. 策略模式 (Strategy)
+- 策略模式定义了一系列算法，并将每一个算法封装起来，以便它们可以互相替换。策略模式让算法的变化独立于使用算法的客户。
+- 使用场景:一个文本编辑器需要支持多种格式的文件保存方式（如纯文本、HTML、Markdown等）。
+5. 适配器模式 (Adapter)
+- 适配器模式将一个类的接口转换成客户端期望的另一个接口。适配器模式让原本接口不兼容的类可以一起工作。
+- 使用场景:有一个旧式的音乐播放器，只能播放MP3格式的音乐，但现在需要播放MP4格式的音乐。
+
+
+## 多线程
+1. 多线程是指在一个程序中同时执行多个独立的任务或操作。每个任务或操作都是由一个单独的线程来执行，而这些线程共享程序的资源和内存空间。与单线程相比，多线程可以提高程序的运行效率和响应速度，因为它可以充分利用 CPU 的多核处理能力，同时也可以避免某些操作阻塞其他操作的问题。
+
+2.Task类常用方法:
+- Task task = new Task(Action); task.Start();  
+- Task.Run(Action):建立异步任务并运行，直接使用不等待运行完成直接往下走，使用await会等待运行完成再往下走 :参数少，但更适合使用
+- Task.Factory.StartNew(Action)  :参数多 ,特定情况使用
+- Task.WaitAll(Task[]):等待所有Task执行完成
+- Task.WaitAny():等待某个Task执行完成
+- Task.ContinueWhenAll():效果与Task.WaitAll(Task[])一样，但会新建一个新的线程，不会卡顿页面
+- Task.ContinueWhenAny():效果与Task.WaitAny()一样,但会新建一个新的线程，不会卡顿页面
+- Task.ContinueWith():ContinueWith表示回调 Task.Run(Action1).ContinueWith(Action2)等待Action1执行完成后就会执行回调Action2
+https://www.jb51.net/article/241505.htm
+
+3. 多线程的优点：
+- 通过同时执行多个任务，可以利用CPU资源，提高程序运行效率。
+- 多线程可以使程序在执行繁琐操作时不会卡死或无响应，提高用户交互体验。
+- 某些功能需要同时进行多项操作才能完成，使用多线程可以更方便地实现这些复杂的功能。
+- 将任务拆分成多个子任务并分配给不同的线程后，代码结构会更清晰，并且可以降低代码的耦合度，提高可读性和可维护性。
+- 现代计算机都是多核CPU，在使用单线程的情况下无法发挥其全部性能。而使用多线程可以充分利用CPU的所有核心，从而提高计算机的处理速度。
+
+4. 多线程的缺点：
+- 因为涉及到并发编程、数据同步等问题，需要对程序逻辑有较深入了解，并且需要一定的经验才能避免出现竞态条件、死锁等问题；程序设计难度加大。
+- 每个线程都需要占用一定内存空间和系统资源（如CPU时间片），同时线程之间的切换也会带来一定开销，因此过多的线程会增加系统资源消耗。
+- 在多线程编程中，如果不做好数据同步和互斥访问等工作，就容易引发数据竞争问题，导致程序崩溃或结果出错。
+- 多线程编程需要注意线程安全、锁死等问题，如果没有考虑周全可能会导致程序崩溃或运行不稳定。
+
+5. 常见问题
+- 竞态条件（Race Condition）：指两个或多个进程或线程同时访问同一块数据，而且至少有一个进程或线程修改了该数据。竞态条件可能导致不可预期的结果。解决方法：使用互斥锁（mutex）、信号量（semaphore）等同步机制，确保对共享变量的访问是互斥的。
+- 死锁（Deadlock）：指两个或多个线程在等待其他线程释放资源时陷入无限等待的状态，导致程序无法继续执行。解决方法：避免循环依赖、按照相同顺序获取锁等方式来避免死锁。
+
+https://www.zhihu.com/question/607950573/answer/3085059864?utm_id=0
+
+
+## Linux常用命令
+https://mp.weixin.qq.com/s?__biz=MzI3NDc4NTQ0Nw==&mid=2247548551&idx=1&sn=d4def01b9f71bf4c3aea45aef285f48b&chksm=eb0ccb4fdc7b425920b138b512557e082b632f2447f516712ec3146d4c2f0e34af54d243de43&scene=27
+### 简略版
+1. ls：列出目录内容。
+2. cd：切换当前工作目录。
+3. mkdir：创建新目录。
+4. rm：删除文件或目录。
+5. cp：复制文件或目录。
+6. mv：移动文件或目录。
+7. cat：查看文件内容。
+8. grep：在文件中搜索指定的文本模式。
+9. chmod：修改文件权限。
+10. chown：修改文件所有者。
+11. ps：查看系统中运行的进程。
+12. top：实时查看系统资源使用情况。
+13. ifconfig：配置和查看网络接口信息。
+14. ping：测试网络连接。
+15. ssh：远程登录到其他计算机。
+
+### 详细版
+1. cd命令:这是一个非常基本，也是大家经常需要使用的命令，它用于切换当前目录，它的参数是要切换到的目录的路径，可以是绝对路径，也可以是相对路径。
+cd /root/Docements # 切换到目录/root/Docements  
+cd ./path          # 切换到当前目录下的path目录中，“.”表示当前目录    
+cd ../path         # 切换到上层目录中的path目录中，“..”表示上一层目录  
+
+2. ls命令:这是一个非常有用的查看文件与目录的命令，list之意，它的参数非常多，下面就列出一些我常用的参数吧
+-l ：列出长数据串，包含文件的属性与权限数据等  
+-a ：列出全部的文件，连同隐藏文件（开头为.的文件）一起列出来（常用）  
+-d ：仅列出目录本身，而不是列出目录的文件数据  
+-h ：将文件容量以较易读的方式（GB，kB等）列出来  
+-R ：连同子目录的内容一起列出（递归列出），等于该目录下的所有文件都会显示出来  
+注：这些参数也可以组合使用，下面举两个例子：
+ls -l #以长数据串的形式列出当前目录下的数据文件和目录  
+ls -lR #以长数据串的形式列出当前目录下的所有文件  
+
+3. grep命令:该命令常用于分析一行的信息，若当中有我们所需要的信息，就将该行显示出来，该命令通常与管道命令一起使用，用于对一些命令的输出进行筛选加工等等，它的简单语法为
+-a ：将binary文件以text文件的方式查找数据  
+-c ：计算找到‘查找字符串’的次数  
+-i ：忽略大小写的区别，即把大小写视为相同  
+-v ：反向选择，即显示出没有‘查找字符串’内容的那一行  
+# 例如：  
+# 取出文件/etc/man.config中包含MANPATH的行，并把找到的关键字加上颜色  
+grep --color=auto 'MANPATH' /etc/man.config  
+# 把ls -l的输出中包含字母file（不区分大小写）的内容输出  
+ls -l | grep -i file  
+
+4. find命令:find是一个基于查找的功能非常强大的命令，相对而言，它的使用也相对较为复杂，参数也比较多，所以在这里将给把它们分类列出
+find [PATH] [option] [action]  
+# 与时间有关的参数：  
+-mtime n : n为数字，意思为在n天之前的“一天内”被更改过的文件；  
+-mtime +n : 列出在n天之前（不含n天本身）被更改过的文件名；  
+-mtime -n : 列出在n天之内（含n天本身）被更改过的文件名；  
+-newer file : 列出比file还要新的文件名  
+# 例如：  
+find /root -mtime 0 # 在当前目录下查找今天之内有改动的文件  
+# 与用户或用户组名有关的参数：  
+-user name : 列出文件所有者为name的文件  
+-group name : 列出文件所属用户组为name的文件  
+-uid n : 列出文件所有者为用户ID为n的文件  
+-gid n : 列出文件所属用户组为用户组ID为n的文件  
+# 例如：  
+find /home/ljianhui -user ljianhui # 在目录/home/ljianhui中找出所有者为ljianhui的文件  
+# 与文件权限及名称有关的参数：  
+-name filename ：找出文件名为filename的文件  
+-size [+-]SIZE ：找出比SIZE还要大（+）或小（-）的文件  
+-tpye TYPE ：查找文件的类型为TYPE的文件，TYPE的值主要有：一般文件（f)、设备文件（b、c）、  
+             目录（d）、连接文件（l）、socket（s）、FIFO管道文件（p）；  
+-perm mode ：查找文件权限刚好等于mode的文件，mode用数字表示，如0755；  
+-perm -mode ：查找文件权限必须要全部包括mode权限的文件，mode用数字表示  
+-perm +mode ：查找文件权限包含任一mode的权限的文件，mode用数字表示  
+# 例如：  
+find / -name passwd # 查找文件名为passwd的文件  
+find . -perm 0755 # 查找当前目录中文件权限的0755的文件  
+find . -size +12k # 查找当前目录中大于12KB的文件，注意c表示byte
+
+5. cp命令:该命令用于复制文件，copy之意，它还可以把多个文件一次性地复制到一个目录下
+-a ：将文件的特性一起复制  
+-p ：连同文件的属性一起复制，而非使用默认方式，与-a相似，常用于备份  
+-i ：若目标文件已经存在时，在覆盖时会先询问操作的进行  
+-r ：递归持续复制，用于目录的复制行为  
+-u ：目标文件与源文件有差异时才会复制  
+cp -a file1 file2 #连同文件的所有特性把文件file1复制成文件file2  
+cp file1 file2 file3 dir #把文件file1、file2、file3复制到目录dir中  
+
+6. mv命令:该命令用于移动文件、目录或更名，move之意
+-f ：force强制的意思，如果目标文件已经存在，不会询问而直接覆盖  
+-i ：若目标文件已经存在，就会询问是否覆盖  
+-u ：若目标文件已经存在，且比目标文件新，才会更新  
+注：该命令可以把一个文件或多个文件一次移动一个文件夹中，但是最后一个目标文件一定要是“目录”。
+例如：
+mv file1 file2 file3 dir # 把文件file1、file2、file3移动到目录dir中  
+mv file1 file2 # 把文件file1重命名为file2  
+
+7. rm命令:该命令用于删除文件或目录，remove之间，它的常用参数如下：
+-f ：就是force的意思，忽略不存在的文件，不会出现警告消息  
+-i ：互动模式，在删除前会询问用户是否操作  
+-r ：递归删除，最常用于目录删除，它是一个非常危险的参数  
+例如：
+rm -i file # 删除文件file，在删除之前会询问是否进行该操作  
+rm -fr dir # 强制删除目录dir中的所有文件
+
+8. ps命令:该命令用于将某个时间点的进程运行情况选取下来并输出，process之意，它的常用参数如下：
+-A ：所有的进程均显示出来  
+-a ：不与terminal有关的所有进程  
+-u ：有效用户的相关进程  
+-x ：一般与a参数一起使用，可列出较完整的信息  
+-l ：较长，较详细地将PID的信息列出  
+其实我们只要记住ps一般使用的命令参数搭配即可，它们并不多，如下：
+ps aux # 查看系统所有的进程数据  
+ps ax # 查看不与terminal有关的所有进程  
+ps -lA # 查看系统所有的进程数据  
+ps axjf # 查看连同一部分进程树状态  
+
+9. killall命令:该命令用于向一个命令启动的进程发送一个信号，它的一般语法如下：
+killall [-iIe] [command name]  
+它的参数如下：
+-i ：交互式的意思，若需要删除时，会询问用户  
+-e ：表示后面接的command name要一致，但command name不能超过15个字符  
+-I ：命令名称忽略大小写  
+# 例如：  
+killall -SIGHUP syslogd # 重新启动syslogd  
+
+10. file命令:该命令用于判断接在file命令后的文件的基本数据，因为在Linux下文件的类型并不是以后缀为分的，所以这个命令对我们来说就很有用了，它的用法非常简单，基本语法如下：
+file filename  
+#例如：  
+file ./test  
+
+11. tar命令:该命令用于对文件进行打包，默认情况并不会压缩，如果指定了相应的参数，它还会调用相应的压缩程序（如gzip和bzip等）进行压缩和解压。它的常用参数如下：
+-c ：新建打包文件  
+-t ：查看打包文件的内容含有哪些文件名  
+-x ：解打包或解压缩的功能，可以搭配-C（大写）指定解压的目录，注意-c,-t,-x不能同时出现在同一条命令中  
+-j ：通过bzip2的支持进行压缩/解压缩  
+-z ：通过gzip的支持进行压缩/解压缩  
+-v ：在压缩/解压缩过程中，将正在处理的文件名显示出来  
+-f filename ：filename为要处理的文件  
+-C dir ：指定压缩/解压缩的目录dir  
+上面的解说可以已经让你晕过去了，但是通常我们只需要记住下面三条命令即可：
+压缩：tar -jcv -f filename.tar.bz2 要被处理的文件或目录名称  
+查询：tar -jtv -f filename.tar.bz2  
+解压：tar -jxv -f filename.tar.bz2 -C 欲解压缩的目录  
+注：文件名并不定要以后缀tar.bz2结尾，这里主要是为了说明使用的压缩程序为bzip2
+
+12. cat命令:该命令用于查看文本文件的内容，后接要查看的文件名，通常可用管道与more和less一起使用，从而可以一页页地查看数据。例如：
+cat text | less # 查看text文件中的内容  
+# 注：这条命令也可以使用less text来代替  
+
+13. chgrp命令:该命令用于改变文件所属用户组，它的使用非常简单，它的基本用法如下：
+chgrp [-R] dirname/filename  
+-R ：进行递归的持续对所有文件和子目录更改  
+# 例如：  
+chgrp users -R ./dir # 递归地把dir目录下中的所有文件和子目录下所有文件的用户组修改为users  
+
+14. chown命令:该命令用于改变文件的所有者，与chgrp命令的使用方法相同，只是修改的文件属性不同，不再详述。
+
+15. chmod命令:该命令用于改变文件的权限，一般的用法如下：
+chmod [-R] xyz 文件或目录  
+-R：进行递归的持续更改，即连同子目录下的所有文件都会更改  
+同时，chmod还可以使用u（user）、g（group）、o（other）、a（all）和+（加入）、-（删除）、=（设置）跟rwx搭配来对文件的权限进行更改。
+# 例如：  
+chmod 0755 file # 把file的文件权限改变为-rxwr-xr-x  
+chmod g+w file # 向file的文件权限中加入用户组可写权限  
+
+16. vim命令:该命令主要用于文本编辑，它接一个或多个文件名作为参数，如果文件存在就打开，如果文件不存在就以该文件名创建一个文件。vim是一个非常好用的文本编辑器，它里面有很多非常好用的命令，在这里不再多说。你可以从这里下载 vim常用操作 的详细说明。
+
+17. gcc命令
+对于一个用Linux开发C程序的人来说，这个命令就非常重要了，它用于把C语言的源程序文件，编译成可执行程序，由于g++的很多参数跟它非常相似，所以这里只介绍gcc的参数，它的常用参数如下：
+-o ：output之意，用于指定生成一个可执行文件的文件名  
+-c ：用于把源文件生成目标文件（.o)，并阻止编译器创建一个完整的程序  
+-I ：增加编译时搜索头文件的路径  
+-L ：增加编译时搜索静态连接库的路径  
+-S ：把源文件生成汇编代码文件  
+-lm：表示标准库的目录中名为libm.a的函数库  
+-lpthread ：连接NPTL实现的线程库  
+-std= ：用于指定把使用的C语言的版本  
+# 例如：  
+# 把源文件test.c按照c99标准编译成可执行程序test  
+gcc -o test test.c -lm -std=c99  
+#把源文件test.c转换为相应的汇编程序源文件test.s  
+gcc -S test.c  
+
+18. time命令:该命令用于测算一个命令（即程序）的执行时间。它的使用非常简单，就像平时输入命令一样，不过在命令的前面加入一个time即可，例如：
+time ./process  
+time ps aux  
+在程序或命令运行结束后，在最后输出了三个时间，它们分别是：
+user：用户CPU时间，命令执行完成花费的用户CPU时间，即命令在用户态中执行时间总和；
+system：系统CPU时间，命令执行完成花费的系统CPU时间，即命令在核心态中执行时间总和；
+real：实际时间，从command命令行开始执行到运行终止的消失时间；
+注：用户CPU时间和系统CPU时间之和为CPU时间，即命令占用CPU执行的时间总和。实际时间要大于CPU时间，因为Linux是多任务操作系统，往往在执行一条命令时，系统还要处理其它任务。另一个需要注意的问题是即使每次执行相同命令，但所花费的时间也是不一样，其花费时间是与系统运行相关的。
 
 - ......
