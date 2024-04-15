@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="/js/vue.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1>会员信息</h1>
+        <h3>姓名:{{name}}</h3>
+        <h3>性别:{{sex}}</h3>
+        <h3>年龄:{{age}}</h3>
+    </div>
+    
+</body>
+<script>
+    new Vue({
+        el:'#root',
+        data:{
+            name:'李嘉靖',
+            sex:'男',
+            age:18
+        }
+    })
+</script>
+</html>
