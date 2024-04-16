@@ -50,12 +50,12 @@
     <div id="root">
         <h2>欢迎来到{{name}}学习</h2>
         
-        <!-- 阻止默认事件（常用） -->
+        <!-- 阻止默认事件（常用）: a标签默认需要跳转链接,prevent可阻止默认事件即阻止跳转链接 -->
         <a href="http://www.atguigu.com" @click.prevent="showInfo">点我提示信息prevent</a>
 
         <br><br><br>
 
-        <!-- 阻止事件冒泡（常用） -->
+        <!-- 阻止事件冒泡（常用）:点击子模块时，父类也被触发,加上stop防止父类被触发 -->
         <div class="demo1" @click="showInfo">
             <!-- 修饰符可以连续写 -->
             <!-- <a href="http://www.atguigu.com" @click.stop.prevent="showInfo">点我提示信息stop</a> -->
@@ -69,7 +69,7 @@
 
         <br><br><br>
 
-        <!-- 使用事件的捕获模式 -->
+        <!-- 使用事件的捕获模式:操作box2点击时，先被box1捕获事件，先触发showMsg(1),再触发showMsg(2) -->
         <div class="box1" @click.capture="showMsg(1)">
             div1-capture
             <div class="box2" @click="showMsg(2)">
@@ -79,13 +79,14 @@
 
         <br><br><br>
 
-        <!-- 只有event.target是当前操作的元素时才触发事件 -->
+        <!-- 只有event.target是当前操作的元素时才触发事件:正常触发子类事件，父类也会被触发，self可限制当操作是当前元素才会被触发 -->
         <div class="demo1" @click.self="showInfoSelf">
             <button @click="showInfoSelf">点我提示信息self</button>
         </div>
 
         <br><br><br>
 
+        <!-- 添加passive,事件的默认行为立即执行，比如a标签跳转，比如页面滚动，不需要等事件执行完毕再执行默认事件 -->
         <!-- <ul @scroll="demo" class="list"> -->
         <ul @wheel.passive="demo" class="list">
             <li>1passive</li>
