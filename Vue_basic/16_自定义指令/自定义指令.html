@@ -77,7 +77,7 @@
             fbind:{
                 //指令与元素成功绑定时（一上来）
                 bind(element,bind){
-                    element.value = bind.value;
+                    element.value = bind.value * 10;
                 },
                 //指令所在元素被插入页面时
                 inserted(element,bind){
@@ -85,7 +85,7 @@
                 },
                 //指令所在的模板被重新解析时
                 update(element,bind){
-                    element.value = bind.value;
+                    element.value = bind.value * 10;
                     element.focus();
                 }
             }
