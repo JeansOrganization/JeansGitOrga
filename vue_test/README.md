@@ -25,6 +25,9 @@
     1. vue.js是完整版的Vue，包含：核心功能 + 模板解析器。
     2. vue.runtime.xxx.js是运行版的Vue，只包含：核心功能；没有模板解析器。
 2. 因为vue.runtime.xxx.js没有模板解析器，所以不能使用template这个配置项，需要使用render函数接收到的createElement函数去指定具体内容。
+   1. Vue-cli脚手架创建项目时使用的是阉割版vue,不携带模板解析器,所以无法使用template配置项,需要使用render函数解析模板
+   2.render:function(createElement) { return createElement('h1','你好');} => render函数里携带了createElement函数参数,用于创建元素，同时入参也可以直接用App组件来创建元素createElement(App)
+   简写: render: (createElement) => createElement(App),    render:h=>h(App)
 
 ## vue.config.js配置文件
 
