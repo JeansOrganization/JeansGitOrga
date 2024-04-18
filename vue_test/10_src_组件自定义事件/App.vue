@@ -55,6 +55,7 @@ export default {
         // setTimeout(() => {
         //     this.$destroy()
         // }, 3000);
+
     }
 };
 </script>

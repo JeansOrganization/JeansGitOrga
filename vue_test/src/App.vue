@@ -1,33 +1,39 @@
 <template>
-    <div>
-        <h1 v-text="msg" ref="title"></h1>
-        <button @click="showDOM" ref="btn">点我输出上方的DOM元素</button>
-        <School ref="sch"/>
-    </div>
+	<div class="container">
+		<Category title="美食" >
+			<img src="https://s3.ax1x.com/2021/01/16/srJlq0.jpg" alt="">
+		</Category>
+
+		<Category title="游戏" >
+			<ul>
+				<li v-for="(g,index) in games" :key="index">{{g}}</li>
+			</ul>
+		</Category>
+
+		<Category title="电影">
+			<video slot="center" controls src="https://www.runoob.com/try/demo_source/mov_bbb.mp4"></video>
+		</Category>
+	</div>
 </template>
 
 <script>
-import Student from './components/Student'
-import School from './components/School'
-
-export default ({
-    name:'App',
-    components:{
-        Student,
-        School
-    },
-    data(){
-        return {
-            msg:'欢迎来尚硅谷学习Vue!'
-        }
-    },
-    methods:{
-        showDOM:function(){
-            console.log(this.$refs)
-            console.log(this.$refs.title)
-            console.log(this.$refs.btn)
-            console.log(this.$refs.sch)
-        }
-    }
-})
+	import Category from './components/Category'
+	export default {
+		name:'App',
+		components:{Category},
+		data() {
+			return {
+				foods:['火锅','烧烤','小龙虾','牛排'],
+				games:['红色警戒','穿越火线','劲舞团','超级玛丽'],
+				films:['《教父》','《拆弹专家》','《你好，李焕英》','《尚硅谷》']
+			}
+		},
+	}
 </script>
+
+<style scoped>
+	.container{
+		display: flex;
+		justify-content: space-around;
+	}
+</style>

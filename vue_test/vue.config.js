@@ -19,7 +19,7 @@ module.exports = {
         target: 'http://localhost:5000',
         pathRewrite: {'^/jean':''},
         ws: true, //用于支持websocket
-        changeOrigin: true
+        changeOrigin: false
       },
       '/demo': {
         target: 'http://localhost:5001',
