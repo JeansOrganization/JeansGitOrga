@@ -1,39 +1,35 @@
 <template>
-	<div class="container">
-		<Category title="美食" >
-			<img src="https://s3.ax1x.com/2021/01/16/srJlq0.jpg" alt="">
-		</Category>
+    <div>
+        <div class="row">
+            <Banner></Banner>
+        </div>
+        <div class="row">
+            <div class="col-xs-2 col-xs-offset-2">
+                <div class="list-group">
+					<!-- 原始html中我们使用a标签实现页面的跳转 -->
+                    <!-- <a class="list-group-item active" href="./about.html">About</a>
+                    <a class="list-group-item" href="./home.html">Home</a> -->
 
-		<Category title="游戏" >
-			<ul>
-				<li v-for="(g,index) in games" :key="index">{{g}}</li>
-			</ul>
-		</Category>
-
-		<Category title="电影">
-			<video slot="center" controls src="https://www.runoob.com/try/demo_source/mov_bbb.mp4"></video>
-		</Category>
-	</div>
+                    <!-- Vue中借助router-link标签实现路由的切换 -->
+                    <router-link class="list-group-item" active-class="active" to="/about">About</router-link>
+                    <router-link class="list-group-item" active-class="active" to="./home">Home</router-link>
+                </div>
+            </div>
+            <div class="col-xs-6">
+                <div class="panel">
+                    <div class="panel-body">
+                        <!-- 指定组件的呈现位置 -->
+                        <router-view></router-view>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
-
 <script>
-	import Category from './components/Category'
-	export default {
-		name:'App',
-		components:{Category},
-		data() {
-			return {
-				foods:['火锅','烧烤','小龙虾','牛排'],
-				games:['红色警戒','穿越火线','劲舞团','超级玛丽'],
-				films:['《教父》','《拆弹专家》','《你好，李焕英》','《尚硅谷》']
-			}
-		},
-	}
+    import Banner from './components/Banner'
+    export default {
+        name: 'App',
+        components:{Banner}
+    }
 </script>
-
-<style scoped>
-	.container{
-		display: flex;
-		justify-content: space-around;
-	}
-</style>
